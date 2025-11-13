@@ -1,0 +1,136 @@
+/* === CARROSSEL HERO SECTION (LARGURA 100%) === */
+#hero {
+  position: relative;
+  height: 550px;
+  overflow: hidden;
+  color: var(--white);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* o elemento que contém o texto (slide-content) deve ter altura total */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.slide::after {
+  /* OVERLAY */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.281);
+  z-index: 1;
+}
+
+/* configurando a imagem como background/fundo visual */
+.slide img {
+  position: absolute; /* tira a imagem do fluxo normal do documento */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* garante que fique no fundo */
+}
+
+.slide-content h1 {
+  color: var(--white);
+  font-size: 3.2em !important;
+  margin-bottom: 20px;
+}
+
+.slide-content p {
+  font-size: 1.2em !important;
+  margin-bottom: 40px;
+}
+
+.btn-hero {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.137);
+  border: 1px solid var(--white);
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 0 rgba(183, 138, 255, 0.5);
+  }
+  70% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 10px rgba(131, 33, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+/* Estilização das Setas de Navegação (Controles Manuais) */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
+  border: none;
+  z-index: 5; /* Garante que fique acima dos slides */
+}
+
+.prev {
+  /* NOVO BLOCO: Posiciona o botão esquerdo */
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: var(--cor-primaria); /* Cor primária no hover */
+}

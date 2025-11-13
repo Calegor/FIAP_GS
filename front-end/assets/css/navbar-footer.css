@@ -1,0 +1,333 @@
+/* ---------------------------------------------------- */
+/* ESTILOS GERAIS DA BARRA DE NAVEGAÇÃO (.nav) */
+/* ---------------------------------------------------- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  /* CHAVE: distribui o espaço uniformemente (desktop) */
+  justify-content: space-around;
+
+  /* padrão para telas grandes */
+  padding: 30px 120px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav .logo-img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+/* botões de ação (centralizados em desktop) */
+.nav .logo-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 0;
+  padding-left: 0;
+  margin-left: 30px;
+}
+
+.nav-action-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-action-btn.transition {
+  background-color: var(--btn-bg);
+  color: var(--white);
+  animation: pulse 2s infinite;
+}
+
+.nav-action-btn.transition:hover {
+  transition: 0.3s ease;
+  transform: scale(1.05);
+}
+
+.nav-action-btn-footer.transition {
+  background-color: var(--white);
+  color: var(--black);
+}
+.nav-action-btn-footer.transition:hover {
+  background-color: var(--btn-bg);
+  color: var(--white);
+}
+
+@keyframes pulse {
+  0% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 0 rgba(183, 138, 255, 0.5);
+  }
+  70% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 10px rgba(131, 33, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS DOS ITENS DE NAVEGAÇÃO (.nav-links) */
+/* ---------------------------------------------------- */
+
+/* container flexbox para links e busca */
+.nav .nav-right-content {
+  display: flex;
+  align-items: center;
+}
+
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+.nav .nav-links li {
+  margin: 0 12px;
+}
+
+.nav .nav-links li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
+  display: block;
+  border-radius: 7px;
+}
+
+.nav .nav-links li a:hover {
+  color: var(--white);
+  background-color: var(--navbar-item-hover-bg);
+}
+
+/* icones de menu responsivo - ocultos por padrão em desktop */
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+  color: var(--color-2);
+  font-size: 22px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .nav-links li a.ativo {
+  /* mantém a cor do texto branca como padrão */
+  color: var(--white);
+  /* CHAVE: aplica a cor de fundo do hover para o estado ativo */
+  background-color: var(--color-2);
+  /* garante que o estilo ativo se sobreponha a qualquer outro hover */
+  pointer-events: none; /* impede que o link ativo seja clicável (opcional) */
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS DO DROPDOWN (DESKTOP) */
+/* ---------------------------------------------------- */
+.nav .nav-links .dropdown {
+  position: relative;
+}
+
+.nav .nav-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: var(--dropdown-bg);
+  min-width: 180px;
+  padding: 10px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid var(--color-1);
+  border-radius: 7px;
+  z-index: 10;
+}
+
+.nav .nav-links .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav .nav-links .dropdown-menu li a {
+  padding: 10px 15px;
+  border-radius: 7px;
+  color: var(--black);
+}
+
+.nav .nav-links .dropdown-menu li a:hover {
+  background-color: var(--color-3);
+  color: var(--black);
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS DA BUSCA (.search-box) - FLEXBOX */
+/* ---------------------------------------------------- */
+
+/* icone de Bbusca principal (lupa) - para abrir a barra */
+.nav #searchIcon {
+  color: var(--color-2);
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  z-index: 1100;
+}
+
+.nav .search-box {
+  position: relative;
+  right: 0;
+  height: 40px;
+  max-width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  z-index: 1099;
+  margin-left: -20px;
+}
+
+.nav.openSearch #searchIcon {
+  display: none;
+  pointer-events: none;
+}
+
+.nav.openSearch .search-box {
+  opacity: 1;
+  max-width: 250px;
+  pointer-events: auto;
+  margin-left: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 0 40px 0 15px;
+  color: var(--white);
+  border: 2px solid var(--color-2);
+  color: var(--black);
+  font-size: 16px;
+}
+
+/* icone de fechar a busca (X) */
+.search-box .search-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-2);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
+  font-size: 18px;
+  cursor: default;
+  display: none;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS DO FOOTER */
+/* ---------------------------------------------------- */
+.main-footer {
+  background: url(../imgs/hero/Design\ sem\ nome.png); /* cor de fundo principal do footer */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  align-items: center;
+  /* CHAVE: distribui o espaço uniformemente entre TODOS os itens (Logo, Frase, Redes, Botão) */
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1300px;
+  /* padding lateral para liberar mais espaço interno para o justify-content */
+  padding: 30px 100px;
+  /* espaçamento mínimo entre os itens (Flexbox gap) */
+  gap: 30px;
+}
+
+.footer-logo img {
+  height: 80px;
+}
+
+.footer-slogan {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* icones sociais */
+.footer-social-media {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-social-media img {
+  height: 27px;
+}
+
+/* botão de ação */
+.footer-action-btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bottom-credits {
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  color: var(--white);
+  font-size: 13px;
+  text-align: center;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.footer-bottom-credits p {
+  margin: 0;
+}

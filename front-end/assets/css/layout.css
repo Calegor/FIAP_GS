@@ -1,0 +1,853 @@
+/* ---------------------------------------------------- */
+/* SEÇÃO: DESAFIO */
+/* ---------------------------------------------------- */
+#desafio {
+  padding: 80px 20px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+#desafio h2 {
+  color: var(--color-1);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#desafio .section-subtitle {
+  font-size: 1.1rem;
+  color: var(--black);
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.desafio-grid {
+  /* adiciona padding horizontal para evitar que os cards toquem as bordas da seção */
+  padding: 0 0;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 30px auto 0; /* centraliza o grid dentro da seção com margin: auto */
+}
+
+.desafio-card {
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  padding: 20px;
+  border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329); 
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 150px;
+}
+
+.desafio-card:hover {
+  transform: translateY(-5px);
+  cursor: default;
+}
+
+.desafio-card h3 {
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+#desafio p {
+  color: var(--white);
+}
+
+.desafio-card p {
+  font-size: 0.95rem;
+  color: var(--black);
+  /* 3. PERMITIR QUE O PARÁGRAFO USE O ESPAÇO MÍNIMO NECESSÁRIO */
+  flex-grow: 1;
+  /* 4. ESCONDER TEXTO EXCEDENTE PARA MANTER A ALTURA MINIMA (Efeito 'Quadrado') */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------------------------------------------------- */
+/* SEÇÃO: PILARES DA PLATAFORMA ABRIR */
+/* ---------------------------------------------------- */
+#logo-pilares-visual {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px; /* AUMENTADO para dar mais impacto visual */
+  color: var(--white);
+  text-align: center;
+}
+
+#logo-pilares-visual h2 {
+  font-size: 3rem; /* AUMENTADO */
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+/* Contêiner das letras ABRIR */
+.logo-abrir-container {
+  display: flex;
+  gap: 20px; /* AUMENTADO */
+  margin-bottom: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Estilo de cada letra (A, B, R, I, R) */
+.logo-abrir-letra {
+  font-size: 5rem; /* AUMENTADO */
+  font-weight: 700;
+  color: var(--white);
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-abrir-letra:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+
+/* Contêiner dos 5 Pilares (Ícone + Texto) */
+.pilares-icones-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* AUMENTADO para igualar o gap do logo */
+  max-width: 1000px;
+}
+
+/* Estilo de cada Ponto (Acessibilidade, Base, etc.) */
+.pilar-visual-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Mesma largura da letra para garantir que o ícone e o texto fiquem na mesma coluna */
+  width: 80px;
+}
+
+.pilar-visual-item i {
+  font-size: 4rem; /* AUMENTADO */
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.pilar-visual-item i:hover {
+  transform: scale(1.05);
+}
+
+.pilar-visual-item p {
+  font-size: 1rem; /* AUMENTADO */
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+
+
+
+
+/* Estilização da Nova Seção: FAQ Visual/Info Box (Foco da Requalificação) */
+#foco-requalificacao {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background: var(--white);
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.faq-container i:hover {
+  transition: 0.3s ease;
+  color: var(--white);
+}
+
+.faq-col-left {
+  flex: 1;
+  border-radius: 7px;
+  margin-top: 15px;
+  padding: 30px;
+}
+
+.faq-col-left h2 {
+  color: var(--color-2); /* Título em branco sobre o fundo escuro */
+  font-weight: 400;
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.faq-col-left p {
+  color: var(--black);
+  margin-top: 20px;
+}
+
+.faq-col-left .faq-subtitle-span {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--black);
+}
+
+.faq-col-right {
+  flex: 1;
+  padding-top: 5px;
+}
+
+.faq-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+.faq-lista li {
+    font-size: 1.2rem;
+    padding: 12px 12px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    
+    /* ADICIONADO: Garante que a transição de COR seja suave */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    background-color: var(--color-4); 
+    border-radius: 7px;
+    
+    /* CORREÇÃO: Cor do texto no estado normal (Preto) */
+    color: var(--white); 
+}
+
+.faq-lista li:hover {
+    background-color: var(--color-3); 
+    background-image: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+    
+    /* CORREÇÃO: Cor do texto no hover (Branco) */
+    color: var(--white); 
+    border-radius: 7px;
+}
+
+/* Estilo do Ícone (Para que ele também fique Branco no Hover e Active) */
+.faq-lista i {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    color: var(--white); /* Cor de destaque (Roxo) no estado normal */
+    transition: transform 0.3s, color 0.3s ease; /* Adiciona transição na cor do ícone */
+}
+
+/* NOVO: Ícone Branco no Hover */
+.faq-lista li:hover i {
+    color: var(--white);
+}
+
+/* --- ESTILOS DE SANFONA/ACORDEÃO --- */
+
+.faq-resposta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  padding-left: 30px;
+  padding-right: 15px;
+}
+
+.faq-resposta p {
+  font-size: 1rem;
+  color: var(--white);
+  border-radius: 7px;
+  margin: 10px 0;
+  padding: 12px 0;
+}
+
+/* CLASSE ATIVA: Expande o Conteúdo no Clique */
+.about-abrir.active .faq-resposta {
+  max-height: 500px;
+}
+
+/* CLASSE ATIVA: Expande o Conteúdo no Clique */
+.about-abrir.active {
+    background-image: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+    
+    /* ADICIONADO: Cor do texto no estado ativo (Branco) */
+    color: var(--white); 
+    border-radius: 7px;
+}
+
+/* NOVO: Ícone Branco no estado Ativo */
+.about-abrir.active i {
+    color: var(--white);
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === SEÇÃO SIMULADOR DE POTENCIAL DE TRANSFORMAÇÃO (NOVO ESTILO LIMPO) === */
+#simulador {
+    background-color: var(--white); 
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+#simulador h2 {
+  color: var(--color-1);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#simulador .section-subtitle {
+  font-size: 1.1rem;
+  color: var(--black);
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+
+/* ESTADO INICIAL: PEQUENO E CENTRALIZADO */
+#simulador-box {
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+    color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329); 
+    
+    /* 1. TAMANHO INICIAL */
+    max-width: 550px; /* Tamanho menor no início */
+    margin: 40px auto;
+    
+    /* 2. LAYOUT INICIAL (ITENS EMPILHADOS) */
+    display: flex;
+    flex-direction: column; /* Empilha input e resultado (se visível) */
+    gap: 25px; 
+    align-items: center; /* Centraliza itens na coluna inicial */
+    text-align: center; 
+
+    /* 3. ANIMAÇÃO */
+    transition: max-width 0.5s ease-in-out, gap 0.5s ease-in-out, flex-direction 0.5s ease-in-out;
+}
+
+.sr-only {
+  font-weight: 300;
+}
+
+/* ESTADO FINAL: GRANDE E LADO A LADO (Adicionado via JavaScript) */
+#simulador-box.simulador-aberto {
+    max-width: 1200px; /* Expande para o tamanho total */
+    
+    /* Muda o layout para Lado a Lado (Row) */
+    flex-direction: row; 
+    gap: 40px; 
+    align-items: flex-start;
+    /* Remover text-align: center; não é estritamente necessário se as colunas forem alinhadas */
+}
+
+
+/* Bloco de Input (Coluna Esquerda) */
+.simulador-col-input {
+    flex: 1; 
+    padding-top: 10px;
+    text-align: left; /* Garante que label e input fiquem à esquerda */
+}
+
+#simulador-box label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* AJUSTE PARA O CAMPO DE SELEÇÃO */
+#profissao-risco {
+    /* Mantém os estilos existentes */
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white); /* Cor do texto no campo fechado */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    
+    /* Novo: Garante que a seta e a cor de fundo do campo estejam corretas */
+    -webkit-appearance: none; /* Remove a aparência padrão do Chrome/Safari */
+    -moz-appearance: none;    /* Remove a aparência padrão do Firefox */
+    appearance: none;         /* Remove a aparência padrão */
+    /* Você pode precisar adicionar uma seta customizada via background-image */
+}
+
+/* NOVO: Estiliza as opções quando a lista está aberta */
+#profissao-risco option {
+    /* Força a cor do texto para preto ou uma cor escura */
+    color: var(--black); /* Use a sua variável de cor escura (e.g., var) */
+    background-color: var(--white);
+    padding: 5px; /* Adicione um padding para melhor visualização */
+}
+
+
+.simulador-btn {
+    background-color: var(--white);
+    color: var(--color-1);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329); 
+}
+
+.simulador-btn:hover {
+      transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.171); 
+}
+
+/* Aviso abaixo do botão */
+.aviso-risco-simulador {
+    margin-top: 15px;
+    margin-right: 60px; 
+    color: rgba(255, 255, 255, 0.596);
+    font-size: 0.9em;
+    text-align: center; /* Alinhamento no estado inicial */
+}
+
+#simulador-box.simulador-aberto .aviso-risco-simulador {
+    text-align: left; /* Alinhamento após a expansão */
+}
+
+/* Cartão de Resultado Semântico (Coluna Direita) */
+#risco-resultado {
+    flex: 1; 
+    min-height: 150px; 
+    padding: 25px;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 1.15em;
+    color: var(--white); 
+    text-align: left;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.185); 
+    /* Garante que o resultado comece escondido */
+    display: none; 
+}
+
+/* Estilos de Cores do Diagnóstico (risco-alto, risco-medio, risco-baixo) - Essenciais para a funcionalidade JS */
+
+/* Estilos de Cores do Diagnóstico (risco-alto, risco-medio, risco-baixo) - Essenciais para a funcionalidade JS */
+.risco-alto {
+    border-left: 5px solid rgb(255, 50, 50) !important; 
+    display: block !important;
+}
+
+.aviso-profissao {
+  display: block !important;
+}
+
+.risco-medio {
+
+    border-left: 5px solid rgb(233, 233, 13) !important;
+    display: block !important;
+}
+
+.risco-baixo {
+    border-left: 5px solid #79ff79 !important;
+    display: block !important;
+}
+
+#risco-resultado strong {
+    font-weight: 700;
+    font-size: 1.25em;
+    display: block;
+    margin-bottom: 8px;
+}
+#simulador-box.simulador-aberto #risco-resultado {
+    display: block; 
+}
+
+
+
+
+
+/* === CTA PARA FILTRO DE PROPÓSITO (DESTAQUE) === */
+#cta-proposito {
+    background: var(--color-4);
+    color: var(--white);
+    padding: 120px 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: flex; /* Mantido para layout */
+    justify-content: center; /* Centraliza o conteúdo flex */
+    align-items: center; /* Alinha verticalmente */
+    
+    /* NOVO: Ícone grande na lateral direita */
+    background-image: url('/assets/svg/compass-2-svgrepo-com.svg'); /* <--- Substitua pelo caminho do seu ícone! */
+    background-repeat: no-repeat;
+    background-size: 35%; /* Ajusta o tamanho da imagem para caber */
+    background-position: right -10% center; /* Posição: direita, 10% do final, centralizado verticalmente */
+    min-height: 250px; /* Garante altura mínima para o ícone aparecer */
+    position: relative; /* Necessário para posicionamento futuro ou pseudo-elementos */
+    overflow: hidden; /* Garante que o ícone não "vaze" se for grande demais */
+}
+
+/* NOVO: Pseudo-elemento para criar um overlay escuro sobre o ícone (opcional) */
+#cta-proposito::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Adiciona uma camada de gradiente para garantir contraste do texto */
+    background: linear-gradient(to left, #19536e 0%, transparent 50%); /* Ajuste conforme necessário */
+    z-index: 1; /* Garante que o overlay esteja acima do ícone, mas abaixo do texto */
+    pointer-events: none; /* Não interfere com cliques */
+}
+
+
+.cta-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 2; /* Garante que o texto esteja acima do ícone e do overlay */
+    position: relative; /* Necessário para o z-index funcionar */
+}
+
+/* Os estilos h3, p, e btn-proposito-principal permanecem os mesmos */
+#cta-proposito h3 {
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#cta-proposito p {
+    font-size: 1.1rem;
+      max-width: 1000px;
+    margin-bottom: 25px;
+}
+
+.btn-proposito-principal {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+          transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse1 2s infinite;
+}
+
+.btn-proposito-principal:hover {
+    background-color: transparent;
+        border: 1px solid var(--white);
+      transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+}
+
+@keyframes pulse1 {
+  0% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 0 rgba(19, 111, 172, 0.199);
+  }
+  70% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 10px rgba(131, 33, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+
+
+/* Seção Blog (Cards) */
+#blog {
+    padding: 80px 20px;
+    background-color: var(--white);
+    text-align: center;
+}
+
+#blog h2 {
+  color: var(--color-1);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#blog .section-subtitle {
+  font-size: 1.1rem;
+  color: var(--black);
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.cards-container {
+    padding: 0 0;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 30px auto 0;
+}
+
+.post-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.253); 
+    overflow: hidden; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329); 
+}
+
+/* NOVO: Estilo para a imagem no topo do card */
+.post-card-image {
+    width: 100%;
+    height: 180px; /* Altura fixa para manter o layout uniforme */
+    overflow: hidden;
+    /* NOVO: Garante que o contêiner interno também use a altura total */
+    display: block; 
+}
+
+/* CORREÇÃO SEMÂNTICA: Anula a margem padrão da tag <figure> */
+.post-card-image figure {
+    margin: 0; 
+    width: 100%;
+    height: 100%;
+}
+
+.post-card-image img {
+    width: 100%;
+    height: 100%;
+    /* ESSENCIAL: Garante que a imagem preencha o container sem distorcer (mantendo a proporção e cortando) */
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.post-card:hover .post-card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: var(--color-1);
+    font-size: 1.4em;
+    margin-top: 5px;
+    font-family: var(--font-family);
+}
+
+.card-content p {
+    color: var(--black);
+    font-size: 0.95em;
+    font-family: var(--font-family);
+    margin-top: 10px;
+}
+
+.card-tag {
+    display: inline-block;
+    background-color: var(--color-4);
+    color: var(--white);
+    padding: 4px 10px;
+    border-radius: 7px;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.btn-link-artigo {
+    display: inline-block;
+    margin-top: 15px;
+    background-image: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+    border-radius: 7px;
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 2s infinite;
+    color: var(--white);
+
+}
+
+.btn-link-artigo:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 0 rgba(183, 138, 255, 0.5);
+  }
+  70% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 10px rgba(131, 33, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+
+/* Estilização da Seção Oportunidades Inclusivas (Tabela de Destaque) */
+#recursos-vulneraveis {
+    background-color: var(--cor-fundo-suave);
+}
+
+.recursos-tabela-container {
+    max-width: 1000px; /* Aumentado para melhor visualização lado a lado */
+    margin: 40px auto 0;
+    padding: 0;
+    list-style: none;
+    
+    /* CRIANDO O LAYOUT DE DUAS COLUNAS */
+    display: grid;
+    /* Coluna 1 (Título) ocupa 35% e Coluna 2 (Descrição) ocupa 65% */
+    grid-template-columns: 35% 65%; 
+    gap: 0; /* Remove o gap para criar a linha contínua */
+    text-align: left;
+    border: 1px solid var(--color-3); /* Borda externa da "tabela" */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Estilo do Cabeçalho (Fundo Escuro) */
+.recurso-tabela-header {
+    background-color: var(--color-2); /* Azul Escuro */
+    color: var(--white);
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+/* Estilo dos Títulos dos Programas (Coluna 1) */
+.recurso-tabela-titulo {
+    background-color: var(--white);
+    color: var(--color-2);
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--color-3); /* Linha divisória horizontal */
+}
+
+/* Estilo das Descrições (Coluna 2) */
+.recurso-tabela-descricao {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 20px;
+    font-size: 1rem;
+    border-left: 1px solid var(--color-3); /* Linha divisória vertical */
+    border-bottom: 1px solid var(--color-3); /* Linha divisória horizontal */
+}
+
+/* Garante que o último item da tabela não tenha borda inferior */
+.recursos-tabela-container dt:last-of-type,
+.recursos-tabela-container dd:last-of-type {
+    border-bottom: none;
+}
+
+/* Estilo do Link de Apoio */
+.btn-apoio-link {
+    color: var(--color-1); /* Roxo/Magenta */
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Correção para Mobile (Volta para uma única coluna) */
+@media (max-width: 768px) {
+    .recursos-tabela-container {
+        grid-template-columns: 1fr; /* Volta para uma única coluna vertical */
+        text-align: left;
+    }
+    
+    /* Oculta o cabeçalho da tabela no mobile, pois ele perde a função */
+    .recurso-tabela-header {
+        display: none; 
+    }
+
+    /* Formato de card vertical */
+    .recurso-tabela-titulo {
+        grid-column: 1;
+        background-color: var(--color-2);
+        color: var(--white);
+        border-bottom: none;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .recurso-tabela-descricao {
+        grid-column: 1;
+        background-color: var(--white);
+        border-left: none;
+        border-bottom: 5px solid var(--color-1); /* Borda de destaque na parte inferior */
+        border-radius: 0 0 8px 8px;
+        margin-bottom: 20px; /* Espaço entre os blocos no mobile */
+    }
+}
+
+
+
+
+
+/* EPOLIUTICA DE PROTECAO SOCIAL */
+#politica {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.faq-position-left {
+  margin-top: 0px;
+}

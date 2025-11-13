@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+ /*variáveis para facilitar futuras mudanças */
+:root {
+  --font-family: 'Inter', sans-serif;
+  --white: #ffffff;
+  --black: #292929;
+  --color-1: #6a3494;
+  --color-2: #1b4668;
+  --color-3: #a2bbcf;
+  --color-4: #7a9ab4;
+  --navbar-item-hover-bg: #28264b;
+  --dropdown-bg: #eeeeee;
+  --dropdown-item-hover-bg: #28264b;
+  --btn-bg: #6a3494;
+  --btn-hover-bg: #28264b;
+  --footer-bg: #2f2559;
+  --search-icon: #6a3494;
+}
+
+
+html {
+  scroll-behavior: smooth; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--branco-principal);
+  padding-top: 100px; /* FAZ O CONTEUDO FICAR PRA BAIXO DA BARRA DE NAV FIXA */
+  color: var(--preto-principal);
+  line-height: 1.5;
+}
+
+.wrapper {
+  text-align: center;
+  padding: 30px 0; /* deixa o espaço entre a hero e o nossos programas */
+  height: 100%;
+  width: 100%;
+  background-color: var(--branco-puro);
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.b-bg {
+    background: linear-gradient(to right, var(--color-1), var(--color-2));
+    color : var(--white);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.u-double {
+    text-decoration: double underline;
+    text-decoration-color: var(--color-3);
+    text-decoration-thickness: calc(6%);
+}
+
+fieldset {
+  color: none;
+  border: none;
+}
+
+/* Estilização da Caixa de Tooltip Posicional */
+      .tooltip-popup {
+        display: none;
+        position: absolute; /* Será posicionado absolutamente pelo JavaScript */
+      background: linear-gradient(to right, var(--color-1), var(--color-2));
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 2000;
+        max-width: 350px; /* Garante quebra de linha em telas maiores */
+        text-align: left;
+        font-size: 0.9em;
+        pointer-events: none; /* Permite clicar através do tooltip */
+        line-height: 1.4;
+      }
+
+      /* Estilização do termo ativador do Tooltip (mantida) */
+      .glossario-white {
+        cursor: help;
+        border-bottom: 3px double var(--white);
+      }
+      .glossario-colorful {
+        cursor: help;
+        border-bottom: 3px double var(--color-4);
+      }

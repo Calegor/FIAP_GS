@@ -1,0 +1,177 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* ---------------------------------------------------- */
+  /* ESTILOS GERAIS */
+  /* ---------------------------------------------------- */
+
+  /* ---------------------------------------------------- */
+  /* SEÇÃO: NAVBAR */
+  /* ---------------------------------------------------- */
+  /* ativa o layout de grid para organizar logo, botão e busca */
+  .nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 15px 20px;
+    justify-content: space-between;
+  }
+
+  /* OCULTA os botões de ação do desktop */
+  .nav .logo-actions {
+    display: none;
+  }
+
+  /* reposiciona elementos no grid */
+  .nav .nav-right-content {
+    display: contents;
+  }
+
+  .nav .logo {
+    grid-column: 2 / 3;
+    justify-self: center; /* centraliza o logo no grid */
+  }
+
+  .nav .navOpenBtn {
+    grid-column: 1 / 2;
+    display: block;
+  }
+
+  .nav #searchIcon {
+    grid-column: 3 / 4;
+    display: block;
+  }
+
+  /* menu lateral (abre na esquerda) */
+  .nav .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    right: auto;
+    height: 100%;
+    max-width: 300px;
+    width: 75%;
+    background-color: var(--white);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px 20px 0;
+    transition: transform 0.4s ease;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .nav.openNav .nav-links {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  /* icon para fechar o menu lateral */
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: auto;
+    display: block;
+  }
+
+  /* ajustes na barra de busca flutuante em mobile */
+  .nav .search-box {
+    position: fixed;
+    right: 20px;
+    max-width: calc(100% - 40px);
+    top: 80px;
+    left: 20px;
+    z-index: 1099;
+    transform: translateY(-20px);
+    margin-left: 0;
+  }
+
+  .nav.openSearch .search-box {
+    opacity: 1;
+    max-width: calc(100% - 40px);
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* DROPDOWN EM MOBILE (CLIQUE) */
+  /* garante que o dropdown não abra com hover, apenas com clique do JS */
+  .nav .nav-links .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .nav .nav-links .dropdown-menu {
+    position: static; /* ocupa o fluxo do menu lateral */
+    display: none;
+    min-width: 100%;
+    padding: 10px 0;
+    background-color: var(--dropdown-bg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid var(--color-1);
+    margin-top: 2px;
+  }
+
+  /* o JS adiciona a classe 'active' */
+  .nav .nav-links .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  /* ---------------------------------------------------- */
+  /* SEÇÃO: HERO */
+  /* ---------------------------------------------------- */
+  #hero {
+    /* Aumenta a altura um pouco mais que o mobile extra small */
+    height: 450px;
+  }
+
+  .slide-content h1 {
+    /* Aumenta o título para telas maiores que 480px */
+    font-size: 2.2em !important;
+    padding: 0 10px;
+  }
+
+  .slide-content p {
+    font-size: 1.1em !important;
+    padding: 0 30px;
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.068); /* Fundo semi-transparente */
+    border-radius: 7px;
+    z-index: 5; /* Garante que fique acima dos slides */
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+
+  /* ---------------------------------------------------- */
+  /* SEÇÃO: FOOTER */
+  /* ---------------------------------------------------- */
+  .main-footer .footer-content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px;
+  }
+  .main-footer .footer-social-media {
+    justify-content: center; /* Centraliza ícones */
+  }
+  .main-footer .footer-action-btn {
+    width: 80%; /* Botão com largura parcial */
+    max-width: 300px;
+  }
+}

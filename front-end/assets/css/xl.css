@@ -1,0 +1,42 @@
+/* Extra-large devices (large laptops and desktops, 1300px and up) */
+
+@media (min-width: 1300px) {
+  /* ---------------------------------------------------- */
+  /* ESTILOS GERAIS */
+  /* ---------------------------------------------------- */
+
+  /* ---------------------------------------------------- */
+  /* SECAO: NAVBAR */
+  /* ---------------------------------------------------- */
+  .nav {
+    padding: 15px 180px;
+  }
+
+  @media (min-width: 1300px) and (max-width: 1520px) {
+    .nav.openSearch .logo-actions {
+      /* esconder o elemento completamente */
+      display: none;
+    }
+    .nav.openSearch {
+      /* se precisar centralizar melhor os outros elementos quando os botões sumirem */
+      justify-content: space-between;
+    }
+  }
+
+  /* ---------------------------------------------------- */
+  /* SEÇÃO: HERO */
+  /* ---------------------------------------------------- */
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+
+  /* ---------------------------------------------------- */
+  /* SECAO: FOOTER */
+  /* ---------------------------------------------------- */
+  .main-footer .footer-content-wrapper {
+    padding: 30px 180px;
+  }
+}
