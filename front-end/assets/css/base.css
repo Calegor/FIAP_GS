@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
- /*variáveis para facilitar futuras mudanças */
+/*variáveis para facilitar futuras mudanças */
 :root {
-  --font-family: 'Inter', sans-serif;
+  --font-family: "Inter", sans-serif;
   --white: #ffffff;
   --black: #292929;
   --color-1: #6a3494;
@@ -16,11 +16,6 @@
   --btn-hover-bg: #28264b;
   --footer-bg: #2f2559;
   --search-icon: #6a3494;
-}
-
-
-html {
-  scroll-behavior: smooth; 
 }
 
 * {
@@ -52,17 +47,21 @@ a {
 }
 
 .b-bg {
-    background: linear-gradient(to right, var(--color-1), var(--color-2));
-    color : var(--white);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-weight: 500;
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  color: var(--white);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.b-colorful {
+  color: var(--color-1);
 }
 
 .u-double {
-    text-decoration: double underline;
-    text-decoration-color: var(--color-3);
-    text-decoration-thickness: calc(6%);
+  text-decoration: double underline;
+  text-decoration-color: var(--color-3);
+  text-decoration-thickness: calc(6%);
 }
 
 fieldset {
@@ -71,28 +70,34 @@ fieldset {
 }
 
 /* Estilização da Caixa de Tooltip Posicional */
-      .tooltip-popup {
-        display: none;
-        position: absolute; /* Será posicionado absolutamente pelo JavaScript */
-      background: linear-gradient(to right, var(--color-1), var(--color-2));
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        z-index: 2000;
-        max-width: 350px; /* Garante quebra de linha em telas maiores */
-        text-align: left;
-        font-size: 0.9em;
-        pointer-events: none; /* Permite clicar através do tooltip */
-        line-height: 1.4;
-      }
+.tooltip-popup {
+  display: none;
+  position: absolute; /* Será posicionado absolutamente pelo JavaScript */
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  max-width: 350px; /* Garante quebra de linha em telas maiores */
+  text-align: left;
+  font-size: 0.9em;
+  pointer-events: none; /* Permite clicar através do tooltip */
+  line-height: 1.4;
+}
 
-      /* Estilização do termo ativador do Tooltip (mantida) */
-      .glossario-white {
-        cursor: help;
-        border-bottom: 3px double var(--white);
-      }
-      .glossario-colorful {
-        cursor: help;
-        border-bottom: 3px double var(--color-4);
-      }
+/* Estilização do termo ativador do Tooltip (mantida) */
+.glossario-white {
+  cursor: help;
+  border-bottom: 3px double var(--white);
+}
+.glossario-colorful {
+  cursor: help;
+  border-bottom: 3px double var(--color-4);
+}
+
+.h1-degrade {
+  background: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
