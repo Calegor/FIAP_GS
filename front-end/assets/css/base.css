@@ -30,6 +30,8 @@ body {
   padding-top: 100px; /* FAZ O CONTEUDO FICAR PRA BAIXO DA BARRA DE NAV FIXA */
   color: var(--preto-principal);
   line-height: 1.5;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .wrapper {

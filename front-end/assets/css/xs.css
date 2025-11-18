@@ -150,7 +150,77 @@
     left: 10px;
   }
   .next {
-    right: 10px
+    right: 10px;
+  }
+
+  /* ---------------------------------------------------- */
+  /* PAGINA: SOBRE */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - SOBRE <===== */
+  .content__hero {
+    height: 70vh;
+  }
+  .content__hero h1 {
+    font-size: 3em;
+    width: 70%;
+    margin-top: -100px;
+    line-height: 1.1em;
+  }
+  .content__hero p {
+    font-size: 1.7em;
+    margin-top: 20px;
+    padding: 8px 12px;
+  }
+
+  /* =====> SOBRE O PROJETO <===== */
+  .content {
+    padding: 0.5rem;
+    margin-top: -100px;
+  }
+  .features__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: -50px;
+  }
+  .features__title {
+    font-size: 1.5em;
+    align-items: center;
+  }
+  .features__item--left {
+    text-align: center;
+    align-items: center;
+  }
+    .features__item--right {
+    text-align: center;
+    align-items: center;
+  }
+  .features__description {
+    font-size: 0.9em;
+  }
+  .features__content h2,
+  .features__content p {
+    text-align: center;
+    border: none;
+    width: 100%;
+  }
+
+  /* =====> TECNOLOGIAS <===== */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .tecnologias-utilizadas-section {
+    margin-top: 30px;
+    margin-bottom: -40px;
+  }
+  .tecnologias-utilizadas-section h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .card-description {
+    text-align: center;
   }
 
   /* ---------------------------------------------------- */

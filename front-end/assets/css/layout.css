@@ -851,84 +851,56 @@
 }
 
 /* ---------------------------------------------------- */
-/* Base Styles & Desktop (> 1300px) */
-/* Aplicado ao elemento <main class="content"> */
+/* PAGINA: SOBRE */
+/* ---------------------------------------------------- */
+/* => HERO <= */
+.cards {
+  background: linear-gradient(to bottom, transparent 50%, #eae5f1 100%),
+    linear-gradient(135deg, var(--white) 0%, var(--white) 100%);
+}
+.content__hero {
+  background: linear-gradient(to bottom, transparent 40%, var(--white) 100%),
+    linear-gradient(135deg, var(--color-4) 0%, var(--color-1) 100%);
+  height: 81vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content__hero h1 {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 4em;
+  text-align: center;
+  font-weight: 400;
+}
+.content__hero p {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  margin-top: 10px;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 300;
+  background-color: #ffffff27;
+  border: 1px solid #ffffff3d;
+  border-radius: 7px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.content__hero p:hover {
+  transition: 0.3s ease;
+  transform: scale(1.05);
+}
+
+/* =====> SOBRE O PROJETO <===== */
 .content {
   max-width: 1400px;
   margin: 20px auto auto;
   padding: 1rem;
 }
 
-
-
-
-
-
-
-/* CODIGO SEM IMAGEM, APENAS DEGRADE */
-/*.content__hero {*/
- /* background: */
-   /* linear-gradient(to bottom, transparent 0%, var(--white) 100%),*/
-    /* 2. Degradê de Cor Principal (Seu degradê original) */
-   /* linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);*/
- /* height: 80vh;*/
- /* display: flex;*/
- /* flex-direction: column;*/
- /* align-items: center;*/
- /* justify-content: center;*/
-/*}*/
-
-
-
-.content__hero {
-  background: 
-    /* 1. Degradê de Transição (TOPO/FADE): De transparente para BRANCO (cor do site) no bottom. */
-    linear-gradient(to bottom, transparent 40%, var(--white) 100%),
-    
-    /* 2. OVERLAY (MEIO): Cria o tom de cor e a opacidade sobre a imagem. 
-       Usamos um degradê simples para garantir uma cor consistente, mas você pode usar rgba() se preferir.
-       Aqui, usamos o var(--color-1) com uma opacidade (opcional) para escurecer/tonalizar a imagem. */
-    linear-gradient(rgba(150, 14, 104, 0.623), rgba(15, 81, 126, 0.596)),
-
-    /* 3. IMAGEM DE FUNDO (BASE): Sua imagem */
-    url('../imgs/sobre/abstract-forms.png'); 
-    
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  /* Configurações da imagem de fundo: */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-
-
-.content__hero h1 {
-  color: var(--white);
-  font-family: "Inter", sans-serif;
-  font-size: 3.2em;
-  text-align: center;
-  font-weight: 400;
-}
-
-.content__hero p {
-  color: var(--white);
-  font-family: "Inter", sans-serif;
-  margin-top: 20px;
-  font-size: 1.4em;
-  text-align: center;
-  font-weight: 300;
-  
-}
-
 /* Aplicado ao elemento <section class="features"> */
 .features {
-  padding: 0 30px;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -940,9 +912,6 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  /* A altura 100vh em cada item é muito restritiva em dispositivos móveis. 
-     Vamos removê-la e reintroduzir nos breakpoints maiores. */
-  /* height: 100vh; */
   min-height: 70vh; /* Ajuste para ter espaço para as animações */
   padding: 2rem 0;
 }
@@ -973,7 +942,7 @@
   overflow: hidden;
   position: relative;
   aspect-ratio: 1 / 1;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329);
 }
 
 .features__img {
@@ -1006,14 +975,109 @@
   line-height: 1.6;
 }
 
+/* ---------------------------------------------------- */
+/* SEÇÃO: TECNOLOGIAS */
+/* ---------------------------------------------------- */
+
+.tecnologias-utilizadas-section {
+  padding: 40px 20px 100px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2em;
+  color: var(--color-1);
+  margin-bottom: 80px;
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+.cards-grid {
+  display: grid;
+  /* Padrão para telas grandes: 3 colunas */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.card {
+  /* Agora é um <article> */
+  background: var(--white);
+  color: var(--black);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.212);
+  display: flex;
+  flex-direction: column;
+  min-height: 250px; /* Garante altura mínima visualmente agradável */
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  cursor: default;
+}
+
+.card-title {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-align: center;
+  padding: 10px 0;
+  margin: -25px -25px 20px -25px; /* Estende a cor de fundo */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  color: var(--white);
+  /* Gradiente roxo */
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização para a lista semântica de ícones/tecnologias */
+.icons-list {
+  display: flex;
+  justify-content: center;
+  list-style: none; /* Remove marcadores da lista para manter o design */
+  padding: 0;
+  margin: 0 0 20px 0;
+  gap: 15px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85em;
+  color: #c9c9c9;
+}
+
+.tech-icon {
+  /* O SVG dentro do <img> será redimensionado */
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+  /* Adicione padding se o ícone SVG for muito grande */
+  padding: 5px;
+}
+.tech-icon:hover {
+  transition: 0.3s ease;
+  transform: scale(1.05) !important;
+}
+
+.card-description {
+  font-size: 0.95em;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.icon-name {
+  color: var(--black);
+  font-weight: 400;
+}
+
 /* GSAP animation reveal styles */
 .gs_reveal {
   opacity: 0;
   visibility: hidden;
   will-change: transform, opacity;
-}
-
-.spacer {
-  background-color: blueviolet; /* Removido cor de teste */
-  height: 10vh;
 }

@@ -26,17 +26,14 @@
   .nav .nav-right-content {
     display: contents;
   }
-
   .nav .logo {
     grid-column: 2 / 3;
     justify-self: center; /* centraliza o logo no grid */
   }
-
   .nav .navOpenBtn {
     grid-column: 1 / 2;
     display: block;
   }
-
   .nav #searchIcon {
     grid-column: 3 / 4;
     display: block;
@@ -61,7 +58,6 @@
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
   }
-
   .nav.openNav .nav-links {
     display: flex;
     transform: translateX(0);
@@ -87,7 +83,6 @@
     transform: translateY(-20px);
     margin-left: 0;
   }
-
   .nav.openSearch .search-box {
     opacity: 1;
     max-width: calc(100% - 40px);
@@ -100,7 +95,6 @@
   .nav .nav-links .dropdown:hover .dropdown-menu {
     display: none;
   }
-
   .nav .nav-links .dropdown-menu {
     position: static; /* ocupa o fluxo do menu lateral */
     display: none;
@@ -111,8 +105,6 @@
     border-top: 2px solid var(--color-1);
     margin-top: 2px;
   }
-
-  /* o JS adiciona a classe 'active' */
   .nav .nav-links .dropdown.active .dropdown-menu {
     display: block;
   }
@@ -121,16 +113,12 @@
   /* SEÇÃO: HERO */
   /* ---------------------------------------------------- */
   #hero {
-    /* Aumenta a altura um pouco mais que o mobile extra small */
     height: 450px;
   }
-
   .slide-content h1 {
-    /* Aumenta o título para telas maiores que 480px */
     font-size: 2.2em !important;
     padding: 0 10px;
   }
-
   .slide-content p {
     font-size: 1.1em !important;
     padding: 0 30px;
@@ -148,9 +136,9 @@
     font-size: 10px;
     transition: 0.6s ease;
     user-select: none;
-    background-color: rgba(0, 0, 0, 0.068); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.068);
     border-radius: 7px;
-    z-index: 5; /* Garante que fique acima dos slides */
+    z-index: 5; /* garante que fique acima dos slides */
   }
   .prev {
     left: 10px;
@@ -158,6 +146,94 @@
   .next {
     right: 10px;
   }
+
+  /* ---------------------------------------------------- */
+  /* PAGINA: SOBRE */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - SOBRE <===== */
+  .content__hero {
+    height: 70vh;
+  }
+  .content__hero h1 {
+    font-size: 3.2em;
+    width: 70%;
+    margin-top: -100px;
+    line-height: 1.1em;
+  }
+  .content__hero p {
+    font-size: 1.9em;
+    margin-top: 20px;
+    padding: 8px 12px;
+  }
+
+  /* =====> SOBRE O PROJETO <===== */
+  .content {
+    padding: 0.5rem;
+    margin-top: -100px;
+  }
+  .features__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: -50px;
+  }
+  .features__title {
+    font-size: 1.5em;
+    align-items: center;
+  }
+  .features__description {
+    font-size: 0.9em;
+  }
+  .features__content h2,
+  .features__content p {
+    text-align: center;
+    border: none;
+    width: 100%;
+  }
+
+  /* =====> TECNOLOGIAS <===== */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .tecnologias-utilizadas-section {
+    margin-top: 30px;
+    margin-bottom: -40px;
+  }
+  .tecnologias-utilizadas-section h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .card-description {
+    text-align: center;
+  }
+
+ @media (min-width: 656px) and (max-width: 767px) {
+  .features__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin: 0 3px;
+  }
+  .features__item {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .features__item--left {
+     padding: 0 1px;
+  }
+  .features__item--right {
+     padding: 0 1px;
+  }
+  .features__item--right h2,
+  .features__item--right p {
+      text-align: center;
+  }
+}
 
   /* ---------------------------------------------------- */
   /* SEÇÃO: FOOTER */
