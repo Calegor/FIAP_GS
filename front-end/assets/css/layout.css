@@ -1081,3 +1081,131 @@
   visibility: hidden;
   will-change: transform, opacity;
 }
+
+
+/* ---------------------------------------------------- */
+/* PAGINA: DESENVOLVEDORES */
+/* ---------------------------------------------------- */
+/* => DESENVOLVEDORES <= */
+
+        .developer-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+
+        .developer-card {
+            border-radius: 10px;
+            background-color: var(--white);
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329);
+            width: 400px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            cursor: default;
+            transition: transform 0.3s ease;
+        }
+
+        .developer-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .developer-card-image {
+            width: 100%;
+            height: 400px; /* Altura fixa para as imagens */
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s ease;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .developer-card-content {
+            padding: 20px;
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+            color: #fff;
+            transition: opacity 0.3s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        .p-desenvolvedores {
+          margin-bottom: 70px;
+        }
+
+        .developer-card:hover .developer-card-image {
+            opacity: 0; /* Esconde a imagem ao passar o mouse */
+        }
+
+        .developer-card:hover .developer-card-content {
+            opacity: 1; /* Mostra o conteúdo ao passar o mouse */
+        }
+
+        .developer-card-content p {
+            font-size: 1em;
+            text-align: center;
+            padding: 0 15px;
+            font-weight: 300;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.8em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--white); /* Um roxo mais claro no hover */
+            transition: 0.3s ease;
+            transform: scale(1.09); ;
+        }
+
+        .social-links svg {
+            fill: currentColor; /* Usa a cor do link */
+            width: 35px;
+            height: 35px;
+        }
+
+        .developer-info {
+            padding: 15px;
+            background: linear-gradient(to right, var(--color-1), var(--color-2));
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            position: relative; /* Para garantir que o z-index funcione se necessário */
+            z-index: 1; /* Para que fique acima do conteúdo de hover, se a imagem não sumir completamente */
+            min-height: 80px; /* Garante espaço para o nome e cargo */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .developer-info h3 {
+            margin: 0 0 5px 0;
+            color: var(--white);
+            font-size: 1.3em;
+            font-weight: 400;
+        }
+
+        .developer-info span {
+            color: var(--white);
+            font-size: 0.9em;
+        }

@@ -214,11 +214,39 @@
     margin-bottom: 20px;
   }
 
+  /* ---------------------------------------------------- */
+  /* PAGINA: INTEGRANTES */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - INTEGRANTES <===== */
+  .content__hero {
+    height: 70vh;
+  }
+  .integrantes__hero h1 {
+    font-size: 3.2em;
+    width: 70%;
+    margin-top: -100px;
+    line-height: 1.1em;
+  }
+  .integrantes__hero p {
+    font-size: 1.9em;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 8px 12px;
+  }
 
-
-
-
-
+  /* =====> DESENVOLVEDORES <===== */
+  .developer-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -140px;
+    margin-bottom: -30px;
+  }
+  .developer-card {
+    width: 90%;
+    max-width: 400px;
+  }
 
   /* ---------------------------------------------------- */
   /* SEÇÃO: FOOTER */

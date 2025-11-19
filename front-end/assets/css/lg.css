@@ -25,15 +25,22 @@
   /* ---------------------------------------------------- */
   /* PAGINA: SOBRE */
   /* ---------------------------------------------------- */
-  /* =====> HERO - SOBRE <===== */
-
   /* =====> SOBRE O PROJETO <===== */
-    .features__item {
+  .features__item {
     margin: -50px 0;
   }
   /* =====> TECNOLOGIAS <===== */
   .cards-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 Colunas: 3x3 completo */
+  }
+
+  /* ---------------------------------------------------- */
+  /* PAGINA: INTEGRANTES */
+  /* ---------------------------------------------------- */
+  /* =====> DESENVOLVEDORES <===== */
+  .developer-cards {
+    margin-top: -35px;
+    margin-bottom: -30px;
   }
 
   /* ---------------------------------------------------- */

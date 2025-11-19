@@ -209,31 +209,64 @@
     text-align: center;
   }
 
- @media (min-width: 656px) and (max-width: 767px) {
-  .features__content {
-    display: flex;
+  @media (min-width: 656px) and (max-width: 767px) {
+    .features__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      margin: 0 3px;
+    }
+    .features__item {
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .features__item--left {
+      padding: 0 1px;
+    }
+    .features__item--right {
+      padding: 0 1px;
+    }
+    .features__item--right h2,
+    .features__item--right p {
+      text-align: center;
+    }
+  }
+
+  /* ---------------------------------------------------- */
+  /* PAGINA: INTEGRANTES */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - INTEGRANTES <===== */
+  .content__hero {
+    height: 70vh;
+  }
+  .integrantes__hero h1 {
+    font-size: 3.2em;
+    width: 70%;
+    margin-top: -100px;
+    line-height: 1.1em;
+  }
+  .integrantes__hero p {
+    font-size: 1.9em;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 8px 12px;
+  }
+
+  /* =====> DESENVOLVEDORES <===== */
+  .developer-cards {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin: 0 3px;
+    margin-top: -140px;
+    margin-bottom: -30px;
   }
-  .features__item {
-    width: 100%;
-    margin-bottom: 30px;
-    text-align: center;
+  .developer-card {
+    width: 90%;
+    max-width: 400px;
   }
-  .features__item--left {
-     padding: 0 1px;
-  }
-  .features__item--right {
-     padding: 0 1px;
-  }
-  .features__item--right h2,
-  .features__item--right p {
-      text-align: center;
-  }
-}
 
   /* ---------------------------------------------------- */
   /* SEÇÃO: FOOTER */
