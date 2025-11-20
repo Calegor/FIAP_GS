@@ -261,7 +261,7 @@
 /* ESTILOS DO FOOTER */
 /* ---------------------------------------------------- */
 .main-footer {
-  background: url(../imgs/hero/Design\ sem\ nome.png); /* cor de fundo principal do footer */
+  background: url(../imgs/hero/hero-index.png); /* cor de fundo principal do footer */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -269,6 +269,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.footer-branco {
+    background: var(--white); /* cor de fundo principal do footer */
 }
 
 .footer-content-wrapper {
@@ -292,6 +296,12 @@
   font-size: 16px;
   font-weight: 600;
   color: var(--white);
+}
+
+.footer-slogan-branco {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
 }
 
 /* icones sociais */
@@ -328,6 +338,19 @@
   width: 100%;
 }
 
+.footer-bottom-credits-branco {
+  background: var(--white);
+}
+
 .footer-bottom-credits p {
   margin: 0;
+}
+
+.footer-bottom-credits-branco p {
+  color: var(--black);
+}
+
+.nav-footer-branco {
+  background-color: var(--color-1) !important;
+  color: var(--white) !important;
 }

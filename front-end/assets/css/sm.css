@@ -269,6 +269,51 @@
   }
 
   /* ---------------------------------------------------- */
+  /* PAGINA: FAQ */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - FAQ <===== */
+
+  /* =====> FAQ <===== */
+  .faq-container {
+    grid-template-columns: 1fr; /* força 1 coluna */
+  }
+  .faq-section {
+    padding: 5px 20px;
+    margin-top: -200px;
+    margin-bottom: -25px;
+  }
+  .faq-question {
+    padding: 18px 20px;
+  }
+  .faq-content {
+    padding: 0 20px 18px 50px;
+  }
+
+  /* ---------------------------------------------------- */
+  /* PAGINA: CONTATO */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - CONTATO <===== */
+
+  /* =====> FORMULARIO <===== */
+
+  .form-container {
+    margin-top: -140px;
+    margin-bottom: 80px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  /* ---------------------------------------------------- */
   /* SEÇÃO: FOOTER */
   /* ---------------------------------------------------- */
   .main-footer .footer-content-wrapper {

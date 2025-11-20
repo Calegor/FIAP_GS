@@ -833,27 +833,20 @@
   margin-top: 0px;
 }
 
-/* ---------------------------------------------------- */
-/* PAGINA: SOBRE */
-/* ---------------------------------------------------- */
-/* Estilo para elementos que serão lidos por leitores de tela, mas visualmente ocultos */
-/* Estilo para elementos que serão lidos por leitores de tela, mas visualmente ocultos */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
+
+
+
+
+
+
+
+
+
 
 /* ---------------------------------------------------- */
-/* PAGINA: SOBRE */
+/* BACKGROUND E HERO PAGINAS:
+   QUEM SOMOS - SOBRE - FAQ - CONTATO */
 /* ---------------------------------------------------- */
-/* => HERO <= */
 .cards {
   background: linear-gradient(to bottom, transparent 50%, #eae5f1 100%),
     linear-gradient(135deg, var(--white) 0%, var(--white) 100%);
@@ -892,14 +885,17 @@
   transform: scale(1.05);
 }
 
+/* ---------------------------------------------------- */
+/* PAGINA: QUEM SOMOS */
+/* ---------------------------------------------------- */
+
 /* =====> SOBRE O PROJETO <===== */
+
 .content {
   max-width: 1400px;
   margin: 20px auto auto;
   padding: 1rem;
 }
-
-/* Aplicado ao elemento <section class="features"> */
 .features {
   display: flex;
   flex-direction: column;
@@ -912,27 +908,22 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  min-height: 70vh; /* Ajuste para ter espaço para as animações */
+  min-height: 70vh;
   padding: 2rem 0;
 }
-
-/* Layout Padrão (Desktop: imagem à esquerda, texto à direita) */
 .features__item--left {
   flex-direction: row;
   text-align: right;
 }
-/* Layout Alternado (Desktop: imagem à direita, texto à esquerda) */
 .features__item--right {
   flex-direction: row-reverse;
   text-align: left;
 }
-
 .features__image {
   flex: 1 1 40%;
   position: relative;
   transition: transform 0.3s ease;
 }
-
 .features__image:hover {
   transform: scale(1.01);
   cursor: default;
@@ -944,19 +935,16 @@
   aspect-ratio: 1 / 1;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329);
 }
-
 .features__img {
   max-width: 100%;
   position: absolute;
   object-fit: cover;
   display: block;
 }
-
 .features__content {
   padding: 0 100px; /* espaçamento lateral */
   flex: 1 1 55%;
 }
-
 .features__title {
   font-size: 1.8em;
   margin-block-end: 1rem;
@@ -969,20 +957,16 @@
   border-left: 3px solid var(--color-1);
   padding-left: 20px;
 }
-
 .features__description {
   font-weight: 400;
   line-height: 1.6;
 }
 
-/* ---------------------------------------------------- */
-/* SEÇÃO: TECNOLOGIAS */
-/* ---------------------------------------------------- */
+/* =====> TECNOLOGIAS <===== */
 
 .tecnologias-utilizadas-section {
   padding: 40px 20px 100px 20px;
 }
-
 .section-title {
   text-align: center;
   font-size: 2.2em;
@@ -991,18 +975,14 @@
   margin-top: 30px;
   font-weight: 400;
 }
-
 .cards-grid {
   display: grid;
-  /* Padrão para telas grandes: 3 colunas */
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 1300px;
   margin: 0 auto;
 }
-
 .card {
-  /* Agora é um <article> */
   background: var(--white);
   color: var(--black);
   padding: 25px;
@@ -1010,39 +990,33 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.212);
   display: flex;
   flex-direction: column;
-  min-height: 250px; /* Garante altura mínima visualmente agradável */
+  min-height: 250px;
   transition: transform 0.3s;
 }
-
 .card:hover {
   transform: translateY(-5px);
   cursor: default;
 }
-
 .card-title {
   font-size: 1.3em;
   font-weight: 300;
   text-align: center;
   padding: 10px 0;
-  margin: -25px -25px 20px -25px; /* Estende a cor de fundo */
+  margin: -25px -25px 20px -25px; /* estende a cor de fundo */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   color: var(--white);
-  /* Gradiente roxo */
   background: linear-gradient(to right, var(--color-1), var(--color-2));
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-/* Estilização para a lista semântica de ícones/tecnologias */
 .icons-list {
   display: flex;
   justify-content: center;
-  list-style: none; /* Remove marcadores da lista para manter o design */
+  list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
   gap: 15px;
 }
-
 .icon-item {
   display: flex;
   flex-direction: column;
@@ -1050,31 +1024,26 @@
   font-size: 0.85em;
   color: #c9c9c9;
 }
-
 .tech-icon {
-  /* O SVG dentro do <img> será redimensionado */
+  /* o SVG dentro do <img> será redimensionado */
   width: 60px;
   height: 60px;
   margin-bottom: 5px;
-  /* Adicione padding se o ícone SVG for muito grande */
   padding: 5px;
 }
 .tech-icon:hover {
   transition: 0.3s ease;
   transform: scale(1.05) !important;
 }
-
 .card-description {
   font-size: 0.95em;
   line-height: 1.5;
   text-align: justify;
 }
-
 .icon-name {
   color: var(--black);
   font-weight: 400;
 }
-
 /* GSAP animation reveal styles */
 .gs_reveal {
   opacity: 0;
@@ -1082,11 +1051,11 @@
   will-change: transform, opacity;
 }
 
-
 /* ---------------------------------------------------- */
 /* PAGINA: DESENVOLVEDORES */
 /* ---------------------------------------------------- */
-/* => DESENVOLVEDORES <= */
+
+/* =====> DESENVOLVEDORES <===== */
 
         .developer-cards {
             display: flex;
@@ -1096,7 +1065,6 @@
             padding-top: 80px;
             padding-bottom: 100px;
         }
-
         .developer-card {
             border-radius: 10px;
             background-color: var(--white);
@@ -1108,21 +1076,18 @@
             cursor: default;
             transition: transform 0.3s ease;
         }
-
         .developer-card:hover {
             transform: translateY(-5px);
         }
-
         .developer-card-image {
             width: 100%;
-            height: 400px; /* Altura fixa para as imagens */
+            height: 400px;
             object-fit: cover;
             display: block;
             transition: opacity 0.3s ease;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
-
         .developer-card-content {
             padding: 20px;
   background: linear-gradient(to right, var(--color-1), var(--color-2));
@@ -1144,68 +1109,322 @@
         .p-desenvolvedores {
           margin-bottom: 70px;
         }
-
         .developer-card:hover .developer-card-image {
-            opacity: 0; /* Esconde a imagem ao passar o mouse */
+            opacity: 0;
         }
-
         .developer-card:hover .developer-card-content {
-            opacity: 1; /* Mostra o conteúdo ao passar o mouse */
+            opacity: 1;
         }
-
         .developer-card-content p {
             font-size: 1em;
             text-align: center;
             padding: 0 15px;
             font-weight: 300;
         }
-
         .social-links {
             display: flex;
             gap: 15px;
             margin-bottom: 40px;
         }
-
         .social-links a {
-            color: #fff;
+            color: var(--white);
             font-size: 1.8em;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-
         .social-links a:hover {
-            color: var(--white); /* Um roxo mais claro no hover */
+            color: var(--white);
             transition: 0.3s ease;
             transform: scale(1.09); ;
         }
-
         .social-links svg {
-            fill: currentColor; /* Usa a cor do link */
+            fill: currentColor; /* usa a cor do link */
             width: 35px;
             height: 35px;
         }
-
         .developer-info {
             padding: 15px;
             background: linear-gradient(to right, var(--color-1), var(--color-2));
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
-            position: relative; /* Para garantir que o z-index funcione se necessário */
-            z-index: 1; /* Para que fique acima do conteúdo de hover, se a imagem não sumir completamente */
-            min-height: 80px; /* Garante espaço para o nome e cargo */
+            position: relative; /* para garantir que o z-index funcione se necessário */
+            z-index: 1; /* para que fique acima do conteúdo de hover, se a imagem não sumir completamente */
+            min-height: 80px; /* garante espaço para o nome e cargo */
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-
         .developer-info h3 {
             margin: 0 0 5px 0;
             color: var(--white);
             font-size: 1.3em;
             font-weight: 400;
         }
-
         .developer-info span {
             color: var(--white);
             font-size: 0.9em;
         }
+
+/* ---------------------------------------------------- */
+/* PAGINA: FAQ */
+/* ---------------------------------------------------- */
+
+/* =====> FAQ <===== */
+.colorful-bg {
+          background: linear-gradient(-45deg, #1b4668, #1b4668, #6a3494, #7a9ab4);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+}
+
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+
+
+
+.content__hero__colorful {
+  height: 81vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content__hero__colorful h1 {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 4em;
+  text-align: center;
+  font-weight: 400;
+}
+.content__hero__colorful p {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  margin-top: 10px;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 300;
+  background-color: #ffffff27;
+  border: 1px solid #ffffff3d;
+  border-radius: 7px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.content__hero__colorful p:hover {
+  transition: 0.3s ease;
+  transform: scale(1.05);
+}
+
+.faq-section {
+    padding: 20px 40px;
+    max-width: 1300px; /* Largura máxima do desktop */
+    margin: 0 auto;
+}
+
+.faq-container {
+    display: grid;
+    gap: 20px; 
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+}
+
+.faq-item {
+    background-color: #ffffff28;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.faq-item:hover {
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos da Pergunta/Summary - Flexbox para ícone à esquerda */
+.faq-question {
+    display: flex; 
+    align-items: center;
+    gap: 12px; /* Espaço entre o ícone e o texto */
+    padding: 20px 25px; /* Padding para Desktop */
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--white);
+    list-style: none;
+    &::-webkit-details-marker {
+        display: none;
+    }
+}
+
+/* icone de expansão (chevron) - criado com CSS puro */
+.icon-toggle {
+    flex-shrink: 0; /* garante que o ícone não encolha */
+    display: block;
+    width: 18px; 
+    height: 18px;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+.icon-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px; 
+    height: 8px;
+    border-style: solid;
+    border-width: 2px 2px 0 0; /* cria a forma de chevron */
+    border-color: var(--white);
+    /* inicia apontando para a direita (fechado) */
+    transform: translate(-50%, -50%) rotate(45deg); 
+    transform-origin: center center;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* rotação do ícone quando o item está aberto */
+.faq-item[open] .icon-toggle::before {
+    /* rotação para apontar para baixo (aberto) */
+    transform: translate(-50%, -50%) rotate(135deg); 
+    top: 60%; 
+}
+.faq-content {
+    padding: 0 25px 20px 55px;
+    border-top: 1px solid rgba(255, 255, 255, 0.411);
+}
+.faq-content p {
+      padding-top: 20px;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+.form-container {
+  margin-top: -90px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+      border: 1px solid #6a349470;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.171);
+    max-width: 800px; 
+    width: 100%;
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px; 
+}
+legend {
+display: none;
+}
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--black);
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 12px;
+    border: 1px solid var(--color-1);
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease;
+}
+input:focus,
+textarea:focus {
+    border-color: var(--color-1); 
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 52, 148, 0.5);
+}
+input.invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+.error-message {
+    color: #dc3545; 
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 18px; 
+}
+.submit-btn {
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  color: var(--white);
+    color: var(--white);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse2 2s infinite;
+}
+.submit-btn:hover {
+    background-color: var(--btn-hover-bg);
+      transform: scale(1.02);
+}
+@keyframes pulse2 {
+  0% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 0 rgba(88, 54, 126, 0.377);
+  }
+  70% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 10px rgba(131, 33, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+  }
+.form-row {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+.form-row .form-group {
+    margin-bottom: 0; 
+}
+.form-row .half-width {
+    width: calc(50% - 10px); 
+}
+.contato-content {
+    margin-top: 0;
+    margin-left: 0;
+    margin-left: 0;
+    margin-bottom: -60px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

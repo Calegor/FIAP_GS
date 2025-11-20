@@ -256,6 +256,57 @@
     max-width: 400px;
   }
 
+  /* ---------------------------------------------------- */
+  /* PAGINA: FAQ */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - FAQ <===== */
+
+  /* =====> FAQ <===== */
+  .faq-container {
+    grid-template-columns: 1fr; /* força 1 coluna */
+  }
+  .faq-section {
+    padding: 5px 20px;
+        margin-top: -200px;
+        margin-bottom: -25px;
+  }
+  .faq-container {
+  }
+  .faq-question {
+    padding: 18px 20px;
+
+  }
+  .faq-content {
+    padding: 0 20px 18px 50px;
+  }
+
+  /* ---------------------------------------------------- */
+  /* PAGINA: CONTATO */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - CONTATO <===== */
+
+  /* =====> FORMULARIO <===== */
+.form-row .half-width {
+        width: 100%; /* Ocupa a largura total */
+        margin-bottom: 20px; 
+    }
+    /* Corrige a margem do último campo para o próximo fieldset */
+    .form-row .form-group:last-child {
+        margin-bottom: 30px; 
+    }
+    .form-container {
+      margin-top: -80px;
+      margin-bottom: 120px;
+    }
+
+
+
+
+
+
+
+
+  
 
   /* ---------------------------------------------------- */
   /* SEÇÃO: FOOTER */
