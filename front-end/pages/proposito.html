@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propósito - Plataforma ABRIR</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/navbar-footer.css" />
+    <link rel="stylesheet" href="../assets/css/hero.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/xs.css" />
+    <link rel="stylesheet" href="../assets/css/sm.css" />
+    <link rel="stylesheet" href="../assets/css/md.css" />
+    <link rel="stylesheet" href="../assets/css/lg.css" />
+    <link rel="stylesheet" href="../assets/css/xl.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/imgs/logo/abrir_pequeno.png"
+            alt="Logo colorido Plataforma ABRIR."
+            class="logo-img"
+          />
+        </a>
+
+        <div class="logo-actions">
+          <a href="../index.html#politica"
+            ><button class="nav-action-btn transition">
+              Política de Proteção Social
+            </button></a
+          >
+          <a href="reclassificacao.html"
+            ><button class="nav-action-btn transition">
+              Reclassificação
+            </button></a
+          >
+        </div>
+
+        <div class="nav-right-content">
+          <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="integrantes.html">Quem somos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-link"
+                >Nossos projetos<i class="uil uil-angle-down"></i
+              ></a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="proposito.html">Carreira por propósito</a>
+                </li>
+                <li>
+                  <a href="reclassificacao.html">Reclassificação</a>
+                </li>
+                <li>
+                  <a href="blog.html">Blog</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <i class="uil uil-search search-icon" id="searchIcon"></i>
+
+          <div class="search-box">
+            <input type="text" placeholder="Buscar..." />
+            <i class="uil uil-times search-close-btn"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="cards proposito__hero">
+      <section class="content__hero integrantes__hero">
+        <h1 class="gs_reveal">Filtro de <b>propósito</b></h1>
+        <a href="">
+          <p>Seu caminho de reskilling começa aqui</p>
+        </a>
+      </section>
+    </section>
+
+    <main>
+      <section id="filtro-proposito">
+        <h2>Avalie seu potencial de <u class="u-double">transformação.</u></h2>
+        <p class="section-subtitle">
+          Entender seus valores é o primeiro passo para uma carreira realizada.
+          Selecione um foco que mobilize sua paixão e veja as carreiras que se
+          alinham à sua missão pessoal. Comece a construir um futuro
+          profissional mais intencional.
+        </p>
+
+        <div id="proposito-box">
+          <label for="selecao-proposito">Quais valores te movem?</label>
+          <select id="selecao-proposito" style="width: 80%; margin-top: 10px">
+            <option value="" selected disabled>
+              -- Selecione um foco de impacto --
+            </option>
+            <option value="inclusao">
+              Inclusão e Redução de Desigualdades (ODS 10)
+            </option>
+            <option value="saude">Saúde e Bem-Estar no Trabalho</option>
+            <option value="verde">
+              Transição Verde e Sustentabilidade (ODS 8)
+            </option>
+            <option value="educacao">
+              Novas Formas de Aprendizagem (ODS 4)
+            </option>
+            <option value="regulacao">Regulação e Justiça Social</option>
+          </select>
+          <button onclick="filtrarProposito()">Buscar Carreiras</button>
+
+          <div id="resultado-proposito"></div>
+        </div>
+      </section>
+
+      <section
+        id="chamada-mapa"
+        style="display: none"
+        class="cta-proposito"
+        aria-labelledby="cta-titulo"
+      >
+        <div class="cta-inner">
+          <h3 id="cta-titulo">Tenha o guia para seus próximos passos.</h3>
+
+          <p>
+            Entendemos que planejar a carreira pode ser desafiador. Nosso Mapa de Requalificação transforma dados complexos em informações acessíveis. Basta selecionar sua área para visualizar um guia para seus próximos passos.
+          </p>
+
+          <div role="group" aria-label="Ação de navegação para o filtro">
+            <a
+              href="reclassificacao.html"
+              class="btn-proposito-principal btn-proposito-page"
+              role="button"
+            >
+              Ver meu mapa agora →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+     <div id="tooltip-box" class="tooltip-popup"></div>
+    <footer class="main-footer footer-branco">
+      <div class="footer-content-wrapper">
+        <div class="footer-logo">
+          <a href="../index.html"
+            ><img
+              src="../assets/imgs/logo/abrir_logosolo.png"
+              alt="Logo branco Plataforma ABRIR."
+          /></a>
+        </div>
+
+        <p class="footer-slogan footer-slogan-branco">
+          Você pode conquistar tudo o que deseja. &#x2665;
+        </p>
+
+        <div class="footer-social-media">
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/facebook-footer-branco.svg"
+              alt="Logo do Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/linkedin-footer-branco.svg"
+              alt="Logo LinkedIn"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/twitter-footer-branco.svg"
+              alt="Logo do Twitter"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/instagram-footer-branco.svg"
+              alt="Logo do Instagram"
+          /></a>
+        </div>
+
+        <a
+          href="blog.html"
+          class="nav-action-btn nav-action-btn-footer transition nav-footer-branco"
+          >Acesse nosso blog</a
+        >
+      </div>
+
+      <div class="footer-bottom-credits footer-bottom-credits-branco">
+        <p class="footer-bottom-credits-branco">
+          &copy; 2025 Plataforma ABRIR | Todos os direitos reservados |
+          Desenvolvimento: Julia Guimarães, Thiago Gramorelli &amp; Julia
+          Spanopoulos | Design: Julia Guimarães &#9733;
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="../assets/js/cards.js"></script>
+    <script src="../assets/js/search.js" defer></script>
+    <script src="../assets/js/tooltip.js"></script>
+    <script src="../assets/js/scrollSmooth.js"></script>
+    <script src="../assets/js/proposito.js"></script>
+  </body>
+</html>

@@ -663,7 +663,7 @@ nav {
     /* remove o limite de 1200px para que o container possa se expandir */
     max-width: unset;
     width: 100%;
-    margin-left: 8%;
+    margin-left: 360px;
     margin-right: auto;
     justify-content: flex-start;
   }
