@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+  </head>
+  <body class="body-blog">
+    <!-- O carrossel completo é uma seção de conteúdo distinta. Adicionamos ARIA Role e Label. -->
+    <section
+      class="carousel"
+      role="region"
+      aria-label="Carrossel de Notícias Principais"
+    >
+      <!-- Indicador de progresso (mobile) -->
+      <div
+        class="progress-bar progress-bar--primary hide-on-desktop"
+        role="progressbar"
+        aria-valuenow="1"
+        aria-valuemin="1"
+        aria-valuemax="3"
+        aria-label="Progresso do carrossel: item 1 de 3"
+      >
+        <div class="progress-bar__fill"></div>
+      </div>
+
+      <!-- Wrapper dos slides principais -->
+      <div class="main-post-wrapper">
+        <!-- Container dos slides. Poderia ter role="listbox" com controles, mas mantemos o básico por ser só HTML. -->
+        <div class="slides">
+          <!-- SLIDE 1: Ativo -->
+          <article
+            class="main-post main-post--active"
+            role="group"
+            aria-roledescription="slide"
+            aria-hidden="false"
+          >
+            <div class="main-post__image">
+              <!-- Alt Text corrigido para ser relevante ao título do post. -->
+              <img
+                src="../assets/imgs/hero/upskilling-reskilling.png"
+                alt="Ilustração sobre Reskilling e Upskilling."
+                loading="eager"
+              />
+            </div>
+            <div class="main-post__content">
+              <div class="main-post__tag-wrapper">
+                <!-- Categoria/Tag -->
+                <span class="main-post__tag">Notícias</span>
+              </div>
+              <!-- Título do post (H2 para hierarquia) -->
+              <h2 class="main-post__title">
+                Reskilling e Upskilling: tendências e práticas de inovação
+              </h2>
+              <p class="hero-p-noticias">
+                Saiba como essas práticas promovem o aprendizado contínuo e o
+                desenvolvimento de habilidades essenciais para o futuro do
+                trabalho.
+              </p>
+              <!-- Link com aria-label para maior contexto fora do texto "Leia mais" -->
+              <a
+                class="main-post__link"
+                href="https://blog.bb.com.br/reskilling-e-upskilling-tendencias-e-praticas-de-inovacao/"
+                aria-label="Leia mais sobre Reskilling e Upskilling: tendências e práticas de inovação"
+              >
+                <span class="main-post__link-text">Leia mais</span>
+                <!-- SVG escondido de leitores de tela, pois o texto já é suficiente. -->
+                <svg
+                  class="main-post__link-icon main-post__link-icon--arrow"
+                  width="37"
+                  height="12"
+                  viewBox="0 0 37 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M0 6H36.0001M36.0001 6L31.0001 1M36.0001 6L31.0001 11"
+                    stroke="white"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- SLIDE 2: Inativo -->
+          <article
+            class="main-post main-post--not-active"
+            role="group"
+            aria-roledescription="slide"
+            aria-hidden="true"
+          >
+            <div class="main-post__image">
+              <!-- Alt Text corrigido para ser relevante ao título do post. -->
+              <img
+                src="../assets/imgs/hero/gig-economy.png"
+                alt="Ilustração sobre o impacto da Gig Economy em relações de trabalho."
+                loading="lazy"
+              />
+            </div>
+            <div class="main-post__content">
+              <div class="main-post__tag-wrapper">
+                <span class="main-post__tag">Notícias</span>
+              </div>
+              <h2 class="main-post__title">
+                Impacto da Gig Economy: transformando relações de trabalho
+              </h2>
+              <p class="hero-p-noticias">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla
+                pariatur perspiciatis autem natus nostrum repudiandae dolorem,
+                doloribus vel magnam velit eius nemo? Dolorem voluptate repellat
+                officia temporibus illo reprehenderit qui!
+              </p>
+              <a
+                class="main-post__link"
+                href="https://rhpravoce.com.br/colab/gig-economy-e-sua-influencia-nas-relacoes-de-trabalho"
+                aria-label="Leia mais sobre o Impacto da Gig Economy: transformando relações de trabalho"
+              >
+                <span class="main-post__link-text">Leia mais</span>
+                <svg
+                  class="main-post__link-icon main-post__link-icon--arrow"
+                  width="37"
+                  height="12"
+                  viewBox="0 0 37 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M0 6H36.0001M36.0001 6L31.0001 1M36.0001 6L31.0001 11"
+                    stroke="white"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- SLIDE 3: Inativo -->
+          <article
+            class="main-post main-post--not-active"
+            role="group"
+            aria-roledescription="slide"
+            aria-hidden="true"
+          >
+            <div class="main-post__image">
+              <!-- Alt Text corrigido para ser relevante ao título do post. -->
+              <img
+                src="../assets/imgs/hero/ia-chatgpt.png"
+                alt="Ilustração sobre o impacto da IA Generativa no futuro do trabalho."
+                loading="lazy"
+              />
+            </div>
+            <div class="main-post__content">
+              <div class="main-post__tag-wrapper">
+                <span class="main-post__tag">Notícias</span>
+              </div>
+              <h2 class="main-post__title">
+                O impacto da IA Generativa no futuro do trabalho
+              </h2>
+              <p class="hero-p-noticias">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla
+                pariatur perspiciatis autem natus nostrum repudiandae dolorem,
+                doloribus vel magnam velit eius nemo? Dolorem voluptate repellat
+                officia temporibus illo reprehenderit qui!
+              </p>
+              <a
+                class="main-post__link"
+                href="#"
+                aria-label="Leia mais sobre o impacto da IA Generativa no futuro do trabalho"
+              >
+                <span class="main-post__link-text">Leia mais</span>
+                <svg
+                  class="main-post__link-icon main-post__link-icon--arrow"
+                  width="37"
+                  height="12"
+                  viewBox="0 0 37 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M0 6H36.0001M36.0001 6L31.0001 1M36.0001 6L31.0001 11"
+                    stroke="white"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Lista de Posts Secundários (desktop). Estrutura alterada para ul > li > article. -->
+      <ul class="posts-wrapper hide-on-mobile" role="tablist">
+        <!-- POST 1: Ativo -->
+        <li class="post-item" role="presentation">
+          <article
+            class="post post--active"
+            role="tab"
+            aria-selected="true"
+            tabindex="0"
+          >
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow="100"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="Progresso de leitura: 100%"
+            >
+              <div class="progress-bar__fill"></div>
+            </div>
+            <!-- Envolvemos o título em um link para torná-lo navegável/clicável -->
+            <a
+              href="#"
+              class="post__link"
+              aria-label="Ver post Reskilling e Upskilling: tendências e práticas de inovação."
+            >
+              <header class="post__header">
+                <span class="post__tag">Notícias</span>
+                <!-- Uso da tag time para data semântica -->
+                <time datetime="2024-12-13" class="post__published"
+                  >13 Dezembro 2024</time
+                >
+              </header>
+              <h3 class="post__title">
+                Reskilling e Upskilling: tendências e práticas de inovação.
+              </h3>
+            </a>
+          </article>
+        </li>
+
+        <!-- POST 2 -->
+        <li class="post-item" role="presentation">
+          <article class="post" role="tab" aria-selected="false" tabindex="-1">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="Progresso de leitura: 0%"
+            >
+              <div class="progress-bar__fill"></div>
+            </div>
+            <a
+              href="#"
+              class="post__link"
+              aria-label="Ver post Gig Economy e sua influência nas relações de trabalho."
+            >
+              <header class="post__header">
+                <span class="post__tag">Notícias</span>
+                <time datetime="2024-10-21" class="post__published"
+                  >21 Outubro 2024</time
+                >
+              </header>
+              <h3 class="post__title">
+                Gig Economy e sua influência nas relações de trabalho.
+              </h3>
+            </a>
+          </article>
+        </li>
+
+        <!-- POST 3 -->
+        <li class="post-item" role="presentation">
+          <article class="post" role="tab" aria-selected="false" tabindex="-1">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="Progresso de leitura: 0%"
+            >
+              <div class="progress-bar__fill"></div>
+            </div>
+            <a
+              href="#"
+              class="post__link"
+              aria-label="Ver post O impacto da IA Generativa no futuro do trabalho."
+            >
+              <header class="post__header">
+                <span class="post__tag">Notícias</span>
+                <time datetime="2025-04-25" class="post__published"
+                  >25 Abril 2025</time
+                >
+              </header>
+              <h3 class="post__title">
+                O impacto da IA Generativa no futuro do trabalho.
+              </h3>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="nav-bg">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#">Início</a></li>
+          <li><a href="../index.html">Site</a></li>
+          <li><a href="../pages/contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="content-blog">
+      <div class="container">
+        <div class="blog-row">
+          <div class="blog">
+            <div class="blog-image">
+              <img
+                src="../assets/imgs/sobre/cellphone-codes.png"
+                alt="Blog Image 1"
+              />
+              <div class="date">June 10, 2024</div>
+            </div>
+            <div class="blog-content">
+              <h2>Blog Post 1</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                vel metus vel est fermentum consectetur.
+              </p>
+              <a href="#">Leia mais</a>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="blog-image">
+              <img
+                src="../assets/imgs/sobre/ai-keyboard.png"
+                alt="Blog Image 2"
+              />
+              <div class="date">June 11, 2024</div>
+            </div>
+            <div class="blog-content">
+              <h2>Blog Post 2</h2>
+              <p>
+                Nullam vehicula turpis in tellus lacinia euismod. Proin
+                tristique arcu vel ullamcorper fermentum.
+              </p>
+              <a href="#">Leia mais</a>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="blog-image">
+              <img
+                src="../assets/imgs/sobre/abstract-forms.png"
+                alt="Blog Image 3"
+              />
+              <div class="date">June 12, 2024</div>
+            </div>
+            <div class="blog-content">
+              <h2>Blog Post 3</h2>
+              <p>
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae.
+              </p>
+              <a href="#">Leia mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-row">
+          <div class="blog">
+            <div class="blog-image">
+              <img
+                src="../assets/imgs/sobre/gradient-smooth.png"
+                alt="Blog Image 4"
+              />
+              <div class="date">June 13, 2024</div>
+            </div>
+            <div class="blog-content">
+              <h2>Blog Post 4</h2>
+              <p>
+                Etiam nec justo euismod, maximus dui in, posuere nunc. Phasellus
+                mollis felis sed felis ullamcorper.
+              </p>
+              <a href="#">Leia mais</a>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="blog-image">
+              <img
+                src="../assets/imgs/sobre/mouse-keyboard.png"
+                alt="Blog Image 5"
+              />
+              <div class="date">June 14, 2024</div>
+            </div>
+            <div class="blog-content">
+              <h2>Blog Post 5</h2>
+              <p>
+                Curabitur dignissim quam a felis rhoncus, non sagittis nunc
+                ultricies. Sed vel massa semper, egestas.
+              </p>
+              <a href="#">Leia mais</a>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="blog-image">
+              <img
+                src="../assets/imgs/sobre/cellphone-codes.png"
+                alt="Blog Image 6"
+              />
+              <div class="date">June 15, 2024</div>
+            </div>
+            <div class="blog-content">
+              <h2>Blog Post 6</h2>
+              <p>
+                Donec mattis libero sit amet dui vehicula, vel suscipit nulla
+                aliquam. Fusce in ex nec est dapibus.
+              </p>
+              <a href="#">Leia mais</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="pagination" aria-label="Paginação do Blog">
+          <ul>
+            <li>
+              <a
+                href="#"
+                class="prev-next disabled"
+                aria-disabled="true"
+                aria-label="Página Anterior"
+                >Anterior</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="page-number active"
+                aria-current="page"
+                aria-label="Página 1, atual"
+                >1</a
+              >
+            </li>
+            <li>
+              <a href="#" class="page-number" aria-label="Ir para a Página 2"
+                >2</a
+              >
+            </li>
+            <li>
+              <a href="#" class="page-number" aria-label="Ir para a Página 3"
+                >3</a
+              >
+            </li>
+            <li>
+              <span class="dots" aria-hidden="true">...</span>
+            </li>
+            <li>
+              <a href="#" class="page-number" aria-label="Ir para a Página 10"
+                >10</a
+              >
+            </li>
+            <li>
+              <a href="#" class="prev-next" aria-label="Próxima Página"
+                >Próxima</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <footer class="footer-blog">
+      <div class="footer-container">
+        <p>&copy; 2025 Blog Plataforma ABRIR. Todos os direitos reservados.</p>
+        <div class="footer-social-media footer-social-media-blog">
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/facebook.svg"
+              alt="Logo do Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/linkedin.svg"
+              alt="Logo LinkedIn"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/twitter.svg"
+              alt="Logo do Twitter"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/instagram.svg"
+              alt="Logo do Instagram"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="../assets/js/blog.js"></script>
+    <script src="../assets/js/tooltip.js"></script>
+    <script src="../assets/js/scrollSmooth.js"></script>
+  </body>
+</html>
