@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa de Reclassificação - Plataforma ABRIR</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/navbar-footer.css" />
+    <link rel="stylesheet" href="../assets/css/hero.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/xs.css" />
+    <link rel="stylesheet" href="../assets/css/sm.css" />
+    <link rel="stylesheet" href="../assets/css/md.css" />
+    <link rel="stylesheet" href="../assets/css/lg.css" />
+    <link rel="stylesheet" href="../assets/css/xl.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/imgs/logo/abrir_pequeno.png"
+            alt="Logo colorido Plataforma ABRIR."
+            class="logo-img"
+          />
+        </a>
+
+        <div class="logo-actions">
+          <a href="../index.html#politica"
+            ><button class="nav-action-btn transition">
+              Política de Proteção Social
+            </button></a
+          >
+          <a href="reclassificacao.html"
+            ><button class="nav-action-btn transition">
+              Reclassificação
+            </button></a
+          >
+        </div>
+
+        <div class="nav-right-content">
+          <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="integrantes.html">Quem somos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-link"
+                >Nossos projetos<i class="uil uil-angle-down"></i
+              ></a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="proposito.html">Carreira por propósito</a>
+                </li>
+                <li>
+                  <a href="reclassificacao.html">Reclassificação</a>
+                </li>
+                <li>
+                  <a href="blog.html">Blog</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <i class="uil uil-search search-icon" id="searchIcon"></i>
+
+          <div class="search-box">
+            <input type="text" placeholder="Buscar..." />
+            <i class="uil uil-times search-close-btn"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="cards proposito__hero">
+      <section class="content__hero integrantes__hero">
+        <h1 class="gs_reveal">Mapa de <b>reclassificação</b></h1>
+        <a href="">
+          <p>Posicione-se no novo mercado de trabalho</p>
+        </a>
+      </section>
+    </section>
+
+    <main>
+      <section id="filtro-proposito" class="reclassificacao-section">
+        <h2>
+          Descubra o seu
+          <u class="u-double">mapa de requalificação</u> profissional.
+        </h2>
+        <p class="section-subtitle">
+          Inicie sua jornada de reskilling. Selecione sua área e mapeie as
+          competências (<dfn
+            class="glossario-colorful"
+            data-tooltip="Soft skills são competências comportamentais, interpessoais e socioemocionais, como comunicação, trabalho em equipe e liderança, que são mais difíceis de quantificar e se referem a como você interage com os outros e com os desafios."
+            tabindex="0"
+            >soft</dfn
+          >
+          e
+          <dfn
+            class="glossario-colorful"
+            data-tooltip="Hard skills são habilidades técnicas e específicas, adquiridas por meio de estudo e treinamento formal, que podem ser facilmente mensuradas, como programar ou dominar um software."
+            tabindex="0"
+            >hard</dfn
+          >
+          skills) essenciais para o mercado de amanhã.
+        </p>
+      </section>
+
+      <section id="filtro-mapa">
+        <div id="mapa-box">
+          <label for="profissao-selecao"
+            >Qual é a sua área ou profissão atual?</label
+          >
+
+          <select
+            id="profissao-selecao"
+            onchange="toggleOutros()"
+            class="selecao-estilizada"
+          >
+            <option value="" selected disabled>
+              -- Selecione uma opção --
+            </option>
+            <option value="analista de rh">Analista de RH</option>
+            <option value="atendente comercial">Atendente Comercial</option>
+            <option value="motorista">Motorista / Logística</option>
+            <option value="professor">Professor / Educador</option>
+            <option value="contador">Contador / Analista Fiscal</option>
+            <option value="gerente de loja">Gerente de Loja / Varejo</option>
+            <option value="jornalista">Jornalista / Comunicação</option>
+            <option value="operador de maquina">
+              Operador de Máquinas / Indústria
+            </option>
+            <option value="enfermeiro">
+              Enfermeiro / Profissional de Saúde
+            </option>
+            <option value="advogado">Advogado / Jurídico</option>
+            <option value="outros">Outros (digite abaixo)</option>
+          </select>
+
+          <div id="outras-profissao-container" style="display: none">
+            <label for="outras-profissao">Se "outros", digite aqui:</label>
+            <input
+              type="text"
+              id="outras-profissao"
+              placeholder="Ex: Professor, Cozinheiro, Contador"
+            />
+          </div>
+
+          <div id="mapa-acao-wrapper">
+            <button onclick="mapearHabilidades()">Mapear habilidades</button>  
+
+            <div
+              id="erro-mensagem"
+              class="erro-msg"
+              style="display: none"
+            ></div>
+          </div>
+
+          <div id="resultado" class="resultado-box" style="display: none">
+            <div id="resultado-reskilling"></div>
+            <h2 class="resultado-titulo">Seu caminho de requalificação</h2>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="chamada-mapa"
+        style="display: none"
+        class="cta-proposito reclassificacao-cta"
+        aria-labelledby="cta-titulo"
+      >
+        <div class="cta-inner">
+          <h3 id="cta-titulo">O seu plano está pronto. Hora de agir.</h3>
+
+          <p>
+            Você já mapeou as skills. Agora, acesse artigos, guias e conteúdos exclusivos para começar a dominar cada competência exigida no seu novo caminho profissional.
+          </p>
+
+          <div role="group" aria-label="Ação de navegação para o filtro">
+            <a
+              href="blog.html"
+              class="btn-proposito-principal btn-proposito-page"
+              role="button"
+            >
+              Acessar artigos relacionados →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="tooltip-box" class="tooltip-popup"></div>
+    <footer class="main-footer footer-branco">
+      <div class="footer-content-wrapper">
+        <div class="footer-logo">
+          <a href="../index.html"
+            ><img
+              src="../assets/imgs/logo/abrir_logosolo.png"
+              alt="Logo branco Plataforma ABRIR."
+          /></a>
+        </div>
+
+        <p class="footer-slogan footer-slogan-branco">
+          Você pode conquistar tudo o que deseja. &#x2665;
+        </p>
+
+        <div class="footer-social-media">
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/facebook-footer-branco.svg"
+              alt="Logo do Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/linkedin-footer-branco.svg"
+              alt="Logo LinkedIn"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/twitter-footer-branco.svg"
+              alt="Logo do Twitter"
+          /></a>
+          <a href="#"
+            ><img
+              src="../assets/imgs/redes-sociais/instagram-footer-branco.svg"
+              alt="Logo do Instagram"
+          /></a>
+        </div>
+
+        <a
+          href="blog.html"
+          class="nav-action-btn nav-action-btn-footer transition nav-footer-branco"
+          >Acesse nosso blog</a
+        >
+      </div>
+
+      <div class="footer-bottom-credits footer-bottom-credits-branco">
+        <p class="footer-bottom-credits-branco">
+          &copy; 2025 Plataforma ABRIR | Todos os direitos reservados |
+          Desenvolvimento: Julia Guimarães, Thiago Gramorelli &amp; Julia
+          Spanopoulos | Design: Julia Guimarães &#9733;
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="../assets/js/cards.js"></script>
+    <script src="../assets/js/search.js" defer></script>
+    <script src="../assets/js/tooltip.js"></script>
+    <script src="../assets/js/scrollSmooth.js"></script>
+    <script src="../assets/js/proposito.js"></script>
+    <script src="../assets/js/reskilling.js"></script>
+  </body>
+</html>

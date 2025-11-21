@@ -1456,6 +1456,7 @@ input.invalid {
     max-width: 1000px;
     margin: 0 auto 40px;
 }
+
 #proposito-box {
     background: linear-gradient(to right, var(--color-1), var(--color-2));
     color: var(--white);
@@ -1531,7 +1532,6 @@ input.invalid {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.185);
     display: none;
 }
-
 #resultado-proposito h3 {
     font-size: 1.3em;
     font-weight: 700;
@@ -1635,4 +1635,288 @@ input.invalid {
   100% {
     box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
   }
+}
+
+
+
+
+
+#filtro-mapa {
+    background-color: var(--white); /* Mantendo o fundo branco da seção externa */
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+#filtro-mapa h2 {
+    color: var(--color-1);
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+#filtro-mapa .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--black);
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+#mapa-box {
+    background: linear-gradient(to right, var(--color-1), var(--color-2));
+    color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329);
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    align-items: center; 
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#mapa-box label {
+    /* Estilo do label */
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    display: block;
+    margin-bottom: 0;
+}
+
+.selecao-estilizada {
+    width: 80%; /* Preenche a largura do container */
+    padding: 14px;
+    
+    /* Estilo Transparente sobre o Gradiente */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin: 0 !important;
+    
+    /* Remove a aparência padrão (select) */
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+}
+
+/* Estilo para as opções (dentro do select) */
+.selecao-estilizada option {
+    color: var(--black); 
+    background-color: var(--white);
+    padding: 5px; 
+}
+
+#mapa-box button {
+    background-color: var(--white);
+    color: var(--color-1);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329);
+    margin-top: 8px;
+    margin-bottom: 23px;
+}
+
+#mapa-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.171);
+}
+
+#mapa-acao-wrapper {
+    /* Força o wrapper (pai do botão e do erro) a ocupar 100% da largura do #mapa-box */
+    width: 100%; 
+    /* Garante que o botão (que é um elemento inline-block/flex item por padrão) seja centralizado */
+    text-align: center; 
+}
+
+#outras-profissao-container {
+    /* Garante que o container ocupe a largura completa dentro do #mapa-box */
+    width: 80%; 
+    text-align: left; /* Alinha o texto do label à esquerda */
+}
+
+#outras-profissao-container label {
+    /* Mantém o label alinhado com a largura do input, forçando a quebra de linha */
+    display: block; 
+    margin-bottom: 10px; /* Adiciona uma pequena margem abaixo do label para separá-lo do input */
+    margin-top: 20px;
+    font-weight: 600; 
+    font-size: 1.1rem;
+    color: var(--white);
+    text-align: center;
+}
+
+#outras-profissao-container input[type="text"] {
+    /* Aplica o estilo transparente e de borda do select no input */
+    width: 100%; 
+    padding: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin: 0 !important;
+}
+
+#outras-profissao-container input::placeholder {
+    /* Estilizando o placeholder para ser visível sobre o fundo transparente */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.reclassificacao-section {
+    margin-bottom: -160px !important;
+    text-align: center;
+}
+/* --- Estilo da Caixa de Resultados do Mapa (ID: #resultado) --- */
+
+#resultado,
+.resultado-box {
+    /* Estilo da caixa principal do Propósito (#resultado-proposito) */
+    width: 100%;
+    min-height: 100px; 
+    padding: 25px;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 1.15em;
+    text-align: left;
+    
+    /* Fundo Transparente sobre o Gradiente */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.185);
+    
+    color: var(--white); /* Garante que o texto dentro seja branco */
+    
+    /* Garante que o bloco use o flexbox do #mapa-box e a margem automática */
+    margin-top: 15px; 
+    display: none; /* Você controla a visibilidade com JavaScript */
+}
+
+/* --- Estilo do Título dentro da Caixa de Resultados (Classe: .resultado-titulo) --- */
+
+#resultado .resultado-titulo, /* Aplica o estilo ao h2 com a classe resultado-titulo */
+#resultado h2 { /* Regra de fallback, caso use apenas h2 */
+    /* Estilo do Título de Referência (#resultado-proposito h3) */
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--white); 
+    
+    /* Estilo de background e bordas */
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 20px 25px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+
+    /* REGRAS CRUCIAIS PARA ALINHAR O TÍTULO À CAIXA (Margens Negativas): */
+    margin-top: -25px;
+    margin-bottom: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+/* --- Estilo dos Itens de Resultado (Classe: .proposito-item) --- */
+
+#resultado .proposito-item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    text-align: left;
+}
+
+#resultado .proposito-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+#resultado .proposito-item strong {
+    color: var(--white);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+#resultado .proposito-item p {
+    color: var(--white);
+    margin: 0;
+}
+#resultado .proposito-item a {
+    background:
+        linear-gradient(135deg, var(--color-4) 0%, var(--color-3) 100%); /* O Gradiente */
+        padding: 10px;
+        border-radius: 8px;
+        width: 191px;
+    text-decoration: none;
+    display: block;
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: var(--white);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse4 2s infinite;
+}
+
+#resultado .proposito-item a:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulse4 {
+  0% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 0 rgba(96, 4, 124, 0.199);
+  }
+  70% {
+    /* Substitua 33, 150, 243 pelo RGB da sua cor */
+    box-shadow: 0 0 0 10px rgba(131, 33, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+
+#erro-mensagem {
+    width: 100%;
+    min-height: 100px; 
+    padding: 25px;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 1.15em;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.185);
+    display: none;
+}
+#erro-mensagem h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    color: var(--white);
+    padding: 20px 25px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: -25px;
+    margin-bottom: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
+    text-align: left;
+}
+
+/* === CTA PARA FILTRO DE PROPÓSITO (DESTAQUE) === */
+.reclassificacao-cta {
+    background: 
+        url("/front-end/assets/imgs/svg/write-svgrepo-com.svg") no-repeat right 2% center / 23%, /* SVG com suas configurações */
+        linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%); /* O Gradiente */
 }

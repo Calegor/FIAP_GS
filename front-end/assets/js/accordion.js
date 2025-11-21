@@ -1,6 +1,4 @@
-/* === Lógica de Ação dos Itens do Info Box (ABOUT-ABRIR) - Acordeão Funcional === */
-        
-        document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
             // ... (Mantenha as lógicas anteriores do Carrossel e Tooltip aqui) ...
             
             // Seleciona a classe específica: .about-abrir
