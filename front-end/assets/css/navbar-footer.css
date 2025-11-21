@@ -140,7 +140,7 @@
   /* mantém a cor do texto branca como padrão */
   color: var(--white);
   /* CHAVE: aplica a cor de fundo do hover para o estado ativo */
-  background-color: var(--color-2);
+  background-color: var(--color-4);
   /* garante que o estilo ativo se sobreponha a qualquer outro hover */
   pointer-events: none; /* impede que o link ativo seja clicável (opcional) */
 }
