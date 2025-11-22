@@ -1,70 +1,77 @@
-/* === Lógica do Tooltip (Glossário Interativo) via JS - VERSÃO POSICIONAL MÚLTIPLA === */
-
 document.addEventListener("DOMContentLoaded", () => {
-  // CORREÇÃO: Combina os seletores de classe usando vírgula
-  // Seleciona todos os elementos com as classes '.glossario-termo' OU '.glossario-white'
-  const termos = document.querySelectorAll(
-    ".glossario-termo, .glossario-white, .glossario-colorful"
-  );
+  // seletor para os elementos que disparam o tooltip
+  const TERM_SELECTOR = ".glossario-termo, .glossario-white, .glossario-colorful";
+
+  // seleciona todos os elementos do glossário
+  const glossaryTerms = document.querySelectorAll(TERM_SELECTOR);
   const tooltipBox = document.getElementById("tooltip-box");
 
-  // Adiciona a verificação para garantir que o tooltipBox exista
-  if (!tooltipBox || termos.length === 0) return;
+  // verifica se os elementos essenciais existem. se não, encerra a execução
+  if (!tooltipBox || glossaryTerms.length === 0) return;
 
-  termos.forEach((termo) => {
-    const definicao = termo.getAttribute("data-tooltip");
+  // mapeamento de classes dos termos para classes de estilo do tooltip
+  const styleMap = {
+    "glossario-white": "tooltip-style-light", // fundo escuro -> texto branco/tooltip claro
+    "glossario-termo": "tooltip-style-dark", // fundo claro -> texto escuro/tooltip escuro
+    // adicione mais mapeamentos para .glossario-colorful se necessário
+  };
 
-    // Evento ao passar o mouse (mouseover)
-    termo.addEventListener("mouseover", () => {
-      const rect = termo.getBoundingClientRect();
+  glossaryTerms.forEach((term) => {
+    const definition = term.getAttribute("data-tooltip");
+
+    // função para lidar com o evento mouseover
+    const handleMouseOver = () => {
+      const rect = term.getBoundingClientRect();
       const scrollY = window.scrollY || window.pageYOffset;
 
-      // 1. --- Lógica de Estilo Dinâmico ---
-      // Remove classes anteriores para garantir um estilo limpo
+      // 1. remove classes anteriores do tooltip para garantir o estilo limpo
       tooltipBox.classList.remove("tooltip-style-dark", "tooltip-style-light");
 
-      // Verifica a classe presente no termo clicado para aplicar o estilo correspondente
-      if (termo.classList.contains("glossario-white")) {
-        // Se o texto está sobre um fundo ESCURO, o tooltip deve ter fundo CLARO (light)
-        tooltipBox.classList.add("tooltip-style-light");
-      } else if (termo.classList.contains("glossario-termo")) {
-        // Se o texto está sobre um fundo CLARO, o tooltip deve ter fundo ESCURO (dark)
-        tooltipBox.classList.add("tooltip-style-dark");
+      // 2. aplica o estilo correspondente baseado na classe do termo
+      for (const termClass in styleMap) {
+        if (term.classList.contains(termClass)) {
+          tooltipBox.classList.add(styleMap[termClass]);
+          break; // sai do loop após encontrar a classe
+        }
       }
-      // ------------------------------------
 
-      tooltipBox.innerHTML = definicao;
+      // 3. define conteúdo e mostra o tooltip
+      tooltipBox.innerHTML = definition;
       tooltipBox.style.display = "block";
 
-      // 2. Calcula e Aplica Posição
-      // *Esta é a ordem CRÍTICA: Mostrar ANTES de calcular a altura (offsetHeight)*
-
+      // 4. calcula a posição: top (acima do termo) e left (centralizado)
+      // mostrar antes para o offSetHeight/offsetWidth ser calculado corretamente
       const topPosition = rect.top + scrollY - tooltipBox.offsetHeight - 10;
       const leftPosition =
-        rect.left +
-        rect.width / 2 -
-        tooltipBox.offsetWidth / 2 +
-        window.scrollX;
+        rect.left + rect.width / 2 - tooltipBox.offsetWidth / 2 + window.scrollX;
 
       tooltipBox.style.top = `${topPosition}px`;
       tooltipBox.style.left = `${leftPosition}px`;
 
-      // Correções de Responsividade
+      // 5. correções de responsividade para garantir que não saia da tela
+      // correção lateral esquerda
       if (leftPosition < 10) {
         tooltipBox.style.left = "10px";
       }
-      if (leftPosition + tooltipBox.offsetWidth > window.innerWidth - 10) {
+      // correção lateral direita
+      const rightEdge = leftPosition + tooltipBox.offsetWidth;
+      if (rightEdge > window.innerWidth - 10) {
         tooltipBox.style.left = `${
           window.innerWidth - tooltipBox.offsetWidth - 10
         }px`;
       }
-    });
+    };
 
-    // Evento ao tirar o mouse (mouseout)
-    termo.addEventListener("mouseout", () => {
+    // função para lidar com o evento mouseout
+    const handleMouseOut = () => {
+      // oculta o tooltip
       tooltipBox.style.display = "none";
-      // Limpa as classes de estilo ao fechar
+      // limpa as classes de estilo
       tooltipBox.classList.remove("tooltip-style-dark", "tooltip-style-light");
-    });
+    };
+
+    // atribui os listeners
+    term.addEventListener("mouseover", handleMouseOver);
+    term.addEventListener("mouseout", handleMouseOut);
   });
 });

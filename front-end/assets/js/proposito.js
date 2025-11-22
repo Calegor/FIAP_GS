@@ -71,14 +71,14 @@ function filtrarProposito() {
     const chamadaMapaDiv = document.getElementById("chamada-mapa"); 
 
     const propositocopia = selecao.value;
-    let htmlResultado = ""; // Declaração única mantida
+    let htmlResultado = ""; // declaração única mantida
 
-    // 1. Esconde tudo no início (reset)
+    // esconde tudo no início (reset)
     resultadoDiv.style.display = "none";
     resultadoDiv.innerHTML = "";
     chamadaMapaDiv.style.display = "none";
 
-    // 2. Verifica se algo foi selecionado (early exit)
+    // verifica se algo foi selecionado (early exit)
     if (!propositocopia) {
         resultadoDiv.innerHTML =
             "Por favor, selecione um foco de impacto para filtrar.";
@@ -88,14 +88,14 @@ function filtrarProposito() {
 
     const carreiras = mapeamentoProposito[propositocopia];
 
-    // 3. Processa os resultados
+    // processa os resultados
     if (carreiras && carreiras.length > 0) {
-        // Gera o título
+        // gera o título
         htmlResultado += `<h3>Carreiras Alinhadas ao Propósito de ${
             selecao.options[selecao.selectedIndex].text
         }:</h3>`;
 
-        // Gera os itens
+        // gera os itens
         carreiras.forEach((c) => {
             htmlResultado += `
                 <div class="proposito-item">
@@ -105,19 +105,19 @@ function filtrarProposito() {
             `;
         });
         
-        // 4. Injeta o HTML e mostra o resultado
+        // injeta o HTML e mostra o resultado
         resultadoDiv.innerHTML = htmlResultado;
         resultadoDiv.style.display = "block";
 
-        // 5. 🚀 AÇÃO CHAVE: Mostra o botão de chamada se houver resultados
+        // mostra o botão de chamada se houver resultados
         chamadaMapaDiv.style.display = "block";
 
     } else {
-        // Não há carreiras (Mostra a mensagem de "não encontrado")
+        // não há carreiras (mostra a mensagem de "não encontrado")
         htmlResultado =
             "<p>Não encontramos carreiras alinhadas a este propósito ainda. O futuro está sendo construído!</p>";
         resultadoDiv.innerHTML = htmlResultado;
         resultadoDiv.style.display = "block";
-        // Não mostra a chamadaMapaDiv
+        // não mostra a chamadaMapaDiv
     }
 }

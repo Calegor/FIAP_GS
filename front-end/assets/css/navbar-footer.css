@@ -19,13 +19,11 @@
   z-index: 1000;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-
 .nav .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
-
 .nav .logo-img {
   height: 80px;
   width: auto;
@@ -41,7 +39,6 @@
   padding-left: 0;
   margin-left: 30px;
 }
-
 .nav-action-btn {
   padding: 8px 15px;
   border: none;
@@ -52,18 +49,15 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
 }
-
 .nav-action-btn.transition {
   background-color: var(--btn-bg);
   color: var(--white);
   animation: pulse 2s infinite;
 }
-
 .nav-action-btn.transition:hover {
   transition: 0.3s ease;
   transform: scale(1.05);
 }
-
 .nav-action-btn-footer.transition {
   background-color: var(--white);
   color: var(--black);
@@ -72,14 +66,11 @@
   background-color: var(--btn-bg);
   color: var(--white);
 }
-
 @keyframes pulse {
   0% {
-    /* Substitua 33, 150, 243 pelo RGB da sua cor */
     box-shadow: 0 0 0 0 rgba(183, 138, 255, 0.5);
   }
   70% {
-    /* Substitua 33, 150, 243 pelo RGB da sua cor */
     box-shadow: 0 0 0 10px rgba(131, 33, 243, 0);
   }
   100% {
@@ -96,7 +87,6 @@
   display: flex;
   align-items: center;
 }
-
 .nav .nav-links {
   display: flex;
   align-items: center;
@@ -105,11 +95,9 @@
   pointer-events: auto;
   transition: all 0.3s ease;
 }
-
 .nav .nav-links li {
   margin: 0 12px;
 }
-
 .nav .nav-links li a {
   text-decoration: none;
   color: var(--black);
@@ -120,7 +108,6 @@
   display: block;
   border-radius: 7px;
 }
-
 .nav .nav-links li a:hover {
   color: var(--white);
   background-color: var(--navbar-item-hover-bg);
@@ -135,11 +122,10 @@
   cursor: pointer;
   display: none;
 }
-
 .nav .nav-links li a.ativo {
   /* mantém a cor do texto branca como padrão */
   color: var(--white);
-  /* CHAVE: aplica a cor de fundo do hover para o estado ativo */
+  /* aplica a cor de fundo do hover para o estado ativo */
   background-color: var(--color-4);
   /* garante que o estilo ativo se sobreponha a qualquer outro hover */
   pointer-events: none; /* impede que o link ativo seja clicável (opcional) */
@@ -151,7 +137,6 @@
 .nav .nav-links .dropdown {
   position: relative;
 }
-
 .nav .nav-links .dropdown-menu {
   display: none;
   position: absolute;
@@ -166,17 +151,14 @@
   border-radius: 7px;
   z-index: 10;
 }
-
 .nav .nav-links .dropdown:hover .dropdown-menu {
   display: block;
 }
-
 .nav .nav-links .dropdown-menu li a {
   padding: 10px 15px;
   border-radius: 7px;
   color: var(--black);
 }
-
 .nav .nav-links .dropdown-menu li a:hover {
   background-color: var(--color-3);
   color: var(--black);
@@ -194,7 +176,6 @@
   margin-left: 20px;
   z-index: 1100;
 }
-
 .nav .search-box {
   position: relative;
   right: 0;
@@ -208,19 +189,16 @@
   z-index: 1099;
   margin-left: -20px;
 }
-
 .nav.openSearch #searchIcon {
   display: none;
   pointer-events: none;
 }
-
 .nav.openSearch .search-box {
   opacity: 1;
   max-width: 250px;
   pointer-events: auto;
   margin-left: 20px;
 }
-
 .search-box input {
   width: 100%;
   height: 100%;
@@ -245,7 +223,6 @@
   cursor: pointer;
   z-index: 10;
 }
-
 .search-box .search-icon {
   position: absolute;
   left: 10px;
@@ -270,11 +247,9 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .footer-branco {
-    background: var(--white); /* cor de fundo principal do footer */
+  background: var(--white); /* cor de fundo principal do footer */
 }
-
 .footer-content-wrapper {
   display: flex;
   align-items: center;
@@ -287,17 +262,14 @@
   /* espaçamento mínimo entre os itens (Flexbox gap) */
   gap: 30px;
 }
-
 .footer-logo img {
   height: 80px;
 }
-
 .footer-slogan {
   font-size: 16px;
   font-weight: 600;
   color: var(--white);
 }
-
 .footer-slogan-branco {
   font-size: 16px;
   font-weight: 600;
@@ -310,7 +282,6 @@
   align-items: center;
   gap: 15px;
 }
-
 .footer-social-media img {
   height: 27px;
 }
@@ -328,7 +299,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .footer-bottom-credits {
   background: linear-gradient(to right, var(--color-1), var(--color-2));
   color: var(--white);
@@ -337,19 +307,15 @@
   padding: 15px 20px;
   width: 100%;
 }
-
 .footer-bottom-credits-branco {
   background: var(--white);
 }
-
 .footer-bottom-credits p {
   margin: 0;
 }
-
 .footer-bottom-credits-branco p {
   color: var(--black);
 }
-
 .nav-footer-branco {
   background-color: var(--color-1) !important;
   color: var(--white) !important;

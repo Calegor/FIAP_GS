@@ -234,15 +234,15 @@ function mapearHabilidades() {
   if (mapeamento[profissaoChave]) {
     const habilidades = mapeamento[profissaoChave];
 
-    /* A mensagem introdutória adaptada para o H2 + p para manter o estilo visual desejado. */
+    /* a mensagem introdutória adaptada para o H2 + p para manter o estilo visual desejado. */
     
-    // Conteúdo da introdução (não é um item de habilidade)
+    // conteúdo da introdução (não é um item de habilidade)
     htmlResultado += `<p style="text-align: left; margin-top: -5px; margin-bottom: 25px;">
                       Com base na sua área, recomendamos que você se concentre nas seguintes <i>competências do futuro</i>:
                       </p>`;
 
     habilidades.forEach((h) => {
-      // Usando a classe .proposito-item para aplicar o estilo de lista e separadores
+      // usando a classe .proposito-item para aplicar o estilo de lista e separadores
       htmlResultado += `
             <div class="proposito-item">
               <strong>${h.nome}</strong>
@@ -252,7 +252,7 @@ function mapearHabilidades() {
           `;
     });
   } else {
-    // Caso a profissão não seja mapeada
+    // caso a profissão não seja mapeada
     htmlResultado = `
           <p>
             Ainda estamos construindo o mapeamento específico para essa área! Isso mostra que a transição está em curso.
@@ -269,11 +269,11 @@ function mapearHabilidades() {
         `;
   }
 
-  // Define o HTML final, usando a classe de título que você deve estilizar
+  // define o HTML final, usando a classe de título que você deve estilizar
   resultadoDiv.innerHTML =
     '<h2 class="resultado-titulo">Seu caminho de requalificação</h2>' + htmlResultado;
   resultadoDiv.style.display = "block";
 
-  // Mostra a chamada à ação após o mapeamento
+  // mostra a chamada à ação após o mapeamento
   chamadaMapa.style.display = "block";
 }

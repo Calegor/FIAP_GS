@@ -1,11 +1,6 @@
-/*
-========================================
-DADOS JAVASCRIPT (MAPAS e RISCO)
-========================================
-*/
 
-// Mapeamento de Risco (Chave: profissão, Valor: Risco de 0 a 100)
-// Usado no Simulador de Potencial de Transformação
+// mapeamento de risco (Chave: profissão, Valor: Risco de 0 a 100)
+// usado no simulador de potencial de transformação
 const mapeamentoRisco = {
     "escriturario": 85,
     "digitador": 95,
@@ -18,11 +13,10 @@ const mapeamentoRisco = {
     "enfermeiro": 20,
     "desenvolvedor": 10,
     "designer": 15,
-    // Adicione outras profissões aqui se desejar
 };
 
-// Mapeamento de Profissões para Habilidades do Futuro (com Glossário)
-// Usado no Mapa de Requalificação
+// mapeamento de profissões para habilidades do futuro (com glossário)
+// usado no mapa de requalificação
 const mapeamento = {
     "analista de rh": [
         { nome: "Análise de Dados (People Analytics)", descricao: "Essencial para prever tendências, garantir recrutamento ético e apoiar decisões.", link: "#" },
@@ -76,8 +70,8 @@ const mapeamento = {
     ]
 };
 
-// Mapeamento de Propósito (Lista Inclusiva)
-// Usado no Filtro de Carreira por Propósito
+// mapeamento de propósito (lista inclusiva)
+// usado no filtro de carreira por propósito
 const mapeamentoProposito = {
     "inclusao": [
         { nome: "Analista de RH", motivo: "Focado em recrutamento ético e inclusivo e mitigação de desigualdades." },

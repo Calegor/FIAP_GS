@@ -2,16 +2,11 @@
 
 @media (min-width: 1300px) {
   /* ---------------------------------------------------- */
-  /* ESTILOS GERAIS */
-  /* ---------------------------------------------------- */
-
-  /* ---------------------------------------------------- */
   /* SECAO: NAVBAR */
   /* ---------------------------------------------------- */
   .nav {
     padding: 15px 180px;
   }
-
   @media (min-width: 1300px) and (max-width: 1520px) {
     .nav.openSearch .logo-actions {
       /* esconder o elemento completamente */

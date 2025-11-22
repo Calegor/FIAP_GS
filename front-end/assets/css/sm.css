@@ -2,10 +2,6 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
   /* ---------------------------------------------------- */
-  /* ESTILOS GERAIS */
-  /* ---------------------------------------------------- */
-
-  /* ---------------------------------------------------- */
   /* SEÇÃO: NAVBAR */
   /* ---------------------------------------------------- */
   /* ativa o layout de grid para organizar logo, botão e busca */
@@ -110,8 +106,9 @@
   }
 
   /* ---------------------------------------------------- */
-  /* SEÇÃO: HERO */
+  /* PAGINA: INDEX */
   /* ---------------------------------------------------- */
+  /* =====> HERO - INDEX <===== */
   #hero {
     height: 450px;
   }
@@ -145,6 +142,138 @@
   }
   .next {
     right: 10px;
+  }
+
+  /* =====> SEÇÃO: O FUTURO DO TRABALHO JA COMEÇOU <===== */
+  #desafio {
+    padding: 70px 20px;
+  }
+  #desafio h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  /* =====> SEÇÃO: O FUTURO DO TRABALHO JA COMEÇOU <===== */
+  #logo-pilares-visual {
+    padding: 60px 15px;
+  }
+  #logo-pilares-visual h2 {
+    font-size: 2.5rem;
+  }
+  .logo-abrir-letra {
+    font-size: 4rem;
+    width: 70px;
+    height: 70px;
+  }
+  .pilar-visual-item {
+    width: 70px;
+  }
+  .pilar-visual-item i {
+    font-size: 3.5rem;
+  }
+
+  /* =====> SEÇÃO: FAQ DOS PILARES <===== */
+  .faq-container {
+    padding: 30px;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: -80px;
+  }
+  .faq-col-left h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .faq-col-left p {
+    font-size: 1em;
+    margin-bottom: -50px;
+  }
+  .faq-lista li {
+    font-size: 1.1rem;
+  }
+
+  /* =====> SEÇÃO: SIMULADOR <===== */
+  #simulador {
+    margin-top: -80px;
+    padding-bottom: 50px;
+  }
+  #simulador h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    padding: 0 20px;
+  }
+  #simulador .section-subtitle {
+    font-size: 1.05rem;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+  }
+  #simulador-box {
+    max-width: 90%;
+    padding: 20px;
+    gap: 20px;
+    margin: 30px auto;
+  }
+  #simulador-box.simulador-aberto {
+    max-width: 90%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .simulador-col-input {
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
+  }
+  #simulador-box label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-align: center;
+    align-items: center;
+  }
+  #profissao-risco {
+    padding: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  .simulador-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .aviso-risco-simulador {
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-right: 0;
+    text-align: center !important;
+  }
+  #risco-resultado {
+    width: 100%;
+    padding: 20px;
+    font-size: 1em;
+    min-height: 100px;
+  }
+
+  /* =====> SEÇÃO: CTA <===== */
+  .cta-responsivo {
+    background: linear-gradient(
+      135deg,
+      var(--color-3) 0%,
+      var(--color-4) 100%
+    ) !important;
+  }
+
+  /* =====> SEÇÃO: POLITICA E PROTECAO SOCIAL <===== */
+  #blog {
+    padding: 60px 20px;
+  }
+  #blog h2 {
+    font-size: 2rem;
+  }
+  .cards-container {
+    gap: 25px;
+  }
+  .card-tag {
+    width: 100%;
+  }
+  .politica-container {
+    margin-bottom: -110px;
   }
 
   /* ---------------------------------------------------- */
@@ -208,7 +337,6 @@
   .card-description {
     text-align: center;
   }
-
   @media (min-width: 656px) and (max-width: 767px) {
     .features__content {
       display: flex;
@@ -292,10 +420,8 @@
   /* ---------------------------------------------------- */
   /* PAGINA: CONTATO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - CONTATO <===== */
 
   /* =====> FORMULARIO <===== */
-
   .form-container {
     margin-top: -140px;
     margin-bottom: 80px;
@@ -304,7 +430,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: CARREIRA POR PROPÓSITO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - CARREIRA POR PROPOSITO <===== */
 
   /* =====> AVALIADOR <===== */
   #filtro-proposito {
@@ -351,7 +476,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: MAPA DE REQUALIFICAÇÃO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - MAPA DE REQUALIFICAÇÃO <===== */
 
   /* =====> MAPA <===== */
   #filtro-mapa {

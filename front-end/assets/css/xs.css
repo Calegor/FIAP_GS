@@ -2,10 +2,6 @@
 
 @media (max-width: 480px) {
   /* ---------------------------------------------------- */
-  /* ESTILOS GERAIS */
-  /* ---------------------------------------------------- */
-
-  /* ---------------------------------------------------- */
   /* SEÇÃO: NAVBAR */
   /* ---------------------------------------------------- */
   /* ativa o layout de grid para organizar logo, botao e busca */
@@ -39,7 +35,7 @@
     display: block;
   }
 
-  /* menu Lateral (abre na esquerda) */
+  /* menu lateral (abre na esquerda) */
   .nav .nav-links {
     display: none;
     position: fixed;
@@ -112,19 +108,18 @@
   }
 
   /* ---------------------------------------------------- */
-  /* SEÇÃO: HERO */
+  /* PAGINA: INDEX */
   /* ---------------------------------------------------- */
+  /* =====> HERO - INDEX <===== */
   #hero {
-    /* Aumenta a altura um pouco mais que o mobile extra small */
+    /* aumenta a altura um pouco mais que o mobile extra small */
     height: 450px;
   }
-
   .slide-content h1 {
-    /* Aumenta o título para telas maiores que 480px */
+    /* aumenta o título para telas maiores que 480px */
     font-size: 2em !important;
     padding: 0 10px;
   }
-
   .slide-content p {
     font-size: 1em !important;
     padding: 0 30px;
@@ -142,15 +137,229 @@
     font-size: 10px;
     transition: 0.6s ease;
     user-select: none;
-    background-color: rgba(0, 0, 0, 0.068); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.068);
     border-radius: 7px;
-    z-index: 5; /* Garante que fique acima dos slides */
+    z-index: 5; /* garante que fique acima dos slides */
   }
   .prev {
     left: 10px;
   }
   .next {
     right: 10px;
+  }
+
+  /* =====> SEÇÃO: O FUTURO DO TRABALHO JA COMEÇOU <===== */
+  #desafio {
+    padding: 60px 15px;
+  }
+  #desafio h2 {
+    font-size: 1.8rem;
+  }
+  #desafio .section-subtitle {
+    margin: 0 auto 30px;
+    font-size: 1rem;
+  }
+  .desafio-grid {
+    gap: 20px;
+    padding: 0 5px;
+  }
+  .desafio-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  /* =====> SEÇÃO: PILARES PLATAFORMA ABRIR <===== */
+  #logo-pilares-visual {
+    padding: 50px 10px;
+    min-height: auto;
+  }
+  #logo-pilares-visual h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  /* contriner das letras ABRIR */
+  .logo-abrir-container {
+    gap: 10px; /* reduz o espaço entre as letras */
+    margin-bottom: 40px;
+  }
+
+  /* estilo de cada letra */
+  .logo-abrir-letra {
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    padding: 5px 10px;
+  }
+
+  /* conteiner dos 5 pilares */
+  .pilares-icones-grid {
+    gap: 15px;
+  }
+
+  /* estilo de cada ponto (icone + texto) */
+  .pilar-visual-item {
+    width: 60px;
+  }
+  .pilar-visual-item i {
+    font-size: 3rem;
+    margin-bottom: 5px;
+  }
+  .pilar-visual-item p {
+    font-size: 0.8rem;
+  }
+
+  /* =====> SEÇÃO: FAQ DOS PILARES <===== */
+  #foco-requalificacao {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  /* container que faz o empilhamento */
+  .faq-container {
+    padding: 20px;
+    flex-direction: column; /* FORÇA O EMPILHAMENTO */
+    gap: 30px;
+  }
+  .faq-col-left {
+    padding: 0;
+    margin-top: 0;
+  }
+  .faq-col-left h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .faq-col-left .faq-subtitle-span {
+    font-size: 1.1rem;
+  }
+
+  /* coluna da direita (lista de itens) */
+  .faq-col-right {
+    padding-top: 0;
+  }
+  .faq-lista li {
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+
+  /* icone dentro do item da lista */
+  .faq-lista i {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  /* resposta do accordion */
+  .faq-resposta p {
+    font-size: 0.9rem;
+  }
+
+  /* =====> SEÇÃO: SIMULADOR <===== */
+  #simulador {
+    margin-top: -80px;
+    padding-bottom: 50px;
+  }
+  #simulador h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    padding: 0 20px;
+  }
+  #simulador .section-subtitle {
+    font-size: 1rem;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+  }
+  #simulador-box {
+    max-width: 90%;
+    padding: 20px;
+    gap: 20px;
+    margin: 30px auto;
+  }
+  #simulador-box.simulador-aberto {
+    max-width: 90%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .simulador-col-input {
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
+  }
+  #simulador-box label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-align: center;
+    align-items: center;
+  }
+  #profissao-risco {
+    padding: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  .simulador-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .aviso-risco-simulador {
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-right: 0;
+    text-align: center !important;
+  }
+  #risco-resultado {
+    width: 100%;
+    padding: 20px;
+    font-size: 1em;
+    min-height: 100px;
+  }
+
+  /* =====> SEÇÃO: CTA <===== */
+  .cta-responsivo {
+    background: linear-gradient(
+      135deg,
+      var(--color-3) 0%,
+      var(--color-4) 100%
+    ) !important;
+  }
+
+  /* =====> SEÇÃO: POLITICA E PROTECAO SOCIAL <===== */
+  #blog {
+    margin-top: 20px;
+    padding: 50px 15px;
+  }
+  #blog h2 {
+    font-size: 1.8rem;
+  }
+  #blog .section-subtitle {
+    margin: 0 auto 25px;
+    font-size: 1rem;
+  }
+  .cards-container {
+    gap: 30px;
+    margin: 20px auto 0;
+  }
+  .post-card-image {
+    height: 150px;
+  }
+  .card-content {
+    padding: 15px;
+  }
+  .card-content h3 {
+    font-size: 1.2em;
+  }
+  .card-content p {
+    font-size: 0.9em;
+    margin-top: 8px;
+  }
+  .btn-link-artigo {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  .card-tag {
+    width: 100%;
+  }
+  .politica-container {
+    margin-bottom: -90px;
   }
 
   /* ---------------------------------------------------- */
@@ -259,7 +468,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: FAQ */
   /* ---------------------------------------------------- */
-  /* =====> HERO - FAQ <===== */
 
   /* =====> FAQ <===== */
   .faq-container {
@@ -282,7 +490,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: CONTATO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - CONTATO <===== */
 
   /* =====> FORMULARIO <===== */
   .form-row .half-width {
@@ -301,7 +508,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: CARREIRA POR PROPÓSITO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - CARREIRA POR PROPOSITO <===== */
 
   /* =====> AVALIADOR <===== */
   #filtro-proposito {
@@ -334,12 +540,10 @@
     width: 100%;
     margin-top: 5px;
   }
-
   #resultado-proposito {
     padding: 20px;
     font-size: 1em;
   }
-
   #resultado-proposito h3 {
     font-size: 1.2em;
     padding: 15px 20px;
@@ -374,7 +578,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: MAPA DE REQUALIFICAÇÃO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - MAPA DE REQUALIFICAÇÃO <===== */
 
   /* =====> MAPA <===== */
   #filtro-mapa {

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- FUNÇÃO DE MÁSCARA DE TELEFONE ---
     function applyPhoneMask() {
-        // Pega apenas os dígitos
+        // pega apenas os dígitos
         let value = phoneInput.value.replace(/\D/g, ''); 
         let formattedValue = '';
 
@@ -75,19 +75,19 @@ document.addEventListener('DOMContentLoaded', () => {
             return false;
         }
 
-        // Validação de tamanho mínimo (para nome e assunto)
+        // validação de tamanho mínimo (para nome e assunto)
         if ((input.id === 'name' || input.id === 'subject') && input.validity.tooShort) {
             displayError(input, `O campo ${label} deve ter pelo menos ${input.minLength} caracteres.`, errorElement);
             return false;
         }
 
-        // Validação de formato de E-mail
+        // validação de formato de e-mail
         if (input.id === 'email' && input.validity.typeMismatch) {
             displayError(input, 'Por favor, insira um endereço de e-mail válido.', errorElement);
             return false;
         }
         
-        // Validação do Telefone (garante que tenha 10 ou 11 dígitos)
+        // validação do Telefone (garante que tenha 10 ou 11 dígitos)
         if (input.id === 'phone' && (rawValue.length < 10 || rawValue.length > 11)) {
             displayError(input, 'Por favor, insira um telefone válido com DDD (10 ou 11 dígitos).', errorElement);
             return false;

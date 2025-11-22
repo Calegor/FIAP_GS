@@ -45,19 +45,19 @@ function progress() {
 posts.forEach((post, index) => {
   post.addEventListener("click", () => {
     disablePostsTemporarily();
-    i = 0; // Reset the progress bar
+    i = 0; // reset the progress bar
     postIndex = index;
     updatePosts();
   });
 });
 
 function disablePostsTemporarily() {
-  // Disable pointer events on all posts
+  // disable pointer events on all posts
   posts.forEach((post) => {
     post.classList.add("post--disabled");
   });
 
-  // Re-enable pointer events after 2 1/2 seconds
+  // re-enable pointer events after 2 1/2 seconds
   setTimeout(() => {
     posts.forEach((post) => {
       post.classList.remove("post--disabled");
@@ -66,7 +66,7 @@ function disablePostsTemporarily() {
 }
 
 function updatePosts() {
-  // Reset all progress bars and classes
+  // reset all progress bars and classes
   posts.forEach((post) => {
     post.querySelector(".progress-bar__fill").style.width = 0;
     post.classList.remove("post--active");
@@ -77,7 +77,7 @@ function updatePosts() {
     mainPost.classList.remove("main-post--active");
   });
 
-  // Update the current post and main post
+  // update the current post and main post
   currentPost = posts[postIndex];
   currentMainPost = mainPosts[postIndex];
 

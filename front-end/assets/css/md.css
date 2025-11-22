@@ -2,10 +2,6 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* ---------------------------------------------------- */
-  /* ESTILOS GERAIS */
-  /* ---------------------------------------------------- */
-
-  /* ---------------------------------------------------- */
   /* SEÇÃO: NAVBAR */
   /* ---------------------------------------------------- */
   /* ativa o layout de grid para organizar logo, botao e busca */
@@ -112,8 +108,9 @@
   }
 
   /* ---------------------------------------------------- */
-  /* SEÇÃO: HERO */
+  /* PAGINA: INDEX */
   /* ---------------------------------------------------- */
+  /* =====> HERO - INDEX <===== */
   #hero {
     /* Aumenta a altura um pouco mais que o mobile extra small */
     height: 450px;
@@ -151,6 +148,89 @@
   }
   .next {
     right: 10px;
+  }
+
+  /* =====> SEÇÃO: O FUTURO DO TRABALHO JA COMEÇOU <===== */
+  #desafio {
+    padding: 80px 30px;
+  }
+  #desafio h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  /* =====> SEÇÃO: O FUTURO DO TRABALHO JA COMEÇOU <===== */
+  #logo-pilares-visual {
+    padding: 70px 20px;
+  }
+  #logo-pilares-visual h2 {
+    font-size: 2.8rem;
+  }
+  .logo-abrir-letra {
+    font-size: 5rem;
+    width: 80px;
+    height: 80px;
+  }
+  .pilares-icones-grid {
+    gap: 20px;
+  }
+  .pilar-visual-item {
+    width: 80px;
+  }
+  .pilar-visual-item i {
+    font-size: 4rem;
+  }
+
+  /* =====> SEÇÃO: FAQ DOS PILARES <===== */
+  .faq-container {
+    flex-direction: row;
+    padding: 40px;
+    gap: 40px;
+  }
+  #foco-requalificacao {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .faq-col-left h2 {
+    font-size: 1.8rem;
+    margin-top: -30px;
+  }
+  .faq-container {
+    margin-top: -30px;
+  }
+
+  /* =====> SEÇÃO: SIMULADOR <===== */
+  #simulador h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    padding: 0 20px;
+  }
+  #simulador .section-subtitle {
+    font-size: 1.05rem;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+  }
+  #simulador-box.simulador-aberto {
+    max-width: 90%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* =====> SEÇÃO: CTA <===== */
+  .cta-responsivo {
+    background: linear-gradient(
+      135deg,
+      var(--color-3) 0%,
+      var(--color-4) 100%
+    ) !important;
+  }
+
+  /* =====> SEÇÃO: POLITICA E PROTECAO SOCIAL <===== */
+  #blog {
+    padding: 80px 20px;
+  }
+  #blog h2 {
+    font-size: 2.2rem;
   }
 
   /* ---------------------------------------------------- */
@@ -251,7 +331,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: FAQ */
   /* ---------------------------------------------------- */
-  /* =====> HERO - FAQ <===== */
 
   /* =====> FAQ <===== */
   .faq-section {
@@ -262,10 +341,8 @@
   /* ---------------------------------------------------- */
   /* PAGINA: CONTATO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - CONTATO <===== */
 
   /* =====> FORMULARIO <===== */
-
   .form-container {
     margin-top: -100px;
     margin-bottom: 100px;
@@ -274,7 +351,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: CARREIRA POR PROPOSITO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - CARREIORA POR PROPOSITO <===== */
 
   /* =====> AVALIADOR <===== */
   #filtro-proposito {
@@ -323,7 +399,6 @@
   /* ---------------------------------------------------- */
   /* PAGINA: MAPA DE REQUALIFICAÇÃO */
   /* ---------------------------------------------------- */
-  /* =====> HERO - MAPA DE REQUALIFICAÇÃO <===== */
 
   /* =====> MAPA <===== */
   #filtro-mapa {
@@ -381,12 +456,12 @@
     margin-top: 10px;
   }
 
-    /* =====> CTA <===== */
+  /* =====> CTA <===== */
   .reclassificacao-cta {
     padding: 100px 30px;
     min-height: 250px;
-    background: url("/front-end/assets/imgs/svg/write-svgrepo-com.svg") no-repeat bottom 60px
-        right 0 / 30%,
+    background: url("/front-end/assets/imgs/svg/write-svgrepo-com.svg")
+        no-repeat bottom 60px right 0 / 30%,
       linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
   }
 

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-/*variáveis para facilitar futuras mudanças */
+/* variáveis para facilitar futuras mudanças */
 :root {
   --font-family: "Inter", sans-serif;
   --white: #ffffff;
@@ -17,14 +17,12 @@
   --footer-bg: #2f2559;
   --search-icon: #6a3494;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
 }
-
 body {
   background-color: var(--branco-principal);
   padding-top: 100px; /* FAZ O CONTEUDO FICAR PRA BAIXO DA BARRA DE NAV FIXA */
@@ -33,7 +31,6 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
-
 .wrapper {
   text-align: center;
   padding: 30px 0; /* deixa o espaço entre a hero e o nossos programas */
@@ -43,11 +40,9 @@ body {
   display: block;
   margin: 0 auto;
 }
-
 a {
   text-decoration: none;
 }
-
 .b-bg {
   background: linear-gradient(to right, var(--color-1), var(--color-2));
   color: var(--white);
@@ -55,23 +50,20 @@ a {
   border-radius: 4px;
   font-weight: 500;
 }
-
 .b-colorful {
   color: var(--color-1);
 }
-
 .u-double {
   text-decoration: double underline;
   text-decoration-color: var(--color-3);
   text-decoration-thickness: calc(6%);
 }
-
 fieldset {
   color: none;
   border: none;
 }
 
-/* Estilização da Caixa de Tooltip Posicional */
+/* estilização da caixa de tooltip posicional */
 .tooltip-popup {
   display: none;
   position: absolute; /* Será posicionado absolutamente pelo JavaScript */
@@ -88,7 +80,7 @@ fieldset {
   line-height: 1.4;
 }
 
-/* Estilização do termo ativador do Tooltip (mantida) */
+/* estilização do termo ativador do tooltip */
 .glossario-white {
   cursor: help;
   border-bottom: 3px double var(--white);
@@ -97,7 +89,6 @@ fieldset {
   cursor: help;
   border-bottom: 3px double var(--color-4);
 }
-
 .h1-degrade {
   background: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
   -webkit-background-clip: text;

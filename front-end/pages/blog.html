@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="../assets/css/base.css" />
   </head>
   <body class="body-blog">
-    <!-- O carrossel completo é uma seção de conteúdo distinta. Adicionamos ARIA Role e Label. -->
     <section
       class="carousel"
       role="region"
       aria-label="Carrossel de Notícias Principais"
     >
-      <!-- Indicador de progresso (mobile) -->
       <div
         class="progress-bar progress-bar--primary hide-on-desktop"
         role="progressbar"
@@ -26,11 +24,8 @@
         <div class="progress-bar__fill"></div>
       </div>
 
-      <!-- Wrapper dos slides principais -->
       <div class="main-post-wrapper">
-        <!-- Container dos slides. Poderia ter role="listbox" com controles, mas mantemos o básico por ser só HTML. -->
         <div class="slides">
-          <!-- SLIDE 1: Ativo -->
           <article
             class="main-post main-post--active"
             role="group"
@@ -38,7 +33,6 @@
             aria-hidden="false"
           >
             <div class="main-post__image">
-              <!-- Alt Text corrigido para ser relevante ao título do post. -->
               <img
                 src="../assets/imgs/hero/upskilling-reskilling.png"
                 alt="Ilustração sobre Reskilling e Upskilling."
@@ -47,10 +41,8 @@
             </div>
             <div class="main-post__content">
               <div class="main-post__tag-wrapper">
-                <!-- Categoria/Tag -->
                 <span class="main-post__tag">Notícias</span>
               </div>
-              <!-- Título do post (H2 para hierarquia) -->
               <h2 class="main-post__title">
                 Reskilling e Upskilling: tendências e práticas de inovação
               </h2>
@@ -59,14 +51,12 @@
                 desenvolvimento de habilidades essenciais para o futuro do
                 trabalho.
               </p>
-              <!-- Link com aria-label para maior contexto fora do texto "Leia mais" -->
               <a
                 class="main-post__link"
                 href="https://blog.bb.com.br/reskilling-e-upskilling-tendencias-e-praticas-de-inovacao/"
                 aria-label="Leia mais sobre Reskilling e Upskilling: tendências e práticas de inovação"
               >
                 <span class="main-post__link-text">Leia mais</span>
-                <!-- SVG escondido de leitores de tela, pois o texto já é suficiente. -->
                 <svg
                   class="main-post__link-icon main-post__link-icon--arrow"
                   width="37"
@@ -85,7 +75,6 @@
             </div>
           </article>
 
-          <!-- SLIDE 2: Inativo -->
           <article
             class="main-post main-post--not-active"
             role="group"
@@ -93,7 +82,6 @@
             aria-hidden="true"
           >
             <div class="main-post__image">
-              <!-- Alt Text corrigido para ser relevante ao título do post. -->
               <img
                 src="../assets/imgs/hero/gig-economy.png"
                 alt="Ilustração sobre o impacto da Gig Economy em relações de trabalho."
@@ -137,7 +125,6 @@
             </div>
           </article>
 
-          <!-- SLIDE 3: Inativo -->
           <article
             class="main-post main-post--not-active"
             role="group"
@@ -145,7 +132,6 @@
             aria-hidden="true"
           >
             <div class="main-post__image">
-              <!-- Alt Text corrigido para ser relevante ao título do post. -->
               <img
                 src="../assets/imgs/hero/ia-chatgpt.png"
                 alt="Ilustração sobre o impacto da IA Generativa no futuro do trabalho."
@@ -191,9 +177,7 @@
         </div>
       </div>
 
-      <!-- Lista de Posts Secundários (desktop). Estrutura alterada para ul > li > article. -->
       <ul class="posts-wrapper hide-on-mobile" role="tablist">
-        <!-- POST 1: Ativo -->
         <li class="post-item" role="presentation">
           <article
             class="post post--active"
@@ -211,7 +195,6 @@
             >
               <div class="progress-bar__fill"></div>
             </div>
-            <!-- Envolvemos o título em um link para torná-lo navegável/clicável -->
             <a
               href="#"
               class="post__link"
@@ -219,7 +202,6 @@
             >
               <header class="post__header">
                 <span class="post__tag">Notícias</span>
-                <!-- Uso da tag time para data semântica -->
                 <time datetime="2024-12-13" class="post__published"
                   >13 Dezembro 2024</time
                 >
@@ -231,7 +213,6 @@
           </article>
         </li>
 
-        <!-- POST 2 -->
         <li class="post-item" role="presentation">
           <article class="post" role="tab" aria-selected="false" tabindex="-1">
             <div
@@ -262,7 +243,6 @@
           </article>
         </li>
 
-        <!-- POST 3 -->
         <li class="post-item" role="presentation">
           <article class="post" role="tab" aria-selected="false" tabindex="-1">
             <div
