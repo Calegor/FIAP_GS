@@ -505,7 +505,7 @@
   align-items: center; /* Alinha verticalmente */
 
   /* NOVO: Ícone grande na lateral direita */
-  background-image: url("/front-end/assets/imgs/svg/compass-2-svgrepo-com.svg"); /* <--- Substitua pelo caminho do seu ícone! */
+  background-image: url('../imgs/svg/compass-2-svgrepo-com.svg');
   background-repeat: no-repeat;
   background-size: 35%; /* Ajusta o tamanho da imagem para caber */
   background-position: right -10% center; /* Posição: direita, 10% do final, centralizado verticalmente */
@@ -1578,7 +1578,7 @@ input.invalid {
 /* === CTA PARA FILTRO DE PROPÓSITO (DESTAQUE) === */
 .cta-proposito {
     background: 
-        url("/front-end/assets/imgs/svg/map-svgrepo-com.svg") no-repeat right -2% center / 25%, /* SVG com suas configurações */
+        url("../imgs/svg/map-svgrepo-com.svg") no-repeat right -2% center / 25%, /* SVG com suas configurações */
         linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%); /* O Gradiente */
     color: var(--white);
     padding: 120px 20px;
@@ -1914,9 +1914,12 @@ input.invalid {
     text-align: left;
 }
 
-/* === CTA PARA FILTRO DE PROPÓSITO (DESTAQUE) === */
+
 .reclassificacao-cta {
     background: 
-        url("/front-end/assets/imgs/svg/write-svgrepo-com.svg") no-repeat right 2% center / 23%, /* SVG com suas configurações */
+        url("../imgs/svg/write-svgrepo-com.svg") no-repeat right 2% center / 23%, /* SVG com suas configurações */
         linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%); /* O Gradiente */
 }
+
+
+

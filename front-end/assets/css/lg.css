@@ -38,9 +38,105 @@
   /* PAGINA: INTEGRANTES */
   /* ---------------------------------------------------- */
   /* =====> DESENVOLVEDORES <===== */
+
   .developer-cards {
     margin-top: -35px;
     margin-bottom: -30px;
+  }
+
+  /* ---------------------------------------------------- */
+  /* PAGINA: CARREIRA POR PROPOSITO */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - CARREIORA POR PROPOSITO <===== */
+
+  /* =====> AVALIADOR <===== */
+  #filtro-proposito {
+    background-color: transparent;
+    margin-top: -25px;
+    padding-bottom: 40px;
+  }
+  #filtro-proposito h2 {
+    font-size: 2.2rem;
+  }
+  #filtro-proposito .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  #proposito-box {
+    margin: 40px auto;
+    max-width: 900px;
+  }
+  #selecao-proposito {
+    min-width: 300px;
+  }
+  #proposito-box button {
+    width: auto;
+  }
+  #resultado-proposito h3 {
+    font-size: 1.3em;
+  }
+
+  /* ---------------------------------------------------- */
+  /* PAGINA: MAPA DE REQUALIFICAÇÃO */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - MAPA DE REQUALIFICAÇÃO <===== */
+
+  /* =====> MAPA <===== */
+  #filtro-mapa {
+    background-color: transparent;
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+  #filtro-mapa .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  #mapa-box {
+    padding: 20px;
+    margin: 100px auto 35px auto;
+    max-width: 900px;
+  }
+  #resultado .proposito-item a {
+    width: 177px;
+  }
+  #mapa-box label,
+  #outras-profissao-container label {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  .selecao-estilizada,
+  #outras-profissao-container {
+    width: 78%;
+  }
+  .selecao-estilizada,
+  #outras-profissao-container input[type="text"] {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  #mapa-acao-wrapper button {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  #resultado,
+  .resultado-box,
+  #erro-mensagem {
+    padding: 20px;
+    font-size: 1.05em;
+  }
+  #resultado .resultado-titulo,
+  #resultado h2,
+  #erro-mensagem h3 {
+    font-size: 1.3em;
+    padding: 15px 20px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  #erro-mensagem {
+    margin-top: 10px;
   }
 
   /* ---------------------------------------------------- */

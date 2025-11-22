@@ -267,14 +267,13 @@
   }
   .faq-section {
     padding: 5px 20px;
-        margin-top: -200px;
-        margin-bottom: -25px;
+    margin-top: -200px;
+    margin-bottom: -25px;
   }
   .faq-container {
   }
   .faq-question {
     padding: 18px 20px;
-
   }
   .faq-content {
     padding: 0 20px 18px 50px;
@@ -286,27 +285,161 @@
   /* =====> HERO - CONTATO <===== */
 
   /* =====> FORMULARIO <===== */
-.form-row .half-width {
-        width: 100%; /* Ocupa a largura total */
-        margin-bottom: 20px; 
-    }
-    /* Corrige a margem do último campo para o próximo fieldset */
-    .form-row .form-group:last-child {
-        margin-bottom: 30px; 
-    }
-    .form-container {
-      margin-top: -80px;
-      margin-bottom: 120px;
-    }
+  .form-row .half-width {
+    width: 100%; /* Ocupa a largura total */
+    margin-bottom: 20px;
+  }
+  /* Corrige a margem do último campo para o próximo fieldset */
+  .form-row .form-group:last-child {
+    margin-bottom: 30px;
+  }
+  .form-container {
+    margin-top: -80px;
+    margin-bottom: 120px;
+  }
 
+  /* ---------------------------------------------------- */
+  /* PAGINA: CARREIRA POR PROPÓSITO */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - CARREIRA POR PROPOSITO <===== */
 
+  /* =====> AVALIADOR <===== */
+  #filtro-proposito {
+    background-color: transparent;
+    margin-top: -140px;
+    padding-bottom: 40px;
+  }
+  #filtro-proposito h2 {
+    font-size: 1.8rem;
+  }
+  #filtro-proposito .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  #proposito-box {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+  #proposito-box label {
+    font-size: 1rem;
+  }
+  #selecao-proposito {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  #proposito-box button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 5px;
+  }
 
+  #resultado-proposito {
+    padding: 20px;
+    font-size: 1em;
+  }
 
+  #resultado-proposito h3 {
+    font-size: 1.2em;
+    padding: 15px 20px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .proposito-item {
+    font-size: 1em !important;
+    padding: 10px 0;
+  }
 
+  /* =====> CTA <===== */
+  .cta-proposito {
+    padding: 60px 20px;
+    min-height: 200px;
+    background: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+  }
+  .cta-proposito::before {
+    background: linear-gradient(to left, var(--color-1) 0%, transparent 70%);
+  }
+  .cta-proposito h3 {
+    font-size: 1.6rem;
+  }
+  .cta-proposito p {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
 
+  /* ---------------------------------------------------- */
+  /* PAGINA: MAPA DE REQUALIFICAÇÃO */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - MAPA DE REQUALIFICAÇÃO <===== */
 
+  /* =====> MAPA <===== */
+  #filtro-mapa {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+  #filtro-mapa h2 {
+    font-size: 1.8rem;
+  }
+  #filtro-mapa .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+  #mapa-box {
+    padding: 20px;
+    margin: 100px 20px 45px 20px;
+  }
+  #resultado .proposito-item a {
+    width: 171px;
+  }
+  #mapa-box label,
+  #outras-profissao-container label {
+    font-size: 1rem;
+  }
+  .selecao-estilizada,
+  #outras-profissao-container {
+    width: 100%;
+  }
+  .selecao-estilizada,
+  #outras-profissao-container input[type="text"] {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  #mapa-acao-wrapper button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  #resultado,
+  .resultado-box,
+  #erro-mensagem {
+    padding: 20px;
+    font-size: 1em;
+  }
+  #resultado .resultado-titulo,
+  #resultado h2,
+  #erro-mensagem h3 {
+    font-size: 1.2em;
+    padding: 15px 20px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  #erro-mensagem {
+    margin-top: 10px;
+  }
 
-  
+  /* =====> CTA <===== */
+  .reclassificacao-cta {
+    background: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+  }
 
   /* ---------------------------------------------------- */
   /* SEÇÃO: FOOTER */

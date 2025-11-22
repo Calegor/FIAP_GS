@@ -301,17 +301,117 @@
     margin-bottom: 80px;
   }
 
+  /* ---------------------------------------------------- */
+  /* PAGINA: CARREIRA POR PROPÓSITO */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - CARREIRA POR PROPOSITO <===== */
 
+  /* =====> AVALIADOR <===== */
+  #filtro-proposito {
+    background-color: transparent;
+    margin-top: -135px;
+    padding-bottom: 40px;
+  }
+  #filtro-proposito h2 {
+    font-size: 2rem;
+  }
+  #filtro-proposito .section-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  #proposito-box {
+    margin: 40px 20px;
+  }
+  #proposito-box button {
+    width: auto;
+  }
+  #resultado-proposito h3 {
+    font-size: 1em;
+  }
 
+  /* =====> CTA <===== */
+  .cta-proposito {
+    padding: 80px 20px;
+    min-height: 220px;
+    background: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+  }
+  .cta-proposito::before {
+    background: linear-gradient(to left, var(--color-1) 0%, transparent 70%);
+  }
+  .cta-proposito h3 {
+    font-size: 1.8rem;
+  }
+  .cta-proposito p {
+    padding: 10px;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
 
+  /* ---------------------------------------------------- */
+  /* PAGINA: MAPA DE REQUALIFICAÇÃO */
+  /* ---------------------------------------------------- */
+  /* =====> HERO - MAPA DE REQUALIFICAÇÃO <===== */
 
+  /* =====> MAPA <===== */
+  #filtro-mapa {
+    background-color: transparent;
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+  #filtro-mapa .section-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  #mapa-box {
+    padding: 20px;
+    margin: 100px 20px 35px 20px;
+  }
+  #resultado .proposito-item a {
+    width: 177px;
+  }
+  #mapa-box label,
+  #outras-profissao-container label {
+    font-size: 1rem;
+  }
+  .selecao-estilizada,
+  #outras-profissao-container {
+    width: 100%;
+  }
+  .selecao-estilizada,
+  #outras-profissao-container input[type="text"] {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  #mapa-acao-wrapper button {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  #resultado,
+  .resultado-box,
+  #erro-mensagem {
+    padding: 20px;
+    font-size: 1.05em;
+  }
+  #resultado .resultado-titulo,
+  #resultado h2,
+  #erro-mensagem h3 {
+    font-size: 1.2em;
+    padding: 15px 20px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  #erro-mensagem {
+    margin-top: 10px;
+  }
 
-
-
-
-
-
-  
+  /* =====> CTA <===== */
+  .reclassificacao-cta {
+    background: linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%);
+  }
 
   /* ---------------------------------------------------- */
   /* SEÇÃO: FOOTER */
