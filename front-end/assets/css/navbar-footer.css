@@ -67,8 +67,8 @@
   color: var(--black);
 }
 .nav-action-btn-footer.transition:hover {
-  background-color: var(--btn-bg);
-  color: var(--white);
+  background-color: var(--color-3);
+  color: var(--black);
 }
 @keyframes pulse {
   0% {

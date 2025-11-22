@@ -1,5 +1,4 @@
-
-// mapeamento de risco (Chave: profissão, Valor: Risco de 0 a 100)
+// mapeamento de risco (chave: profissão, valor: risco de 0 a 100)
 // usado no simulador de potencial de transformação
 const mapeamentoRisco = {
     "escriturario": 85,
@@ -67,31 +66,5 @@ const mapeamento = {
         { nome: `Regulação de <span class="glossario-termo" data-tooltip="Inteligência Artificial: Sistemas que simulam a inteligência humana para realizar tarefas, como aprender e tomar decisões.">IA</span> e Automação`, descricao: `Criação de instrumentos legais para coibir a exclusão e proteger o trabalhador frente à IA.`, link: "#" },
         { nome: `Fortalecimento da Proteção Social`, descricao: `Adaptação de redes de proteção social e <span class="glossario-termo" data-tooltip="Processo de modernização das leis de trabalho para se adequarem a novos modelos de emprego, como o trabalho por plataforma.">regulação trabalhista</span> aos novos modelos de emprego (ex.: trabalho por plataforma).`, link: "#" },
         { nome: `Análise de Dados Jurídicos e Ética`, descricao: `Análise de dados para prever tendências e garantir o uso ético das novas tecnologias.`, link: "#" }
-    ]
-};
-
-// mapeamento de propósito (lista inclusiva)
-// usado no filtro de carreira por propósito
-const mapeamentoProposito = {
-    "inclusao": [
-        { nome: "Analista de RH", motivo: "Focado em recrutamento ético e inclusivo e mitigação de desigualdades." },
-        { nome: "Gerente de Loja", motivo: "Garantindo inclusão produtiva para populações vulneráveis na força de trabalho." },
-        { nome: "Advogado", motivo: "Trabalhando na regulação e proteção social para combater a exclusão." }
-    ],
-    "saude": [
-        { nome: "Enfermeiro", motivo: "Uso de telemedicina e monitoramento de saúde e bem-estar no trabalho." },
-        { nome: "Analista de RH", motivo: "Criação de sistemas de saúde mental corporativa e gestão de ambientes híbridos saudáveis." }
-    ],
-    "verde": [
-        { nome: "Motorista / Logística", motivo: "Adaptação a modelos de trabalho baseados em impacto social e sustentabilidade." },
-        { nome: "Operador de Máquinas", motivo: "Requalificação para transições verdes e otimização de recursos (ODS 8)." }
-    ],
-    "educacao": [
-        { nome: "Professor / Educador", motivo: "Design de experiências imersivas e personalização de jornadas de aprendizagem (ODS 4)." },
-        { nome: "Jornalista", motivo: "Comunicação e narrativa em novas plataformas de aprendizagem." }
-    ],
-    "regulacao": [
-        { nome: "Advogado", motivo: "Especializado na regulação de IA e fortalecimento da proteção social." },
-        { nome: "Contador", motivo: "Especializado em ética e transparência na análise de dados financeiros e fiscais." }
     ]
 };

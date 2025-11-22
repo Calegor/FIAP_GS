@@ -3,64 +3,64 @@ const mapeamentoProposito = {
     {
       nome: "Analista de RH",
       motivo:
-        "Focado em recrutamento ético e inclusivo e mitigação de desigualdades.",
+        "Foco em recrutar todos de forma igual e acabar com as diferenças no trabalho.",
     },
     {
       nome: "Gerente de Loja",
       motivo:
-        "Garantindo inclusão produtiva para populações vulneráveis na força de trabalho.",
+        "Cuidando para que pessoas em situações mais difíceis tenham um bom emprego e se desenvolvam na nossa equipe.",
     },
     {
       nome: "Advogado",
       motivo:
-        "Trabalhando na regulação e proteção social para combater a exclusão.",
+        "Usando a lei para garantir a proteção das pessoas e lutar contra quem fica de fora.",
     },
   ],
   saude: [
     {
       nome: "Enfermeiro",
       motivo:
-        "Uso de telemedicina e monitoramento de saúde e bem-estar no trabalho.",
+        "Usando a tecnologia (como consultas online) para monitorar a saúde e o bem-estar de quem está no trabalho.",
     },
     {
       nome: "Analista de RH",
       motivo:
-        "Criação de sistemas de saúde mental corporativa e gestão de ambientes híbridos saudáveis.",
+        "Criando programas para cuidar da saúde mental no trabalho e organizando ambientes híbridos que fazem bem para todos.",
     },
   ],
   verde: [
     {
       nome: "Motorista / Logística",
       motivo:
-        "Adaptação a modelos de trabalho baseados em impacto social e sustentabilidade.",
+        "Adaptando o jeito de trabalhar para ter um impacto positivo na sociedade e no planeta.",
     },
     {
       nome: "Operador de Máquinas",
       motivo:
-        "Requalificação para transições verdes e otimização de recursos (ODS 8).",
+        "Aprendendo novas formas de usar máquinas para economizar recursos e ajudar na transição para um mundo mais sustentável.",
     },
   ],
   educacao: [
     {
       nome: "Professor / Educador",
       motivo:
-        "Design de experiências imersivas e personalização de jornadas de aprendizagem (ODS 4).",
+        "Criando aulas super imersivas e personalizando o aprendizado, para que cada aluno siga seu próprio ritmo e interesse.",
     },
     {
       nome: "Jornalista",
-      motivo: "Comunicação e narrativa em novas plataformas de aprendizagem.",
+      motivo: "Usando a comunicação e a escrita para criar conteúdos de aprendizado em novas plataformas digitais.",
     },
   ],
   regulacao: [
     {
       nome: "Advogado",
       motivo:
-        "Especializado na regulação de IA e fortalecimento da proteção social.",
+        "Focado em criar regras para a inteligência artificial e garantir que a proteção social seja sempre forte.",
     },
     {
       nome: "Contador",
       motivo:
-        "Especializado em ética e transparência na análise de dados financeiros e fiscais.",
+        "Trabalhando com ética e clareza para analisar dados de dinheiro e impostos, garantindo que tudo seja honesto.",
     },
   ],
 };
@@ -91,9 +91,9 @@ function filtrarProposito() {
     // processa os resultados
     if (carreiras && carreiras.length > 0) {
         // gera o título
-        htmlResultado += `<h3>Carreiras Alinhadas ao Propósito de ${
+        htmlResultado += `<h3>Carreiras alinhadas ao propósito de: ${
             selecao.options[selecao.selectedIndex].text
-        }:</h3>`;
+        }</h3>`;
 
         // gera os itens
         carreiras.forEach((c) => {

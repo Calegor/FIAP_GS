@@ -180,7 +180,7 @@ const mapeamento = {
 // função para mostrar/esconder o campo de texto "outros"
 function toggleOutros() {
   const selecao = document.getElementById("profissao-selecao");
-  const containerOutros = document.getElementById("outras-profissao-container"); 
+  const containerOutros = document.getElementById("outras-profissao-container");
   const inputOutros = document.getElementById("outras-profissao");
 
   if (!selecao || !containerOutros || !inputOutros) return;
@@ -204,14 +204,14 @@ function mapearHabilidades() {
   const resultadoDiv = document.getElementById("resultado");
   const erroDiv = document.getElementById("erro-mensagem");
   // o elemento cta-mapa será mostrado após a exibição do resultado
-  const chamadaMapa = document.getElementById("chamada-mapa"); 
+  const chamadaMapa = document.getElementById("chamada-mapa");
 
   if (!selecao || !resultadoDiv || !erroDiv || !chamadaMapa) return;
 
   resultadoDiv.style.display = "none";
   erroDiv.style.display = "none";
   chamadaMapa.style.display = "none";
-  
+
   let htmlResultado = "";
   let profissaoChave = "";
 
@@ -235,7 +235,7 @@ function mapearHabilidades() {
     const habilidades = mapeamento[profissaoChave];
 
     /* a mensagem introdutória adaptada para o H2 + p para manter o estilo visual desejado. */
-    
+
     // conteúdo da introdução (não é um item de habilidade)
     htmlResultado += `<p style="text-align: left; margin-top: -5px; margin-bottom: 25px;">
                       Com base na sua área, recomendamos que você se concentre nas seguintes <i>competências do futuro</i>:
@@ -258,20 +258,21 @@ function mapearHabilidades() {
             Ainda estamos construindo o mapeamento específico para essa área! Isso mostra que a transição está em curso.
           </p>
           <p>
-            Para qualquer carreira, as **competências humanas** são cruciais. Recomendamos focar em:
+            Para qualquer carreira, as competências humanas são cruciais. Recomendamos focar em:
           </p>
           <!-- Usando a classe .proposito-item para aplicar o estilo de lista e separadores -->
           <div class="proposito-item">
             <strong>Criatividade e Pensamento Crítico</strong>
             <p>Habilidades essenciais para lidar com os desafios inéditos e reimaginar o trabalho.</p>
-            <a href="#">Acessar Guia de Soft Skills (Recomendação para todos)</a>
+            <a href="https://sebrae.com.br/Sebrae/Portal%20Sebrae/UFs/PE/Anexos/Guia-das-soft-skills-saiba-tudo-sobre-essas-habilidades.pdf" target="_blank" style="text-align: center;">Entenda soft skills</a>
           </div>
         `;
   }
 
   // define o HTML final, usando a classe de título que você deve estilizar
   resultadoDiv.innerHTML =
-    '<h2 class="resultado-titulo">Seu caminho de requalificação</h2>' + htmlResultado;
+    '<h2 class="resultado-titulo">Seu caminho de requalificação</h2>' +
+    htmlResultado;
   resultadoDiv.style.display = "block";
 
   // mostra a chamada à ação após o mapeamento
