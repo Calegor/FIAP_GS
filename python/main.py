@@ -23,7 +23,7 @@ while True:
           1 - Urgência de requalificação
           2 - Cargos Sugeridos
           3 - Tendências de mercado atuais
-          4 - Avanço da Inteligência Artificial
+          4 - Avanço da Inteligência ArtificialÉ
           0 - Sair
 """)
 

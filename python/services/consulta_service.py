@@ -92,6 +92,7 @@ class ConsultaService():
             2 - Assistente Administrativo Digital: Atua com ERP, CRM, dashboards e ferramentas online e acaba substituindo o trabalho repetitivo por operação de sistemas, algo bem menos automatizável.
             3 - Analista de Suporte Operacional: Em vez de só registrar dados, resolve gargalos, monitora indicadores e auxilia na operação em tempo real, funções que exigem julgamento humano.
             """
+        
         elif pr == "digitador":
             return """
             1 - Assistente de Operações Digitais: Em vez de só digitar, opera sistemas, valida informações e resolve inconsistências. Exige raciocínio, não só dedos rápidos.
