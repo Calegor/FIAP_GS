@@ -1135,6 +1135,9 @@
   max-width: 800px;
   width: 100%;
 }
+.integrantes__hero {
+  margin-bottom: 20px;
+}
 fieldset {
   border: none;
   padding: 0;

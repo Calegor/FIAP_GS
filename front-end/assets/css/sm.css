@@ -145,12 +145,14 @@
   }
 
   /* =====> SEÇÃO: O FUTURO DO TRABALHO JA COMEÇOU <===== */
-  #desafio {
-    padding: 70px 20px;
+  .desafio-grid {
+    grid-template-columns: 1fr 1fr;
   }
-  #desafio h2 {
-    font-size: 2rem;
-    line-height: 1.2;
+  .desafio-card:nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    max-width: 280px;
+    width: 90%;
   }
 
   /* =====> SEÇÃO: O FUTURO DO TRABALHO JA COMEÇOU <===== */
@@ -266,14 +268,21 @@
   #blog h2 {
     font-size: 2rem;
   }
-  .cards-container {
-    gap: 25px;
-  }
   .card-tag {
     width: 100%;
   }
   .politica-container {
     margin-bottom: -110px;
+  }
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  .post-card:nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    max-width: 320px;
+    width: 100%;
   }
 
   /* ---------------------------------------------------- */
@@ -423,7 +432,7 @@
 
   /* =====> FORMULARIO <===== */
   .form-container {
-    margin-top: -140px;
+    margin-top: 20px;
     margin-bottom: 80px;
   }
 

@@ -162,10 +162,17 @@
   .desafio-grid {
     gap: 20px;
     padding: 0 5px;
+    grid-template-columns: 1fr;
   }
   .desafio-card h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
+  }
+  .desafio-card:nth-child(3) {
+    grid-column: auto;
+    justify-self: auto;
+    max-width: none;
+    width: auto;
   }
 
   /* =====> SEÇÃO: PILARES PLATAFORMA ABRIR <===== */
@@ -358,9 +365,13 @@
   .card-tag {
     width: 100%;
   }
+  #politica {
+    padding-top: 0px;
+  }
   .politica-container {
     margin-bottom: -90px;
   }
+  
 
   /* ---------------------------------------------------- */
   /* PAGINA: SOBRE */
@@ -501,8 +512,11 @@
     margin-bottom: 30px;
   }
   .form-container {
-    margin-top: -80px;
+    margin-top: 20px;
     margin-bottom: 120px;
+  }
+  .duvidas-title {
+    padding: 0 20px;
   }
 
   /* ---------------------------------------------------- */

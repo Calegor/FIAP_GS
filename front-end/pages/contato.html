@@ -99,89 +99,95 @@
           </a>
         </section>
 
-        <section class="contato-content">
-          <form id="contactForm" class="form-container" novalidate>
-            <fieldset>
-              <legend>Informações pessoais</legend>
-              <div class="form-group">
-                <label for="name" class="gs_reveal">Nome completo: *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  minlength="3"
-                  aria-required="true"
-                  aria-describedby="nameError"
-                />
-                <div
-                  id="nameError"
-                  class="error-message"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <div class="form-row">
-                <div class="form-group half-width">
-                  <label for="email" class="gs_reveal">E-mail: *</label>
+        <section id="filtro-proposito">
+          <h2 class="gs_reveal duvidas-title">
+            Dúvidas, reclamações ou sugestões
+          </h2>
+
+          <section class="contato-content">
+            <form id="contactForm" class="form-container" novalidate>
+              <fieldset>
+                <legend>Informações pessoais</legend>
+                <div class="form-group">
+                  <label for="name" class="gs_reveal">Nome completo: *</label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
+                    type="text"
+                    id="name"
+                    name="name"
                     required
+                    minlength="3"
                     aria-required="true"
-                    aria-describedby="emailError"
+                    aria-describedby="nameError"
                   />
                   <div
-                    id="emailError"
+                    id="nameError"
                     class="error-message"
                     aria-live="polite"
                   ></div>
                 </div>
-                <div class="form-group half-width">
-                  <label for="phone" class="gs_reveal">Telefone: *</label>
+                <div class="form-row">
+                  <div class="form-group half-width">
+                    <label for="email" class="gs_reveal">E-mail: *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      aria-required="true"
+                      aria-describedby="emailError"
+                    />
+                    <div
+                      id="emailError"
+                      class="error-message"
+                      aria-live="polite"
+                    ></div>
+                  </div>
+                  <div class="form-group half-width">
+                    <label for="phone" class="gs_reveal">Telefone: *</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      pattern="[0-9]{10,11}"
+                      aria-required="true"
+                      aria-describedby="phoneError"
+                    />
+                    <div
+                      id="phoneError"
+                      class="error-message"
+                      aria-live="polite"
+                    ></div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Sua mensagem</legend>
+                <div class="form-group">
+                  <label for="subject" class="gs_reveal">Assunto: *</label>
                   <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
+                    type="text"
+                    id="subject"
+                    name="subject"
                     required
-                    pattern="[0-9]{10,11}"
+                    minlength="5"
                     aria-required="true"
-                    aria-describedby="phoneError"
+                    aria-describedby="subjectError"
                   />
                   <div
-                    id="phoneError"
+                    id="subjectError"
                     class="error-message"
                     aria-live="polite"
                   ></div>
                 </div>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Sua mensagem</legend>
-              <div class="form-group">
-                <label for="subject" class="gs_reveal">Assunto: *</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  minlength="5"
-                  aria-required="true"
-                  aria-describedby="subjectError"
-                />
-                <div
-                  id="subjectError"
-                  class="error-message"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <div class="form-group">
-                <label for="message" class="gs_reveal">Mensagem:</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-              </div>
-            </fieldset>
-            <button type="submit" class="submit-btn">Enviar Cadastro</button>
-          </form>
+                <div class="form-group">
+                  <label for="message" class="gs_reveal">Mensagem:</label>
+                  <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+              </fieldset>
+              <button type="submit" class="submit-btn">Enviar Cadastro</button>
+            </form>
+          </section>
         </section>
       </section>
     </main>

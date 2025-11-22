@@ -158,6 +158,14 @@
     font-size: 2.2rem;
     line-height: 1.2;
   }
+  .desafio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .desafio-card:nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    max-width: 320px;
+  }
 
   /* =====> SEÇÃO: O FUTURO DO TRABALHO JA COMEÇOU <===== */
   #logo-pilares-visual {
@@ -232,6 +240,15 @@
   #blog h2 {
     font-size: 2.2rem;
   }
+  .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .post-card:nth-child(3) {
+        grid-column: span 2;
+        justify-self: center; 
+        max-width: 320px; 
+        width: 100%;
+    }
 
   /* ---------------------------------------------------- */
   /* PAGINA: SOBRE */
@@ -344,7 +361,7 @@
 
   /* =====> FORMULARIO <===== */
   .form-container {
-    margin-top: -100px;
+    margin-top: 20px;
     margin-bottom: 100px;
   }
 
