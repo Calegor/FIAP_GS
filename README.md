@@ -101,33 +101,54 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/juliarichesky/" target="_blank" title="LinkedIn Julia Guimarães">
-        <img src="assets-readme-main/julia-guimaraes.png" width="200" height="300" style="object-fit: cover; border-radius: 50%;" alt="Julia Guimarães"/><br>
+        <img src="assets-readme/julia-guimaraes.png" width="200" height="300" style="object-fit: cover; border-radius: 50%;" alt="Julia Guimarães"/><br>
         <sub>
           <b>Julia Guimarães</b>
         </sub>
       </a>
       <br>
+      <a href="https://github.com/juliarichesky" target="_blank" title="GitHub Julia Guimarães">
+        <sub>
+          <b>GitHub Julia Guimarães</b>
+        </sub>
+      </a>
+      <br>
       <p>RM: 568275</p>
+      <p>Turma: 1TDSPA</p>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/juspanopoulos/ target="_blank" title="LinkedIn Julia Spanopoulos">
-        <img src="assets-readme-main/julia-spanopoulos.png" width="200" height="300" style="object-fit: cover; border-radius: 50%;" alt="Julia Spanopoulos"/><br>
+        <img src="assets-readme/julia-spanopoulos.png" width="200" height="300" style="object-fit: cover; border-radius: 50%;" alt="Julia Spanopoulos"/><br>
         <sub>
           <b>Julia Spanopoulos</b>
         </sub>
       </a>
       <br>
+      <a href="https://github.com/juspanopoulos" target="_blank" title="GitHub Julia Spanopoulos">
+        <sub>
+          <b>GitHub Julia Spanopoulos</b>
+        </sub>
+      </a>
+      <br>
       <p>RM: 566754</p>
+      <p>Turma: 1TDSPA</p>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/thiago-gramorelli-lima-070097185/" target="_blank" title="LinkedIn Thiago Gramorelli">
-        <img src="assets-readme-main/thiago-lima.png" width="200" height="300" style="object-fit: cover; border-radius: 50%;" alt="Thiago Gramorelli"/><br>
+        <img src="assets-readme/thiago-lima.png" width="200" height="300" style="object-fit: cover; border-radius: 50%;" alt="Thiago Gramorelli"/><br>
         <sub>
-          <b>Thiago Gramorelli</b>
+          <b>LinkedIn Thiago Gramorelli</b>
+        </sub>
+      </a>
+      <br>
+      <a href="https://github.com/Calegor" target="_blank" title="GitHub Thiago Gramorelli">
+        <sub>
+          <b>GitHub Thiago Gramorelli</b>
         </sub>
       </a>
       <br>
       <p>RM: 567630</p>
+      <p>Turma: 1TDSPA</p>
     </td>
   </tr>
 </table>
