@@ -7,7 +7,7 @@
 <br>
 
 <p align="center">
-  <img src="assets-readme-main/imagem-github.png" alt="Header da Interface da Plataforma." width="50%">
+  <img src="assets-readme-main/abrir_logosolo.png" alt="Header da Interface da Plataforma." width="40%">
 </p>
   
 </div>
