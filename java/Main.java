@@ -8,10 +8,6 @@ public class Main {
         ConsultaService consultaService = new ConsultaService();
 
         System.out.println("Bem-vindo à consulta profissional.");
-        try {
-            Thread.sleep(1000); // só pra dar o mesmo efeito "orgânico"
-        } catch (InterruptedException ignored) {
-        }
         System.out.println("Para começarmos, precisamos de alguns dados: \n");
 
         Profissional profissional = consultaService.adicionarCadastro();

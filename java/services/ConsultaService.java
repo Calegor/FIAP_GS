@@ -18,7 +18,6 @@ public class ConsultaService {
         System.out.print("E o seu endereço? ");
         String endereco = IO.readln();
 
-        // Seleção de profissão + cálculo da urgência (como no Python)
         ProfissaoSelecao selecao = selecaoProfissao();
         String profissao = selecao.profissao();
         int urgencia = selecao.urgencia();
