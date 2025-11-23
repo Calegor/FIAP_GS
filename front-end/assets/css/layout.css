@@ -169,10 +169,6 @@
   gap: 40px;
   align-items: flex-start;
 }
-.faq-container i:hover {
-  transition: 0.3s ease;
-  color: var(--white);
-}
 .faq-col-left {
   flex: 1;
   border-radius: 7px;
@@ -211,42 +207,46 @@
   padding: 12px 12px;
   cursor: pointer;
   margin-bottom: 5px;
-
-  /* garante que a transição de COR seja suave */
-  transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: var(--color-4);
   border-radius: 7px;
-
-  /* cor do texto no estado normal (preto) */
+  background-color: var(--color-4);
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
   color: var(--white);
 }
-.faq-lista li:hover {
-  background-color: var(--color-3);
+.faq-lista li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(
     135deg,
     var(--color-3) 0%,
     var(--color-1) 100%
   );
-
-  /* cor do texto no hover (branco) */
-  color: var(--white);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
   border-radius: 7px;
 }
-
-/* estilo do icone (para que ele tambem fique branco no hover e active) */
+.faq-lista li:hover::before {
+  opacity: 1;
+}
+.faq-lista li:hover {
+  color: var(--white);
+}
 .faq-lista i {
   font-size: 1.1rem;
   margin-right: 15px;
-  color: var(--white); /* Cor de destaque (Roxo) no estado normal */
-  transition: transform 0.3s, color 0.3s ease; /* Adiciona transição na cor do ícone */
+  color: var(--white);
+  transition: transform 0.3s, color 0.3s ease;
 }
-
-/* icone branco no hover */
 .faq-lista li:hover i {
   color: var(--white);
 }
-
-/* --- ESTILOS DE SANFONA/ACORDEÃO --- */
 .faq-resposta {
   max-height: 0;
   overflow: hidden;
@@ -261,29 +261,33 @@
   margin: 10px 0;
   padding: 12px 0;
 }
-
-/* expande o conteúdo no clique */
 .about-abrir.active .faq-resposta {
   max-height: 500px;
 }
-
-/* expande o conteúdo no clique */
 .about-abrir.active {
-  background-image: linear-gradient(
-    135deg,
-    var(--color-3) 0%,
-    var(--color-1) 100%
-  );
-
-  /* cor do texto no estado ativo (branco) */
+  /* garante que a cor do texto fique branca no estado ativo */
   color: var(--white);
   border-radius: 7px;
 }
 
-/* icone branco no estado ativo */
+/* força a opacidade 1 no pseudo-elemento quando o item está ativo */
+.about-abrir.active::before {
+  opacity: 1;
+}
+
+/* icone branco e rotacionado no estado ativo */
 .about-abrir.active i {
   color: var(--white);
   transform: rotate(90deg);
+}
+.faq-content-wrapper {
+  /* força a criação de um novo contexto de empilhamento */
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 /* ---------------------------------------------------- */

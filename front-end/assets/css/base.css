@@ -103,11 +103,11 @@ fieldset {
   color: var(--white);
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--color-4);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-2);
+  background: var(--color-1);
 }
