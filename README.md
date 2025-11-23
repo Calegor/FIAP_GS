@@ -74,14 +74,23 @@ Cupcake ipsum dolor sit amet fruitcake croissant tiramisu chupa chups. Toffee do
 * **Linguagem:** **Java** (Modelagem)
 
 ## 🤖 Inteligência Artificial & Chatbot
-Cupcake ipsum dolor sit amet fruitcake croissant tiramisu chupa chups. Toffee donut cake tart I love lemon drops. Dragée cheesecake tiramisu cupcake halvah pie croissant chocolate bar candy canes.
+Fluxos de conversação e a lógica de integração do assistente virtual. Protótipo desenvolvido para oferecer uma experiência multimodal (texto e voz) e personalizada, refletindo a missão de inovação e garantindo que o usuário possa navegar fluidamente entre diagnósticos de carreira e aprendizado de conceitos.
 
-* **Integrações** **Watson** e **Telegram** (Para canais de comunicação)
+* **Cérebro:** IBM Watson Assistant (Processamento de Linguagem Natural, Gestão de Diálogo com *Slots*, *Digressions* e Múltiplas Respostas Condicionadas).
+* **Orquestração:** Node-RED (Integração de APIs, gerenciamento de sessão/contexto do usuário e lógica de roteamento de mensagens).
+* **Serviços Cognitivos:** IBM Watson Speech-to-Text & Text-to-Speech (Conversão de áudio para texto e vice-versa, garantindo acessibilidade e interação natural).
+* **Canal:** Telegram Bot API (Interface de comunicação direta com o usuário).
+
+> **Nota:** O arquivo `ABRIR-dialog.json` contém a estrutura de treinamento do Watson (Intenções/Entidades) e o `ABRIR-flow-nodered.json` contém o fluxo de integração.
 
 ## 🎲 Database
-Cupcake ipsum dolor sit amet fruitcake croissant tiramisu chupa chups. Toffee donut cake tart I love lemon drops. Dragée cheesecake tiramisu cupcake halvah pie croissant chocolate bar candy canes.
+O modelo relacional foi estruturado para viabilizar o "Motor de Match", cruzando as habilidades que o usuário possui com as exigências do mercado, permitindo o diagnóstico preciso de gaps profissionais.
 
-* **Linguagem:** **Python** (Criação do sistema)
+* **SGBD:** Oracle Database (Modelagem Relacional).
+* **Arquitetura:** Modelo normalizado com tabelas associativas para resolver cardinalidades N:N (Muitos-para-Muitos), garantindo integridade e performance.
+* **Padrões de Projeto:**
+    * **Nomenclatura Internacional:** Todo o esquema (tabelas e atributos) está em inglês para padronização global e compatibilidade.
+    * **Convenção de Prefixos:** Uso estrito de prefixos como `T_A_` (Tabela Aplicação), `nm_` (Nome) e `ds_` (Descrição) para rápida identificação de objetos e atributos.
 
 ## 💼 Business Model
 Cupcake ipsum dolor sit amet fruitcake croissant tiramisu chupa chups. Toffee donut cake tart I love lemon drops. Dragée cheesecake tiramisu cupcake halvah pie croissant chocolate bar candy canes.
