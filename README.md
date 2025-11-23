@@ -112,7 +112,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="https://www.linkedin.com/in/juliarichesky/" target="_blank" title="LinkedIn Julia Guimarães">
         <img src="assets-readme-main/julia-guimaraes.png" width="200" height="300" style="object-fit: cover; border-radius: 50%;" alt="Julia Guimarães"/><br>
         <sub>
-          <b>Julia Guimarães</b>
+          <b>LinkedIn Julia Guimarães</b>
         </sub>
       </a>
       <br>
@@ -129,7 +129,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="https://www.linkedin.com/in/juspanopoulos/ target="_blank" title="LinkedIn Julia Spanopoulos">
         <img src="assets-readme-main/julia-spanopoulos.png" width="200" height="300" style="object-fit: cover; border-radius: 50%;" alt="Julia Spanopoulos"/><br>
         <sub>
-          <b>Julia Spanopoulos</b>
+          <b>LinkedIn Julia Spanopoulos</b>
         </sub>
       </a>
       <br>
