@@ -709,7 +709,7 @@
 }
 
 /* ---------------------------------------------------- */
-/* PAGINA: QUEM SOMOS */
+/* PAGINA: SOBRE */
 /* ---------------------------------------------------- */
 
 /* =====> SOBRE O PROJETO <===== */
@@ -759,7 +759,8 @@
 }
 .features__img {
   max-width: 100%;
-  position: absolute;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -1399,7 +1400,7 @@ input.invalid {
 .cta-proposito {
   background: url("../imgs/svg/map-svgrepo-com.svg") no-repeat right -2% center /
       25%,
-      linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%); /* gradiente */
+    linear-gradient(135deg, var(--color-3) 0%, var(--color-1) 100%); /* gradiente */
   color: var(--white);
   padding: 120px 20px;
   text-align: center;

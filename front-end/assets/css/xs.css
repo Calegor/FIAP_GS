@@ -176,6 +176,25 @@
   }
 
   /* =====> SEÇÃO: PILARES PLATAFORMA ABRIR <===== */
+  @media (max-width: 389px) {
+    #logo-pilares-visual {
+      padding: 50px 20px !important;
+      background-color: red;
+    }
+
+    .pilar-visual-item p {
+      font-size: 0.7rem !important;
+    }
+
+    .logo-abrir-container {
+      gap: 5px !important;
+      margin-bottom: 40px;
+    }
+
+    .pilares-icones-grid {
+      gap: 5px !important;
+    }
+  }
   #logo-pilares-visual {
     padding: 50px 10px;
     min-height: auto;
@@ -371,7 +390,6 @@
   .politica-container {
     margin-bottom: -90px;
   }
-  
 
   /* ---------------------------------------------------- */
   /* PAGINA: SOBRE */
@@ -404,6 +422,7 @@
     margin: 0 auto;
     justify-content: center;
     margin-bottom: -50px;
+    padding: 0 30px;
   }
   .features__title {
     font-size: 1.5em;
@@ -419,12 +438,16 @@
   }
   .features__description {
     font-size: 0.9em;
+    width: 100%;
+    margin: 0 auto;
   }
   .features__content h2,
   .features__content p {
     text-align: center;
     border: none;
-    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 1rem auto;
   }
 
   /* =====> TECNOLOGIAS <===== */
