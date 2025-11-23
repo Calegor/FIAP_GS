@@ -16,7 +16,7 @@
 
 🔗 **LINK DO REPOSITÓRIO:** [Repositório Plataforma ABRIR](https://github.com/Calegor/FIAP_GS)
 <br>
-🔗 **Veja o site online:** [Turma do Bem](https://fiap-gs.vercel.app/)
+🔗 **Veja o site online:** [Plataforma ABRIR](https://fiap-gs.vercel.app/)
 
 > Projeto desenvolvido durante o curso da FIAP para o **Global Challenge**.
 >
