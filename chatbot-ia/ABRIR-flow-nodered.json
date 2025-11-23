@@ -1,0 +1,472 @@
+[
+    {
+        "id": "1f08db8e78c73f55",
+        "type": "tab",
+        "label": "LinkAid Watson Telegram",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "195126fa2f55950e",
+        "type": "telegram receiver",
+        "z": "1f08db8e78c73f55",
+        "name": "ABRIR",
+        "bot": "34f369b3606ef792",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 70,
+        "y": 260,
+        "wires": [
+            [
+                "26d3816cf6965eda",
+                "7947042e39106a75"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "737351e65a4412f7",
+        "type": "watson-speech-to-text",
+        "z": "1f08db8e78c73f55",
+        "name": "STT",
+        "alternatives": 1,
+        "speakerlabels": true,
+        "smartformatting": false,
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "custom-weight": "0.5",
+        "band": "BroadbandModel",
+        "bandhidden": "",
+        "keywords": "",
+        "keywords-threshold": "0.5",
+        "word-confidence": false,
+        "password": "",
+        "apikey": "eWJt-u5JOrrsj_WIJ4QyBhOdTCHi37gYgzvYkXL3g8EJ",
+        "payload-response": true,
+        "streaming-mode": false,
+        "streaming-mute": true,
+        "auto-connect": false,
+        "discard-listening": false,
+        "disable-precheck": false,
+        "service-endpoint": "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/82e2f7ad-1018-4a7d-bd70-2aa096cb3fb5",
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "d614c9d4039038e0",
+                "fa5c67018b395c59"
+            ]
+        ]
+    },
+    {
+        "id": "26d3816cf6965eda",
+        "type": "debug",
+        "z": "1f08db8e78c73f55",
+        "name": "Debug ABRIR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ab90769137cf27eb",
+        "type": "function",
+        "z": "1f08db8e78c73f55",
+        "name": "Formatar Saída Voz",
+        "func": "// Guardar o chatId ANTES de sobrescrever o payload\nconst chatId = msg.payload.chatId;\n\n// O STT precisa receber uma URL (string)\nmsg.payload = msg.payload.weblink;\n\n// Manter chatId na mensagem (para o Watson Assistant multisession)\nmsg.chatId = chatId;\n\n// Salvar o número para responder depois\nmsg.celular = chatId;\n\n// Marcar que a entrada é voz\nmsg.tipoEntrada = \"voice\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [
+                "737351e65a4412f7"
+            ]
+        ]
+    },
+    {
+        "id": "d614c9d4039038e0",
+        "type": "debug",
+        "z": "1f08db8e78c73f55",
+        "name": "Debug STT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "aef93aa9442f9403",
+        "type": "watson-text-to-speech",
+        "z": "1f08db8e78c73f55",
+        "name": "TTS",
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "voice": "pt-BR_CamilaNatural",
+        "voicehidden": "pt-BR_CamilaNatural",
+        "format": "audio/wav",
+        "password": "",
+        "apikey": "D7xwaJ-Vi9fAYvWo0C0tZmawX7UEtUogVP9uah6Nj4BG",
+        "payload-response": true,
+        "service-endpoint": "https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/fb490549-4b01-42e8-8f43-10ce7ed23359",
+        "x": 1070,
+        "y": 580,
+        "wires": [
+            [
+                "f6a5d8cbf1231772",
+                "59bd48e44ee9c8e7"
+            ]
+        ]
+    },
+    {
+        "id": "f6a5d8cbf1231772",
+        "type": "debug",
+        "z": "1f08db8e78c73f55",
+        "name": "Debug TTS",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8e1c05d3958c59f7",
+        "type": "telegram sender",
+        "z": "1f08db8e78c73f55",
+        "name": "ABRIR",
+        "bot": "34f369b3606ef792",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1550,
+        "y": 800,
+        "wires": [
+            [
+                "2a937c3ab83316d4"
+            ]
+        ]
+    },
+    {
+        "id": "59bd48e44ee9c8e7",
+        "type": "function",
+        "z": "1f08db8e78c73f55",
+        "name": "Formatar Resposta Voz",
+        "func": "msg.payload = {\n    chatId : msg.celular,\n    type: 'voice',\n    content : msg.payload,\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 720,
+        "wires": [
+            [
+                "8e1c05d3958c59f7"
+            ]
+        ]
+    },
+    {
+        "id": "dc179dab9688447a",
+        "type": "watson-assistant-v2",
+        "z": "1f08db8e78c73f55",
+        "name": "ABRIR Watson",
+        "service-endpoint": "https://api.us-south.assistant.watson.cloud.ibm.com/instances/ba19b410-ba20-4d13-b2f0-5a5634e5e685",
+        "assistant_id": "876da074-1782-4f10-9c96-7a2f270ee680",
+        "debug": false,
+        "restart": false,
+        "return_context": true,
+        "alternate_intents": false,
+        "multisession": true,
+        "timeout": "",
+        "optout-learning": false,
+        "persist-session-id": false,
+        "x": 780,
+        "y": 380,
+        "wires": [
+            [
+                "2d9b439c8ea3863a",
+                "60da84de52f36103"
+            ]
+        ]
+    },
+    {
+        "id": "2d9b439c8ea3863a",
+        "type": "function",
+        "z": "1f08db8e78c73f55",
+        "name": "Func Antes do Switch de Saída",
+        "func": "const watsonResponses = msg.payload.output.generic;\nconst tipoEntrada = msg.tipoEntrada;\nconst celular = msg.celular;\n\nvar messagesToSend = [];\n\nwatsonResponses.forEach(function(response) {\n    if (response.response_type === 'text') {\n        var newMsg = {\n            \"tipoEntrada\": tipoEntrada, \n            \"celular\": celular,\n            \"payload\": response.text \n        };\n    \n        messagesToSend.push(newMsg);\n    }\n});\n\nreturn messagesToSend;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 460,
+        "wires": [
+            [
+                "b6960a688b71d76b",
+                "65a1d1bbc3711053"
+            ]
+        ]
+    },
+    {
+        "id": "7947042e39106a75",
+        "type": "switch",
+        "z": "1f08db8e78c73f55",
+        "name": "",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "voice",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "message",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 210,
+        "y": 300,
+        "wires": [
+            [
+                "ab90769137cf27eb"
+            ],
+            [
+                "dc4dda7172fcba6e"
+            ]
+        ]
+    },
+    {
+        "id": "dc4dda7172fcba6e",
+        "type": "function",
+        "z": "1f08db8e78c73f55",
+        "name": "Formatar Saída Texto",
+        "func": "const chatId = msg.payload.chatId;\n\nmsg.params = {};\nmsg.params.session_id = chatId;\nmsg.payload = msg.payload.content; \n\nmsg.celular = chatId;\nmsg.tipoEntrada = \"text\";\n\nif (!msg.payload || msg.payload.trim() === \"\") {\n    msg.payload = \" \"; // Evita erro no Watson\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 380,
+        "wires": [
+            [
+                "dc179dab9688447a",
+                "f8a5eaefeb9c610e"
+            ]
+        ]
+    },
+    {
+        "id": "b6960a688b71d76b",
+        "type": "switch",
+        "z": "1f08db8e78c73f55",
+        "name": "Roteador de Saída",
+        "property": "tipoEntrada",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "voice",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "text",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 890,
+        "y": 640,
+        "wires": [
+            [
+                "aef93aa9442f9403"
+            ],
+            [
+                "2733479abd5ca091"
+            ]
+        ]
+    },
+    {
+        "id": "2733479abd5ca091",
+        "type": "function",
+        "z": "1f08db8e78c73f55",
+        "name": "Formatar Resposta Texto",
+        "func": "msg.payload = {\n    chatId: msg.celular,\n    type: 'message',\n    content: msg.payload\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 800,
+        "wires": [
+            [
+                "8e1c05d3958c59f7"
+            ]
+        ]
+    },
+    {
+        "id": "60da84de52f36103",
+        "type": "debug",
+        "z": "1f08db8e78c73f55",
+        "name": "Debug Watson Assistant V2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "65a1d1bbc3711053",
+        "type": "debug",
+        "z": "1f08db8e78c73f55",
+        "name": "Debug Func Switch Saída",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2a937c3ab83316d4",
+        "type": "debug",
+        "z": "1f08db8e78c73f55",
+        "name": "Debug Retorno Telegram",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "fa5c67018b395c59",
+        "type": "function",
+        "z": "1f08db8e78c73f55",
+        "name": "Extrair Texto STT",
+        "func": "if (!msg.params) {\n    msg.params = {};\n}\n\nmsg.params.session_id = msg.celular;\nmsg.tipoEntrada = \"voice\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [
+                "dc179dab9688447a"
+            ]
+        ]
+    },
+    {
+        "id": "f8a5eaefeb9c610e",
+        "type": "debug",
+        "z": "1f08db8e78c73f55",
+        "name": "Debug Formatar Saída de Texto",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "34f369b3606ef792",
+        "type": "telegram bot",
+        "botname": "Bot ABRIR",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "5006397a6fa99cbc",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-telegrambot": "16.4.0",
+            "node-red-node-watson": "0.10.3"
+        }
+    }
+]

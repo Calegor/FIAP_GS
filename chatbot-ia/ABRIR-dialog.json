@@ -1,0 +1,1170 @@
+{
+  "intents": [
+    {
+      "intent": "DEFINIR_TERMOS",
+      "examples": [
+        {
+          "text": "Defina o termo Gig Economy"
+        },
+        {
+          "text": "Me ajude a entender alguns termos"
+        },
+        {
+          "text": "me explica o que é OIT"
+        },
+        {
+          "text": "O que é Inteligência Artificial"
+        },
+        {
+          "text": "O que significa ODS"
+        },
+        {
+          "text": "o que você sabe sobre IA"
+        },
+        {
+          "text": "pode me explicar o que significa Tripartismo"
+        },
+        {
+          "text": "Pode me explicar sobre um termo?"
+        },
+        {
+          "text": "pode me falar sobre"
+        },
+        {
+          "text": "Qual a definição de"
+        },
+        {
+          "text": "Qual o significado de"
+        }
+      ],
+      "description": "Identifica que o usuário quer saber o significado de algum termo."
+    },
+    {
+      "intent": "DESPEDIDA",
+      "examples": [
+        {
+          "text": "Até logo"
+        },
+        {
+          "text": "Até mais"
+        },
+        {
+          "text": "Encerrar"
+        },
+        {
+          "text": "Tchau"
+        }
+      ],
+      "description": "Entende a intenção de encerrar a conversa."
+    },
+    {
+      "intent": "INICIAR",
+      "examples": [
+        {
+          "text": "Ajuda"
+        },
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Começar"
+        },
+        {
+          "text": "Olá"
+        }
+      ],
+      "description": "Intenção de início de conversa, especificamente para o Telegram, que dá as boas-vindas ao usuário."
+    },
+    {
+      "intent": "NEWSLETTER",
+      "examples": [
+        {
+          "text": "Me cadastra no email"
+        },
+        {
+          "text": "Me mande por email"
+        },
+        {
+          "text": "Quero cadastrar meu email"
+        },
+        {
+          "text": "Quero receber artigos por email"
+        },
+        {
+          "text": "Quero receber novidades"
+        },
+        {
+          "text": "Quero receber vagas"
+        }
+      ],
+      "description": "Identifica a intenção de se cadastrar para receber emails."
+    },
+    {
+      "intent": "RISCO_PROFISSAO",
+      "examples": [
+        {
+          "text": "A profissão x ainda existe?"
+        },
+        {
+          "text": "Avaliar minha carreira"
+        },
+        {
+          "text": "Meu trabalho está sumindo?"
+        },
+        {
+          "text": "Minha profissão vai acabar?"
+        },
+        {
+          "text": "Qual o risco da profissão"
+        },
+        {
+          "text": "Quero saber o risco da minha profissão"
+        },
+        {
+          "text": "Risco do meu cargo de"
+        }
+      ],
+      "description": "Identifica que o usuário quer saber se sua profissão está em risco."
+    },
+    {
+      "intent": "SOBRE_ABRIR",
+      "examples": [
+        {
+          "text": "Como vocês podem me ajudar?"
+        },
+        {
+          "text": "Conte sobre a plataforma"
+        },
+        {
+          "text": "Explique o pilar"
+        },
+        {
+          "text": "Explique o que é Acessibilidade"
+        },
+        {
+          "text": "Explique sobre a plataforma ABRIR"
+        },
+        {
+          "text": "Fale sobre o pilar"
+        },
+        {
+          "text": "O que vocês fazem?"
+        }
+      ],
+      "description": "Descreve o que é a plataforma ABRIR."
+    },
+    {
+      "intent": "VOLTAR",
+      "examples": [
+        {
+          "text": "Menu anterior"
+        },
+        {
+          "text": "Menu principal"
+        },
+        {
+          "text": "Retornar"
+        },
+        {
+          "text": "Voltar"
+        }
+      ],
+      "description": "Observa a intenção do usuário de sair de um nó para outro nó anterior."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "pilar_abrir",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Acessibilidade",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Base",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Inovação",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Renda",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Reskilling",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "profissao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Analista de RH",
+          "synonyms": [
+            "Recursos Humanos",
+            "RH"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Contador",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Designer",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Motorista",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Telemarketing",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "termo_chave",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Gig Economy",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Inteligência Artificial",
+          "synonyms": [
+            "IA"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ODS",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "OIT",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tripartismo",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "BOAS VINDAS",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Sou o assistente virtual da plataforma ABRIR. Estou aqui para ajudar a desmistificar termos do futuro do trabalho e analisar a urgência de requalificação da sua profissão."
+              },
+              {
+                "text": "Posso explicar sobre algum termo que você não tenha entendido, avaliar o risco da sua profissão, explicar mais sobre a ABRIR ou cadastrar seu e-mail para receber novidades, vagas e artigos."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "welcome || #INICIAR",
+      "dialog_node": "Bem-vindo",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "OUTROS CASOS",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Pode tentar reformular sua frase?"
+              },
+              {
+                "text": "Posso explicar sobre algum termo que você não tenha entendido, avaliar o risco da sua profissão, explicar mais sobre a ABRIR ou cadastrar seu e-mail para receber novidades, vagas e artigos."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_2_1763421671654",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hmm, isso não parece um e-mail válido. Por favor, digite APENAS seu e-mail na próxima mensagem."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_1_1763421048822",
+      "event_name": "nomatch",
+      "dialog_node": "handler_10_1763421287053",
+      "previous_sibling": "handler_6_1763421048827"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_12_1763419130870",
+      "context": {
+        "risco_profissao": "@profissao"
+      },
+      "conditions": "@profissao",
+      "event_name": "input",
+      "dialog_node": "handler_13_1763419130870"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Assim como no simulador da nossa plataforma, posso dar um diagnóstico da necessidade de requalificação. Lembre-se, necessidade significa oportunidade. Aquilo que você já sabe fazer, pode ser aproveitado e reutilizado em profissões novas com a ajuda de cursos e novos conhecimentos."
+              },
+              {
+                "text": "Qual sua profissão atual?"
+              },
+              {
+                "text": "Exemplos atuais implementados: Telemarketing, Designer, Analista de RH, Contador, Motorista"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "slot_12_1763419130870",
+      "event_name": "focus",
+      "dialog_node": "handler_14_1763419130870",
+      "previous_sibling": "handler_13_1763419130870"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Não tenho essa profissão na minha base do simulador. Por favor, tente uma das profissões listadas no site. (Telemarketing, Designer, Analista de RH, Contador, Motoristar)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_12_1763419130870",
+      "next_step": {
+        "behavior": "reprompt"
+      },
+      "event_name": "nomatch",
+      "dialog_node": "handler_15_1763419130870",
+      "previous_sibling": "handler_14_1763419130870"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hmm, não tenho esse termo na minha base. Por favor, tente um dos termos que eu conheço, como IA, ODS ou Tripartismo, OIT ou Gig Economy."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1763412787613",
+      "next_step": {
+        "behavior": "reprompt"
+      },
+      "event_name": "nomatch",
+      "dialog_node": "handler_2_1763429671018",
+      "previous_sibling": "handler_3_1763412787618"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Posso explicar vários termos e conceitos usados na nossa plataforma. Qual você gostaria de entender agora? (Ex: IA, ODS, OIT, Tripartismo, Gig Economy)"
+              },
+              {
+                "text": "Caso queira outra coisa, basta digitar/dizer \"Voltar\"."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "slot_6_1763412787613",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1763412787618",
+      "previous_sibling": "handler_6_1763412787618"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1763417993039",
+      "context": {
+        "sobre_abrir": "@pilar_abrir"
+      },
+      "conditions": "@pilar_abrir",
+      "event_name": "input",
+      "dialog_node": "handler_3_1763417993039"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1763421048822",
+      "context": {
+        "email_usuario": "@email"
+      },
+      "conditions": "@email",
+      "event_name": "input",
+      "dialog_node": "handler_3_1763421048827"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A ABRIR é um uma central focado nos 5 pilares do seu futuro profissional:\n\nAcessibilidade, Base, Reskilling, Inovação e Renda.\n\nNosso objetivo é transformar a ameaça do futuro do trabalho em uma oportunidade, sem medo e alarmismo, mas com empatia e vontade de aprender."
+              },
+              {
+                "text": "Posso explicar o que cada um desses termos significa, basta escolher um deles."
+              },
+              {
+                "text": "Caso queira outra coisa, basta dizer \"Voltar\"."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "slot_2_1763417993039",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1763417993039",
+      "previous_sibling": "handler_3_1763417993039"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hmm, não tenho esse termo na minha base. Por favor, tente um dos termos que eu conheço, como Acessibilidade, Base, Reskilling, Inovação e Renda."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1763417993039",
+      "next_step": {
+        "behavior": "reprompt"
+      },
+      "conditions": "",
+      "event_name": "nomatch",
+      "dialog_node": "handler_5_1763417993039",
+      "previous_sibling": "handler_4_1763417993039"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1763412787613",
+      "context": {
+        "termo_chave": "@termo_chave"
+      },
+      "conditions": "@termo_chave",
+      "event_name": "input",
+      "dialog_node": "handler_6_1763412787618"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo! Para qual e-mail você gostaria que enviássemos as novidades da plataforma ABRIR?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_1_1763421048822",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1763421048827",
+      "previous_sibling": "handler_3_1763421048827"
+    },
+    {
+      "type": "frame",
+      "title": "RISCO PROFISSÃO",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#RISCO_PROFISSAO",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_11_1763419130870",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_9_1763412718705",
+      "digress_out_slots": "allow_all",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "title": "SOBRE ABRIR",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#SOBRE_ABRIR",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1763417993038",
+      "digress_out": "allow_all",
+      "previous_sibling": "Bem-vindo",
+      "digress_out_slots": "allow_all",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "ENCERRAMENTO",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado por conversar! Lembre-se: Seu maior valor é ser humano. Invista nisso. Até a próxima!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#DESPEDIDA",
+      "dialog_node": "node_2_1763421671654",
+      "previous_sibling": "node_3_1763412657117",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "VOLTAR",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Precisa de mais alguma coisa?"
+              },
+              {
+                "text": "Posso explicar sobre algum termo que você não tenha entendido, avaliar o risco da sua profissão, explicar mais sobre a ABRIR ou cadastrar seu e-mail para receber novidades, vagas e artigos."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#VOLTAR",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1763412657117",
+      "previous_sibling": "node_9_1763420956620",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "title": "DEFINIR TERMOS",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#DEFINIR_TERMOS",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1763412718705",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1763417993038",
+      "digress_out_slots": "allow_all",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "title": "CADASTRAR EMAIL",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#NEWSLETTER",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1763420956620",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_11_1763419130870",
+      "digress_out_slots": "allow_all",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "OIT significa Organização Internacional do Trabalho. É uma agência especializada da ONU, criada em 1919, para promover a justiça social e os direitos humanos e trabalhistas. Ela define as normas internacionais de trabalho e fortalece o diálogo entre governos, empregadores e trabalhadores."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1763412718705",
+      "context": {
+        "termo_chave": null
+      },
+      "conditions": "$termo_chave == \"OIT\"",
+      "dialog_node": "response_10_1763413820652",
+      "previous_sibling": "response_8_1763413468455"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Focamos na criação de oportunidades mais justas e na garantia de condições dignas de trabalho para todos. A seção de política de proteção social (direitos) e a seção de recursos para populações vulneráveis abordam diretamente a garantia de emprego decente e a redução de desigualdades. Esse pilar não se refere apenas ao valor do salário, mas à estabilidade, proteção e acesso."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1763417993038",
+      "context": {
+        "sobre_abrir": null
+      },
+      "conditions": "$sobre_abrir == \"Renda\"",
+      "dialog_node": "response_10_1763417993039",
+      "previous_sibling": "response_9_1763417993039"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Telemarketing: O mercado na sua área está em aceleração total, e é hora de agir com urgência! Não espere a mudança acontecer: seja o protagonista da sua reinvenção. Use o Mapa de Requalificação como seu guia para se posicionar de forma proativa e garantir um futuro seguro e sólido."
+              },
+              {
+                "text": "Você gostaria de saber sobre outra profissão? (Se sim, é só digitar o nome. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_11_1763419130870",
+      "context": {
+        "risco_profissao": null
+      },
+      "conditions": "$risco_profissao == \"Telemarketing\"",
+      "dialog_node": "response_16_1763419130870"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Designer: Sua base é sólida, o que te dá uma vantagem estratégica. Este é o momento ideal para aprofundar sua especialização e desenvolver liderança. Foque em ser uma referência para garantir sua ascensão em um futuro cada vez mais centrado no talento único do ser humano!"
+              },
+              {
+                "text": "Você gostaria de saber sobre outra profissão? (Se sim, é só digitar o nome. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_11_1763419130870",
+      "context": {
+        "risco_profissao": null
+      },
+      "conditions": "$risco_profissao == \"Designer\"",
+      "dialog_node": "response_17_1763419130870",
+      "previous_sibling": "response_16_1763419130870"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Recursos Humanos: O sucesso na sua área é construído através de evolução constante. Adote a Inteligência Artificial não como substituta, mas como sua parceira de produtividade. Ao mesmo tempo, invista em suas soft skills (comunicação, criatividade, empatia), elas serão seu diferencial inegociável para garantir a ascensão!"
+              },
+              {
+                "text": "Você gostaria de saber sobre outra profissão? (Se sim, é só digitar o nome. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_11_1763419130870",
+      "context": {
+        "risco_profissao": null
+      },
+      "conditions": "$risco_profissao == \"Analista de RH\"",
+      "dialog_node": "response_18_1763419130870",
+      "previous_sibling": "response_17_1763419130870"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Contador: O sucesso na sua área é construído através da evolução constante. Adote a Inteligência Artificial não como substituta, mas como sua parceira de produtividade. Ao mesmo tempo, invista na melhoria de habilidades técnicas e métodos modernos, eles serão seu diferencial inegociável para garantir a ascensão!"
+              },
+              {
+                "text": "Você gostaria de saber sobre outra profissão? (Se sim, é só digitar o nome. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_11_1763419130870",
+      "context": {
+        "risco_profissao": null
+      },
+      "conditions": "$risco_profissao == \"Contador\"",
+      "dialog_node": "response_19_1763419130870",
+      "previous_sibling": "response_18_1763419130870"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Motorista: O sucesso na sua área é construído através da evolução constante. Adote a Inteligência Artificial não como substituta, mas como sua parceira de produtividade. Ao mesmo tempo, invista em suas soft skills (comunicação, criatividade, empatia), elas serão seu diferencial inegociável para garantir a ascensão!"
+              },
+              {
+                "text": "Você gostaria de saber sobre outra profissão? (Se sim, é só digitar o nome. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_11_1763419130870",
+      "context": {
+        "risco_profissao": null
+      },
+      "conditions": "$risco_profissao == \"Motorista\"",
+      "dialog_node": "response_20_1763419130870",
+      "previous_sibling": "response_19_1763419130870"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A 'Gig Economy' (ou Economia de Bicos) é um modelo de trabalho baseado em serviços temporários e freelancers, conectados por plataformas digitais, onde os trabalhadores não têm vínculo empregatício formal. Ela oferece flexibilidade, mas muitas vezes não inclui benefícios como férias e FGTS, por isso a 'Adaptação da Proteção Social' é tão importante."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1763412718705",
+      "context": {
+        "termo_chave": null
+      },
+      "conditions": "$termo_chave == \"Gig Economy\"",
+      "dialog_node": "response_2_1763414003260",
+      "previous_sibling": "response_6_1763413939615"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ODS significa 'Objetivos de Desenvolvimento Sustentável'. É um conjunto de 17 metas globais que os países da ONU, incluindo o Brasil, se comprometeram a atingir até 2030. O objetivo é acabar com a pobreza, combater a desigualdade e proteger o meio ambiente, garantindo prosperidade e paz para todos, como mencionamos na nossa plataforma."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1763412718705",
+      "context": {
+        "termo_chave": null
+      },
+      "conditions": "$termo_chave == \"ODS\"",
+      "dialog_node": "response_6_1763413939615",
+      "previous_sibling": "response_10_1763413820652"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Queremos garantir que o conhecimento sobre o futuro do trabalho chegue a todos, especialmente a populações vulneráveis. Nossa implementação do Glossário Interativo e a Acessibilidade Web cumprem esse pilar."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1763417993038",
+      "context": {
+        "sobre_abrir": null
+      },
+      "conditions": "$sobre_abrir == \"Acessibilidade\"",
+      "dialog_node": "response_6_1763417993039"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito! Seu e-mail foi registrado. Você receberá nossos melhores artigos sobre o futuro do trabalho, oportunidades de vagas e cursos em demanda no mercado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1763420956620",
+      "conditions": "@email:email",
+      "dialog_node": "response_6_1763421360992"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Sou o assistente virtual da plataforma ABRIR. Você pode falar comigo por texto ou por voz, e eu vou responder da mesma forma. Se quiser, posso te dar algumas opções de como exatamente eu consigo ajudar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "disabled": true,
+      "dialog_node": "response_7_1763402830913"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Oferecemos a base de conhecimento necessária para a adaptação. Nosso site fornece dados, tendências e informações essenciais da OIT e ONU. O simulador de transformação e a biblioteca de artigos e cursos servem como uma base organizada e informativa."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1763417993038",
+      "context": {
+        "sobre_abrir": null
+      },
+      "conditions": "$sobre_abrir == \"Base\"",
+      "dialog_node": "response_7_1763417993039",
+      "previous_sibling": "response_6_1763417993039"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O Tripartismo, mencionado na nossa seção de Política Social, é a negociação entre governo, empregadores e trabalhadores para garantir um trabalho digno, com condições humanas e éticas."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1763412718705",
+      "context": {
+        "termo_chave": null
+      },
+      "conditions": "$termo_chave == \"Tripartismo\"",
+      "dialog_node": "response_8_1763413468455",
+      "previous_sibling": "response_9_1763413289512"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Reskilling significa, em uma tradução livre, \"Requalificação\". Abordamos a necessidade urgente de reskilling constante, visto que milhres de empregos serão criados e extintos até 2030. O nosso mapa de requalificação e o filtro de carreira por propósito são as ferramentas centrais desse pilar."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1763417993038",
+      "context": {
+        "sobre_abrir": null
+      },
+      "conditions": "$sobre_abrir == \"Reskilling\"",
+      "dialog_node": "response_8_1763417993039",
+      "previous_sibling": "response_7_1763417993039"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "IA (Inteligência Artificial) é a tecnologia que está transformando profissões. No nosso site, destacamos que ela não substitui habilidades humanas como criatividade e empatia, mas deve ser usada como ferramenta, em conjunto com a capacidade humana e de forma ética, acima de tudo."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1763412718705",
+      "context": {
+        "termo_chave": null
+      },
+      "conditions": "$termo_chave == \"Inteligência Artificial\"",
+      "dialog_node": "response_9_1763413289512"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Usamos criatividade humana, vontade de inovar e tecnologia para transformar vidas. O uso de IA como parceira, as simulações das nossas ferramentas, e o foco em ambientes híbridos e imersivos representam a inovação da nossa solução."
+              },
+              {
+                "text": "Você gostaria de saber o significado de outro termo? (Se sim, é só digitar o termo. Se não, diga 'voltar'.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1763417993038",
+      "context": {
+        "sobre_abrir": null
+      },
+      "conditions": "$sobre_abrir == \"Inovação\"",
+      "dialog_node": "response_9_1763417993039",
+      "previous_sibling": "response_8_1763417993039"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1763420956620",
+      "variable": "$email_usuario",
+      "dialog_node": "slot_1_1763421048822",
+      "previous_sibling": "response_6_1763421360992"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_11_1763419130870",
+      "variable": "$risco_profissao",
+      "dialog_node": "slot_12_1763419130870",
+      "previous_sibling": "response_20_1763419130870"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1763417993038",
+      "variable": "$sobre_abrir",
+      "dialog_node": "slot_2_1763417993039",
+      "previous_sibling": "response_10_1763417993039"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1763412718705",
+      "variable": "$termo_chave",
+      "dialog_node": "slot_6_1763412787613",
+      "previous_sibling": "response_2_1763414003260"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "assistente_abrir"
+}
