@@ -50,22 +50,22 @@ function simularRisco() {
 
     // determinação do nível e mensagem (regras humanizadas)
     if (pontuacao >= 70) {
-        nivel = "ALTA URGÊNCIA";
+        nivel = "NECESSIDADE DE REQUALIFICAÇÃO: ALTA";
         classe = "risco-alto";
-        mensagem = `O mercado na sua área está em aceleração total, e é hora de agir com urgência! Não espere a mudança acontecer: seja o protagonista da sua reinvenção. Use o Mapa de Requalificação como seu guia para se posicionar de forma proativa e garantir um futuro sólido antes que o mercado exija.`;
+        mensagem = `O mercado na sua área está em aceleração total, e a hora de agir é agora! Não espere a mudança acontecer: seja o protagonista da sua reinvenção. Use o Mapa de Requalificação como seu guia para se posicionar de forma proativa e garantir um futuro sólido no mercado de trabalho.`;
     } else if (pontuacao >= 40) {
-        nivel = "ATENÇÃO";
+        nivel = "NECESSIDADE DE REQUALIFICAÇÃO: MÉDIA";
         classe = "risco-medio";
-        mensagem = `O sucesso na sua área é construído através da evolução constante. Adote a Inteligência Artificial não como substituta, mas como sua parceira de produtividade. Ao mesmo tempo, invista em suas soft skills (comunicação, criatividade, empatia) — elas serão seu diferencial inegociável para garantir a ascensão!`;
+        mensagem = `O sucesso na sua área é construído através da evolução constante. Adote a Inteligência Artificial não como substituta, mas como sua parceira de produtividade. Ao mesmo tempo, invista em suas soft skills (comunicação, criatividade, empatia), pois elas serão seu diferencial inegociável para garantir a ascensão!`;
     } else {
-        nivel = "BAIXA URGÊNCIA";
+        nivel = "NECESSIDADE DE REQUALIFICAÇÃO: BAIXA";
         classe = "risco-baixo";
-        mensagem = `Sua base é sólida, o que te dá uma vantagem estratégica. Este é o momento ideal para aprofundar sua especialização e desenvolver liderança. Foque em ser uma referência para garantir sua ascensão em um futuro cada vez mais humano-centrado!`;
+        mensagem = `Sua base é sólida, o que te dá uma vantagem estratégica. Este é o momento ideal para aprofundar sua especialização e desenvolver habilidades de liderança. Foque em ser uma referência para garantir sua ascensão em um futuro cada vez mais centrado na inovação humana!`;
     }
 
     // ajuste de mensagem para profissões não mapeadas
     if (riscoNaoMapeado) {
-        nivel = "ATENÇÃO MÉDIA";
+        nivel = "NECESSIDADE DE REQUALIFICAÇÃO: MÉDIA";
         classe = "risco-medio";
         mensagem = `Não encontramos dados exatos, mas o potencial estimado é **ATENÇÃO MÉDIA**. O avanço tecnológico exige adaptação em todas as áreas.`;
     }

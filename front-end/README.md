@@ -35,9 +35,9 @@ A Plataforma ABRIR é a resposta a esse desafio global. Nosso projeto resolve o 
 
 A Plataforma ABRIR serve como um Hub de Requalificação Universal e um guia prático que capacita qualquer pessoa a ser protagonista da sua transição de carreira.
 
-* **Diagnóstico Humanizado:** Servimos para que o usuário avalie seu Potencial de Transformação (Simulador), substituindo o pânico pela ação informada.
+* **Diagnóstico Humanizado:** Servimos para que o usuário avalie seu Potencial de Transformação, substituindo o pânico pela ação informada.
 * **Guia de Ação (Reskilling):** Oferecemos o Mapa de Requalificação para dar um caminho claro e personalizado, focando nas habilidades humanas e tecnológicas mais demandadas.
-* **Inclusão e Segurança:** Nosso diferencial é garantir que a jornada seja justa (Pilar Renda). Servimos como ponte para Comunidades de Apoio e informações sobre Proteção Social, assegurando que a tecnologia seja usada como uma ferramenta de empoderamento, e não de exclusão.
+* **Inclusão e Segurança:** Nosso diferencial é garantir que a jornada seja justa. Servimos como ponte para Comunidades de Apoio e informações sobre Proteção Social, assegurando que a tecnologia seja usada como uma ferramenta de empoderamento, e não de exclusão.
 
 Nossa missão é clara: Usar a inovação para democratizar o acesso ao futuro, garantindo que a nova economia digital seja construída sobre os pilares da Renda, Inclusão e Acessibilidade.
 
