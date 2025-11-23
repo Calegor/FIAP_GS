@@ -73,7 +73,7 @@ Este repositório contém o código-fonte da interface do usuário (o site), des
 * **Linguagem:** **Python** (Criação do sistema)
 * **Linguagem:** **Java** (Modelagem)
 
-## 🤖 Inteligência Artificial & Chatbot
+## 🤖 Artificial Intelligence & Chatbot
 Fluxos de conversação e a lógica de integração do assistente virtual. Protótipo desenvolvido para oferecer uma experiência multimodal (texto e voz) e personalizada, refletindo a missão de inovação e garantindo que o usuário possa navegar fluidamente entre diagnósticos de carreira e aprendizado de conceitos.
 
 * **Cérebro:** IBM Watson Assistant (Processamento de Linguagem Natural, Gestão de Diálogo com *Slots*, *Digressions* e Múltiplas Respostas Condicionadas).
@@ -83,7 +83,7 @@ Fluxos de conversação e a lógica de integração do assistente virtual. Prot�
 
 > **Nota:** O arquivo `ABRIR-dialog.json` contém a estrutura de treinamento do Watson (Intenções/Entidades) e o `ABRIR-flow-nodered.json` contém o fluxo de integração.
 
-## 🎲 Database
+## 🎲 Building Relational Database
 O modelo relacional foi estruturado para viabilizar o "Motor de Match", cruzando as habilidades que o usuário possui com as exigências do mercado, permitindo o diagnóstico preciso de gaps profissionais.
 
 * **SGBD:** Oracle Database (Modelagem Relacional).
@@ -92,7 +92,7 @@ O modelo relacional foi estruturado para viabilizar o "Motor de Match", cruzando
     * **Nomenclatura Internacional:** Todo o esquema (tabelas e atributos) está em inglês para padronização global e compatibilidade.
     * **Convenção de Prefixos:** Uso estrito de prefixos como `T_A_` (Tabela Aplicação), `nm_` (Nome) e `ds_` (Descrição) para rápida identificação de objetos e atributos.
 
-## 💼 Software Engineering & Business Model
+## 💼 Software Engineering and Business Model
 Esta seção documenta a estruturação de negócios e a modelagem de requisitos da **Plataforma ABRIR**. O foco é garantir que a solução técnica esteja alinhada com a proposta de valor de "Transição Justa" e com as necessidades reais dos usuários vulneráveis à automação.
 
 ### 📊 Estratégia de Negócio
