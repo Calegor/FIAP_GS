@@ -68,7 +68,7 @@ Este repositório contém o código-fonte da interface do usuário (o site), des
 * **Estilização:** CSS3 (Responsividade, Layout Grid/Flexbox e Design).
 
 ## 🛠️ Arquitetura (Backend)
-Cupcake ipsum dolor sit amet fruitcake croissant tiramisu chupa chups. Toffee donut cake tart I love lemon drops. Dragée cheesecake tiramisu cupcake halvah pie croissant chocolate bar candy canes.
+É onde roda a parte lógica do projeto, realizando a consulta profissional para o cliente em necessidade de requalificação.
 
 * **Linguagem:** **Python** (Criação do sistema)
 * **Linguagem:** **Java** (Modelagem)
