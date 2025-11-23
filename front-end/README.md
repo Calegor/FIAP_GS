@@ -86,19 +86,21 @@ Abaixo estão as funcionalidades centrais do Frontend, que transformam a missão
 ## 📂 Estrutura de pastas
 
 ```bash
-├── assets
+front-end/
+│
+├── assets/
 │   ├── css
-│   │   └── base.css
-│   │   └── blog.css
-│   │   └── hero.css
-│   │   └── layout.css
-│   │   └── lg.css
-│   │   └── md.css
-│   │   └── navbar-footer.css
-│   │   └── sm.css
-│   │   └── xl.css
-│   │   └── xs.css
-│   ├── imgs
+│   │   └── base.css                  # Estilos de cores, fontes, links, regras globais
+│   │   └── blog.css                  # Estilos do blog
+│   │   └── hero.css                  # Estilos da seção principal
+│   │   └── layout.css                # Estilo da estrutura principal
+│   │   └── lg.css                    # Estilos de responsividade - Large Devices
+│   │   └── md.css                    # Estilos de responsividade - Medium Devices
+│   │   └── navbar-footer.css         # Estilos da barra de navegação e footer
+│   │   └── sm.css                    # Estilos de responsividade - Small Devicess
+│   │   └── xl.css                    # Estilos de responsividade - Extra Large Devices
+│   │   └── xs.css                    # Estilos de responsividade - Extra Small Devices
+│   ├── imgs                          # Imagens e ícones
 │   │   └── biblioteca
 │   │   └── favicon
 │   │   └── hero
@@ -107,25 +109,25 @@ Abaixo estão as funcionalidades centrais do Frontend, que transformam a missão
 │   │   └── redes-sociais
 │   │   └── sobre
 │   │   └── svg
-│   ├── js
-│   │   └── accordion.js
-│   │   └── blog.js
-│   │   └── cards.js
-│   │   └── carrosselHero.js
-│   │   └── dados.js
-│   │   └── form.js
-│   │   └── proposito.js
-│   │   └── reskilling.js
-│   │   └── scrollSmooth.js
-│   │   └── search.js
-│   │   └── simulator.js
-│   │   └── tooltip.js
-│   ├── assets-readme
+│   ├── js                            
+│   │   └── accordion.js              # Script dos Pilares e dos Direitos na página index.html
+│   │   └── blog.js                   # Script da seção principal na página blog.html
+│   │   └── cards.js                  # Script das animações dos textos em todas as páginas
+│   │   └── carrosselHero.js          # Script da seção principal na página index.html
+│   │   └── dados.js                  # Script de dados do simulador na página index.html
+│   │   └── form.js                   # Script do formulário de contato na página contato.html
+│   │   └── proposito.js              # Script da primeira solução na página proposito.html
+│   │   └── reskilling.js             # Script da segunda solução na página reclassificacao.html
+│   │   └── scrollSmooth.js           # Script da barra de rolagem em todas as páginas
+│   │   └── search.js                 # Script da barra de pesquisa em todas as páginas
+│   │   └── simulator.js              # Script do simulador na página index.html
+│   │   └── tooltip.js                # Script do tooltip em todas as páginas
+│   ├── assets-readme                 # Imagens para o README.md
 │   │   └── imagem-github.png
 │   │   └── julia-guimaraes.png
 │   │   └── julia-spanopoulos.png
 │   │   └── thiago-lima.png
-│   ├── pages
+│   ├── pages                         # Páginas obrigatórias e restante
 │   │   └── blog.html
 │   │   └── contato.html
 │   │   └── faq.html
@@ -133,8 +135,8 @@ Abaixo estão as funcionalidades centrais do Frontend, que transformam a missão
 │   │   └── proposito.html
 │   │   └── reclassificacao.html
 │   │   └── sobre.html
-├── index.html
-├── README.md
+├── index.html                       # Página inicial
+├── README.md                        # Documentação
 
 ```
 
